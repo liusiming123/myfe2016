@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>折叠菜单</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            ul,ol{
+                list-style: none;
+            }
+            a{
+                text-decoration: none;
+            }
+            #menu .main-menu{
+                background: gainsboro;
+                width: 300px;
+                border: solid 1px;
+            }
+            #menu .main-menu ul{
+                display: none;
+            }
+            #menu p{
+                background: black;
+                color: white;
+                font-size: 20px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <ul id="menu">
+            <li class="main-menu">
+                <p>交流区</p>
+                <ul>
+                    <li>111</li>
+                    <li>222</li>
+                    <li>333</li>
+                </ul>
+            </li>
+            <li class="main-menu">
+                <p>管理区</p>
+                <ul>
+                    <li>444</li>
+                    <li>555</li>
+                    <li>666</li>
+                </ul>
+            </li>
+        </ul>
+        <script>
+            var oMenu=document.getElementById('menu');
+            var aLi=oMenu.getElementsByTagName('li');
+            for(i=0;i<aLi.length;i++){
+                if(aLi[i].className=='main-menu'){
+                    aLi[i].onclick=function(){
+                        var aUl=this.getElementsByTagName('ul')[0];
+                        if(aUl.style.display='none'){
+                            aUl.style.display='block';
+                        }else{
+                            aUl.style.display='none'
+                        }
+                    };
+                }
+            }
+        </script>
+    </body>
+</html>
