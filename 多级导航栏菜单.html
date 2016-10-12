@@ -55,7 +55,7 @@
             <li class="main-menu">
                 <a href="">link 1</a>
                 <ul class="sub-menu">
-                    <li>
+                    <li id="two-menu">
                         <a href="">sublink 1</a>
                         <ul class="three-menu">
                             <li><a href="">llllink 1</a></li>
@@ -98,7 +98,16 @@
                         oSubMenu.style.display = 'none';
                     };
                 }
-                if(aMainMenu[i].className=='')
+                if(aMainMenu[i].id='two-menu'){
+                    aMainMenu[i].onmouseover =function(){
+                        this.getElementsByTagName('ul')[0].style.display = 'block';
+
+                    };
+                    aMainMenu[i].onmouseout =function(){
+                        this.getElementsByTagName('ul')[0].style.display = 'none';
+
+                    };
+                }
             }
 
 
