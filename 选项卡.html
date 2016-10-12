@@ -1,62 +1,68 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
+<!doctype html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
-    <title>123</title>
+    <title>选项卡</title>
     <style>
         *{
             margin: 0;
             padding: 0;
         }
-        ul ,ol{
-            list-style: none;
-        }
-        a {
-            text-decoration: none;
-        }
-        #con{
-            width: 400px;
-            height:200px ;
+        #tab{
+            width: 600px;
+            height: 400px;
             margin: 50px auto;
 
         }
-        #nav{
-            height: 40px;
-        }
-        #nav li{
-            background: gray;
+        #tab2 div{
             float: left;
-            width: 70px;
+            width: 60px;
             height: 40px;
+            background: gray;
             line-height: 40px;
             text-align: center;
             margin-right: 10px;
 
         }
-        #con2{
-            width: 400px;
-            height:160px ;
-            border-top: solid 1px;
+        #tab #words{
+            clear: both;
             background: gainsboro;
+            border-top:1px solid ;
+            height: 360px;
         }
-        #nav .a11{
+        #tab2 .content{
             background: black;
-            color:white;
+            color: white;
         }
 
     </style>
 </head>
 <body>
-    <div id="con">
-        <ul id="nav">
-            <li class="a11">11</li>
-            <li>22</li>
-            <li>33</li>
-        </ul>
-        <div id="con2">
-            刘思明
-        </div>
+<div id ="tab">
+    <div id="tab2">
+        <div class="content">liu</div>
+        <div>si</div>
+        <div>ming</div>
     </div>
+    <div id="words">韩庚</div>
+</div>
 
+<script>
+    var date=["韩庚","王凯","李易峰"];
+    var oTab = document.getElementById('tab2');
+    var aDiv = oTab.getElementsByTagName('div');
+    var oWords = document.getElementById('words');
+    for(i=0; i<aDiv.length;i++){
+        aDiv[i].index=i;
+        aDiv[i].onclick = function(){
+            for(i=0;i<aDiv.length;i++){
+                aDiv[i].className=''
+            }
+            this.className='content';
+            oWords.innerHTML=date[this.index];
+        };
+    }
+
+</script>
 </body>
 </html>
