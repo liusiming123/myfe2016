@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>123</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul ,ol{
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+        }
+        #con{
+            width: 400px;
+            height:200px ;
+            margin: 50px auto;
+
+        }
+        #nav{
+            height: 40px;
+        }
+        #nav li{
+            background: gray;
+            float: left;
+            width: 70px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            margin-right: 10px;
+
+        }
+        #con2{
+            width: 400px;
+            height:160px ;
+            border-top: solid 1px;
+            background: gainsboro;
+        }
+        #nav .a11{
+            background: black;
+            color:white;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="con">
+        <ul id="nav">
+            <li class="a11">11</li>
+            <li>22</li>
+            <li>33</li>
+        </ul>
+        <div id="con2">
+            刘思明
+        </div>
+    </div>
+    <script>
+        var oNav=document.getElementById('nav');
+        var ali=oNav.getElementsByTagName('li');
+        var a = ["刘思明","韩庚","wangkai"];
+        var oCon2=document.getElementById('con2');
+        for(var i=0;i<ali.length;i++){
+            ali[i].index = i;
+            ali[i].onclick=function(){
+                for(var i=0;i<ali.length;i++){
+                    ali[i].className = "";
+                }
+                this.className = 'a11' ;
+                oCon2.innerHTML=a[this.index];
+
+            };
+        }
+    </script>
+
+</body>
+</html>
