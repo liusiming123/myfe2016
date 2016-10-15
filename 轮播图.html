@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>轮播图</title>
+        <style>
+            /***样式重置***/
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            ul,ol{
+                list-style: none;
+            }
+            a{
+                text-decoration: none;
+            }
+            /***样式重置****/
+            #container{
+                width: 516px;
+                height: 690px;
+                margin: 0 auto;
+                position: relative;
+            }
+            #tab{
+                position: absolute;
+                right: 5px;
+                bottom: 5px;
+            }
+            #tab li{
+                cursor: pointer;
+                float: left;
+                width: 50px;
+                height: 50px;
+                background: gray;
+                color: white;
+                line-height: 50px;
+                text-align: center;
+                margin-right: 5px;
+            }
+            #right-left{
+                width: 64px;
+                height: 40px;
+
+                position: absolute;
+                left: 5px;
+                bottom: 5px;
+            }
+            #right-left span {
+                float: left;
+                width: 30px;
+                height: 30px;
+                background: black;
+                color: white;
+                text-align: center;
+                line-height: 30px;
+                margin-right: 2px;
+                cursor: pointer;
+
+            }
+            #tab .selected{
+                background: orange;
+            }
+            #content .selected{
+                display: block;
+            }
+            #content img{
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+         <div id="container">
+             <ul id="tab">
+                 <li class="selected">1</li>
+                 <li>2</li>
+                 <li>3</li>
+                 <li>4</li>
+             </ul>
+             <div id="content">
+                 <img class="selected" src="img/11.jpg" alt=""/>
+                 <img src="img/22.jpg" alt=""/>
+                 <img src="img/33.jpg" alt=""/>
+                 <img src="img/44.jpg" alt=""/>
+             </div>
+             <div id="right-left">
+                 <span id ='previous'>&lt;</span>
+                 <span id='next'>&gt;</span>
+             </div>
+         </div>
+         <script>
+             var oContainer=document.getElementById('container')
+             var oTab=document.getElementById('tab');
+             var aLi=oTab.getElementsByTagName('li');
+             var oContent=document.getElementById('content');
+             var aImg=oContent.getElementsByTagName('img');
+             var oNext=document.getElementById('next');
+             var oPrevious=document.getElementById('previous');
+                var iNow=0;
+             for(var i=0;i<aLi.length;i++){
+                 aLi[i].index = i;
+                 aLi[i].onmousemove=function(){
+                     changeImg(this.index);
+                     iNow=this.index;
+                 };
+             }
+             oNext.onclick=function(){
+                 iNow=iNow+1;
+                 if(iNow==aLi.length){
+                     iNow=0;
+                 }
+                 changeImg(iNow);
+             };
+             oPrevious.onclick=function(){
+                 iNow=iNow-1;
+                 if(iNow==-1){
+                     iNow=aLi.length-1;
+                 }
+                 changeImg(iNow);
+             };
+             function changeImg(index){
+                 for(var i=0;i<aLi.length;i++){
+                     aLi[i].className ='';
+                     aImg[i].className =''
+                 }
+                 aLi[index].className='selected';
+                 aImg[index].className='selected';
+             }
+             var timer=setInterval(function(){
+                 oNext.onclick();
+             },500)
+             oContainer.onmouseover=function(){
+                 clearInterval(timer);
+             };
+             oContainer.onmouseout=function(){
+                 timer=setInterval(function(){
+                     oNext.onclick();
+                 },500)
+             };
+         </script>
+    </body>
+</html>

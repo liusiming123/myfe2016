@@ -53,10 +53,10 @@
             var oMenu=document.getElementById('menu');
             var aLi=oMenu.getElementsByTagName('li');
             for(i=0;i<aLi.length;i++){
-                if(aLi[i].className=='main-menu'){
+                if(aLi[i].className =='main-menu'){
                     aLi[i].onclick=function(){
                         var aUl=this.getElementsByTagName('ul')[0];
-                        if(aUl.style.display=='none'){
+                        if(aUl.style.display =='none'){
                             aUl.style.display='block';
                         }else{
                             aUl.style.display='none';
