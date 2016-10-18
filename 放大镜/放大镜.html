@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>放大镜</title>
+        <style>
+            /***样式重置***/
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            ul,ol{
+                list-style: none;
+            }
+            a{
+                text-decoration: none;
+            }
+            img{
+                border: 0;
+            }
+            /***样式重置****/
+            #small-img{
+                width: 400px;
+                height: 400px;
+                position: relative;
+                float: left;
+            }
+            #big-img {
+                width: 400px;
+                height: 400px;
+                float: left;
+                overflow: hidden;
+                display: none;
+                position: absolute;
+                left: 400px;
+
+            }
+            #img{
+                position: absolute;
+            }
+            #drag{
+                width: 200px;
+                height: 200px;
+                background: gray;
+                position: absolute;
+                left: 0;
+                top: 0;
+                opacity: 0.5;
+                filter: alpha(opacity=50);
+                display: none;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="small-img">
+            <div id="drag"></div>
+            <img src="1.jpg" alt=""/>
+        </div>
+        <div id="big-img">
+            <img id="img" src="2.jpg" alt=""/>
+        </div>
+        <script>
+            var oSmallImg = document.getElementById('small-img');
+            var oBigImg = document.getElementById('big-img');
+            var oDrag = document.getElementById('drag');
+            var oImg=document.getElementById('img');
+            oSmallImg.onmouseover = function(){
+                oBigImg.style.display ='block';
+                oDrag.style.display = 'block';
+            };
+                oSmallImg.onmousemove = function(e){
+                    e = e || window.event;
+                    var iLeft =  e.clientX-(oDrag.offsetWidth/2);
+                    var iTop = e.clientY-(oDrag.offsetHeight/2);
+                    if(iLeft<0){
+                        iLeft=0;
+                    }
+                    if (iLeft>oSmallImg.offsetWidth-oDrag.offsetWidth){
+                        iLeft = oSmallImg.offsetWidth-oDrag.offsetWidth;
+                    }
+                    if(iTop<0){
+                        iTop=0;
+                    }
+                    if (iTop>oSmallImg.offsetHeight-oDrag.offsetHeight){
+                        iTop = oSmallImg.offsetHeight-oDrag.offsetHeight;
+                    }
+                    oDrag.style.left= iLeft + 'px';
+                    oDrag.style.top= iTop  + 'px';
+                    /***大图片定位****/
+                    var iScaleLeft = iLeft/(oSmallImg.offsetWidth-oDrag.offsetWidth);
+                    var iScaleTop = iTop/(oSmallImg.offsetHeight-oDrag.offsetHeight);
+                    oImg.style.left =- (oImg.offsetWidth-oBigImg.offsetWidth)* iScaleLeft +'px';
+                    oImg.style.top = - (oImg.offsetHeight-oBigImg.offsetHeight)* iScaleTop+'px';
+                    return false;
+            };
+            oSmallImg.onmouseout = function(){
+                oBigImg.style.display ='none';
+                oDrag.style.display = 'none';
+            };
+        </script>
+    </body>
+</html>
