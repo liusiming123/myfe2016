@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>回到顶部</title>
+        <style>
+            div{
+                height: 4000px;
+            }
+            #go-top{
+                width: 40px;
+                height: 40px;
+                background: #cccccc;
+                line-height: 40px;
+                text-align: center;
+                position: fixed;
+                right: 5px;
+                bottom: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div><a id='go-top' href="#">Go!</a></div>
+    </body>
+    <script>
+        var oGoTop = document.getElementById('go-top');
+
+        oGoTop.onclick = function(){
+            var iScrollTop=document.documentElement.scrollTop||document.body.scrollTop;
+             var timer = setInterval(function(){
+                window.scrollTo(0,iScrollTop =iScrollTop*0.9);
+                if(iScrollTop<=1){
+                    scrollTo(0,0);
+                    clearInterval(timer);
+                    console.log(document.documentElement.scrollTop||document.body.scrollTop)
+                }
+            },20);
+        }
+    </script>
+</html>

@@ -119,7 +119,7 @@
         var iNow = 0;
 
         oContent.style.width = aImg.length * aImg[0].offsetWidth+"px";
-        alert( aImg[0].offsetWidth);
+//        alert( aImg[0].offsetWidth);
         oContent.style.height = aImg[0].offsetHeight +'px';
 
         for (var i = 0; i < aLi.length; i++) {
@@ -128,13 +128,7 @@
                 changeImg(this.index);
                 iNow = this.index;
             };
-
-
         }
-
-
-
-
         oNext.onclick = function () {
             iNow = iNow + 1;
             if (iNow == aLi.length) {
@@ -153,13 +147,8 @@
         function changeImg(index) {
             for (var i = 0; i < aLi.length; i++) {
                 aLi[i].className = '';
-//            aImg[i].className = ''
             }
             aLi[index].className = 'selected';
-//        aImg[index].className = 'selected';
-
-
-            // oContent.style.left = -idx * aImg[0].offsetWidth +'px';
             animate(oContent,{left:-index * aImg[0].offsetWidth});
         }
         var timer = setInterval(function () {
