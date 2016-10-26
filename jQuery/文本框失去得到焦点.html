@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>文本框失去得到焦点</title>
+        <style>
+            .change{
+                background: palevioletred;
+                border: 2px #cccccc;
+            }
+            input{
+                display: block;
+            }
+            textarea{
+                margin: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="">
+            <fieldset>
+                <legend>个人基本信息</legend>
+                名称: <input name='123'type="text" value="输入"/>
+                密码: <input name='123' type="password" value="输入"/>
+                详细信息: <textarea name="123" >详细信息</textarea>
+            </fieldset>
+        </form>
+        <script src="jquery-1.12.4.js"></script>
+        <script>
+            $(function(){
+                var $foucs=$(":input");
+                $foucs.on("focus",function(){
+                    $(this).addClass('change');
+                    if( this.value==this.defaultValue){
+                        this.value='';
+                    }
+                });
+               $foucs.on('blur',function(){
+                    $(this).removeClass('change');
+                    if(this.value==''){
+                        this.value=this.defaultValue;
+                    }else{
+                        this.value;
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

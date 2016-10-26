@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        #container{
+            position: relative;
+            top: 100px;
+            left: 50px;
+        }
+        ul{
+            height: 30px;
+        }
+        li{
+            float: left;
+            width: 50px;
+            height: 30px;
+            background: gainsboro;
+            text-align: center;
+            line-height: 30px;
+            margin-right: 5px;
+            cursor: pointer;
+        }
+        textarea{
+            width: 200px;
+            height: 200px;
+        }
+
+    </style>
+</head>
+<body>
+<div id="container">
+    <ul>
+        <li id="up">向上</li>
+        <li id="down">向下</li>
+    </ul>
+    <div>
+        <textarea id="content" >疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯疯了疯了疯疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了疯了</textarea>
+    </div>
+</div>
+<script src="jquery-1.12.4.js"></script>
+<script>
+    $(function(){
+        $('#down').on('click',function(){
+            var $top=$('#content').scrollTop();
+            $('#content').scrollTop($top+20);
+        });
+        $('#up').on('click',function(){
+            var $top=$('#content').scrollTop();
+            $('#content').scrollTop($top-20);
+        });
+    });
+</script>
+</body>
+</html>
