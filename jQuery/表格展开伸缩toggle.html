@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title></title>
+        <style>
+            table{
+                border-collapse:collapse;
+                width: 400px;
+            }
+            thead{
+                padding:4px;
+                border-top:2px inset gainsboro;
+                border-bottom:2px inset gainsboro;
+            }
+            tr{
+                text-align: center;
+                font-size: 18px;
+            }
+            .parent{
+                background: pink;
+                text-align: left;
+                font-size: 20px;
+            }
+            .change{
+                background: powderblue;
+            }
+        </style>
+    </head>
+    <body>
+    <table>
+        <thead>
+            <tr><th>姓名</th><th>性别</th><th>暂住地</th></tr>
+        </thead>
+        <tbody>
+            <tr class="parent" id="row_01"><td colspan="3">帅哥</td></tr>
+            <tr class="child_row_01"><td>胡歌</td><td>男</td><td>上海</td></tr>
+            <tr class="child_row_01"><td>李易峰</td><td>男</td><td>浙江温州</td></tr>
+
+            <tr class="parent" id="row_02"><td colspan="3">美女</td></tr>
+            <tr class="child_row_02"><td>赵丽颖</td><td>女</td><td>浙江杭州</td></tr>
+            <tr class="child_row_02"><td>杨幂</td><td>女</td><td>北京</td></tr>
+
+            <tr class="parent" id="row_03"><td colspan="3">偶像</td></tr>
+            <tr class="child_row_03"><td>韩庚</td><td>男</td><td>牡丹江</td></tr>
+            <tr class="child_row_03"><td>权志龙</td><td>男</td><td>韩国首尔</td></tr>
+        </tbody>
+    </table>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(function(){
+            $('.parent').on('click',function(){
+               $(this).toggleClass('change');
+                $(".child_"+this.id).toggle();
+            });
+        });
+    </script>
+    </body>
+</html>

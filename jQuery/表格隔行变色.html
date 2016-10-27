@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title></title>
+        <style>
+            table{
+                border-collapse:collapse;
+            }
+            td	{
+                padding:2px;
+                width:100px;
+            }
+            thead{
+                text-align:left;
+                padding:4px;
+                border-top:2px  inset red;
+                border-bottom:2px  inset red;
+            }
+            tr{
+                text-align: center;
+            }
+
+        </style>
+    </head>
+    <body>
+        <table>
+            <thead>
+                <tr><th>姓名</th><th>性别</th><th>暂住地</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>胡歌</td><td>男</td><td>浙江宁波</td></tr>
+                <tr><td>赵丽颖</td><td>女</td><td>浙江杭州</td></tr>
+                <tr><td>韩庚</td><td>男</td><td>湖南长沙</td></tr>
+                <tr><td>李易峰</td><td>男</td><td>浙江温州</td></tr>
+                <tr><td>杨幂</td><td>女</td><td>浙江杭州</td></tr>
+                <tr><td>Rain</td><td>男</td><td>浙江杭州</td></tr>
+            </tbody>
+        </table>
+    </body>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(function(){
+            $('tbody tr:even').css('background','yellow');
+            $('tbody tr:odd').css('background','pink');
+//            $('tbody tr').on('click',function(){
+//                $(this).css('background','blue');
+//            });
+            $('tbody tr:contains(女)').css('background','chartreuse')
+
+        });
+    </script>
+</html>

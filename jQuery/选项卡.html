@@ -73,6 +73,15 @@
         </div>
 
         </div>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(function(){
+            $('#nav li').on('click',function(){
+               $(this).addClass('selected').siblings().removeClass('selected');
+                $('#content div').eq($(this).index()).css('display','block').siblings().css('display','none');
 
+            });
+        });
+    </script>
     </body>
 </html>
