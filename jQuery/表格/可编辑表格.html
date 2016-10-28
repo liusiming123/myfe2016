@@ -9,10 +9,9 @@
                 padding: 0;
             }
             table{
-                width: 400px;
                 border: solid 1px black;
                 border-collapse:collapse;
-                width: 500px;
+                width: 600px;
                 font-size: 20px;
             }
             th{
@@ -20,6 +19,7 @@
             }
             td,th{
                 border: 1px solid black;
+                width: 200px;
             }
 
         </style>
@@ -45,10 +45,19 @@
         <script>
             $(function(){
                 $('tbody tr:odd').css('background','pink');
-                $('.editable').on('click',function(){
-                    $('<input type="text"/>').prependTo(this).val($(this).text())
-
-
+                $('.editable').on('click',function() {
+                    if ($(this).children(':input').length == 0) {
+                        var td_this = this;
+                        var $input = $('<input type="text" width="200"/>').val($(this).text());
+                        $(this).html($input);
+                        $input.select().on('keydown', function (event) {
+                            if (event.which == 13) {
+                                $(td_this).html($(this).val());
+                            }
+                        }).on('blur', function () {
+                            $(td_this).html($(this).val());
+                        });
+                    }
                 });
             });
 
