@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        table{
+            border: solid 1px black;
+            border-collapse:collapse;
+            width: 600px;
+            height: 250px;
+            font-size: 20px;
+        }
+        th{
+            background: paleturquoise;
+        }
+        td,th{
+            border: 1px solid black;
+            width: 200px;
+        }
+
+    </style>
+</head>
+<body>
+<table >
+    <thead>
+    <tr ><th colspan="3" style="background: white">鼠标点击表格就可以编辑</th></tr>
+    <tr>
+        <th>学号</th>
+        <th>性别</th>
+        <th>姓名</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr><td>001</td><td class="editable">男</td><td class="editable">韩庚</td></tr>
+    <tr><td>002</td><td class="editable">女</td><td class="editable">杨幂</td></tr>
+    <tr><td>003</td><td class="editable">男</td><td class="editable">王凯</td></tr>
+    <tr><td>004</td><td class="editable">男</td><td class="editable">权志龙</td></tr>
+    </tbody>
+</table>
+<script src="jquery-1.12.4.js"></script>
+<script>
+    $(function(){
+        $('tbody tr:odd').css('background','pink');
+        $('.editable').on('click',function() {
+            if($(this).children().length==0){
+                var td_this = this;
+                var $input = $('<input type="text" width="200"/>').val($(td_this).text());
+                $(this).empty().append($input);
+                $input.trigger('focus');
+                $input.on('keydown',function(event){
+                    if(event.which == 13){
+                        var $valu=$(this).val();
+                        $(td_this).empty().text($valu);
+                    }
+                }).on('blur',function(){
+                    var $valu=$(this).val();
+                    $(td_this).empty().text($valu);
+                });
+            }
+        });
+
+    });
+
+</script>
+</body>
+</html>
