@@ -1,0 +1,268 @@
+/**样式重置开始**/
+*{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+img{
+    border: 0;
+}
+/**样式重置结束**/
+/**header start**/
+#header-main{
+        width: 1002px;
+        margin:0 auto;
+        height: 120px;
+}
+#logo{
+    float: left;
+    width: 189px;
+    height: 47px;
+    background-image: url("../images/logo.png");
+    margin-top: 37px;
+}
+#nav{
+    float: left;
+    margin-left: 139px;
+}
+#nav li{
+    margin-top: 53px;
+    float: left;
+    padding:0 25px;
+    border-right: 1px #6a6a6a solid;
+}
+#nav li a{
+    color: #626262;
+}
+#nav li a:hover{
+    color: #22b9ff;
+}
+#search{
+    float: right;
+    background: #f1f3f6;
+    width: 130px;
+    height: 30px;
+    margin-top: 45px;
+}
+#search input{
+    float: left;
+    width: 100px;
+    height: 30px;
+    border: 0;
+    outline: none;
+    background:#f1f3f6 ;
+    color: #a3a3a3;
+    text-indent: 2px;
+}
+#search span{
+    float: right;
+    width: 30px;
+    height: 30px;
+    background-image: url("../images/icon.png");
+    background-position: 10px 10px;
+}
+/**header  end*/
+/**banner start**/
+#banner{
+    background: #31333e;
+}
+#banner-main{
+    width: 1002px;
+    height: 460px;
+    background: #31333e;
+    margin:0 auto;
+    position: relative;
+}
+#banner-main span{
+    cursor: pointer;
+}
+#prve{
+    position: absolute;
+    top: 206px;
+    left: 0;
+    float: left;
+    width: 30px;
+    height: 50px;
+    background-image: url("../images/icon.png");
+    background-position: 0 -68px;
+}
+#next{
+    position: absolute;
+    top: 206px;
+    right: 0;
+    float: right;
+    width: 30px;
+    height: 50px;
+    background-image: url("../images/icon.png");
+    background-position: -70px  -68px;
+}
+#img{
+    margin: 0 auto;
+    width: 941px;
+    height: 460px;
+    overflow: hidden;
+}
+/**banner end**/
+/**news start**/
+#news-main{
+    width: 1002px;
+    height: 492px;
+    margin:0 auto;
+}
+#news-main .group{
+    float: left;
+    width: 334px;
+    text-align: center;
+}
+#news-main .group h1{
+    font-size: 30px;
+    color: #626262;
+    margin-top: 86px;
+}
+#news-main .group p{
+    float: left;
+    width: 280px;
+    font-size:15px;
+    color: #2a2e39;
+    margin-left: 27px;
+}
+#news-main .group a{
+    color: #00aeff;
+}
+#news-main .group span{
+    float: left;
+    margin:30px;
+    margin-left: 120px;
+}
+#icon01 {
+    margin:29px auto;
+    width: 100px;
+    height: 100px;
+    background-image: url("../images/icon.png");
+    background-position: -254px -146px;
+}
+#icon02 {
+    margin:29px auto;
+    width: 100px;
+    height: 100px;
+    background-image: url("../images/icon.png");
+    background-position: -127px -146px;
+}
+#icon03 {
+    margin:29px auto;
+    width: 100px;
+    height: 100px;
+    background-image: url("../images/icon.png");
+    background-position: 0 -146px;
+}
+/**news end**/
+#works{
+    background: #e2e7ed;
+}
+#works-main{
+    width: 1002px;
+    height: 500px;
+    margin:0 auto;
+
+    padding-left: 1px;
+}
+#works-main .big-p{
+    float: left;
+    width: 1002px;
+    height: 70px;
+    font-size: 30px;
+    color: #626262;
+    line-height: 70px;
+    text-indent: 5px;
+}
+#works-main .image{
+    float: left;
+    width: 250px;
+    height: 200px;
+    position: relative;
+}
+#works-main #image-text {
+    background: #00aeff;
+    color: white;
+    text-align: center;
+}
+#works-main #image-text h3{
+  margin-top: 20px;
+}
+#works-main #image-text p{
+    font-size: 15px;
+    margin-top: 20px;
+}
+#works-main #image-text div{
+    width: 70px;
+    height: 40px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background:#008bcc;
+}
+#small{
+    position: absolute;
+    top: 8px;
+    left: 24px;
+    float: left;
+    width: 22px;
+    height: 25px;
+    background: url("../images/icon-1.png");
+}
+#clients-main{
+    width: 1002px;
+    height: 154px;
+    margin: 0 auto;
+    position: relative;
+}
+#clients-main .big-p{
+    float: left;
+    width: 1002px;
+    font-size: 30px;
+    color: #626262;
+    line-height: 70px;
+    text-indent: 5px;
+}
+#trademark{
+    width: 952px;
+    height: 84px;
+    position: absolute;
+    left: 25px;
+    bottom: 0;
+    overflow: hidden;
+}
+#big-mark{
+    width: 1190px;
+    position: absolute;
+
+}
+#big-mark .mark{
+    float: left;
+    width: 238px;
+    height: 84px;
+}
+#clients-main span{
+    /*float: left;*/
+    width: 25px;
+    height: 40px;
+    cursor: pointer;
+}
+#clients-prve{
+    position: absolute;
+    left: 0;
+    top: 80px;
+    background: url("../images/icon-1.png") -40px 0;
+}
+#clients-next{
+    z-index: 1;
+    position: absolute;
+    right: 0;
+    top: 80px;
+    background: url("../images/icon-1.png") -80px 0;
+}

@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    font-size: 12px;
+}
+/***—˘ Ω÷ÿ÷√*****/
+p{
+    font-size: 14px;
+}
+#menu {
+    width: 770px;
+    height: 30px;
+    position: absolute;
+    top:40px;
+    background: gainsboro;
+}
+#menu li{
+    float: left;
+    height: 28px;
+    text-align: center;
+    margin-left: 10px;
+    margin-top: 2px;
+    padding: 3px 8px;
+}
+.on{
+    background: white;
+}
+#content{
+    position: absolute;
+    top: 70px;
+    width: 770px;
+    height: 273px;
+    overflow: hidden;
+}
+.no-con{
+    width: 770px;
+    height: 90px;
+    border-bottom:1px dotted black;
+}
+
+.small-con {
+    float: left;
+    width: 380px;
+    margin: 2px;
+}
+.small-con div{
+    float: left;
+    margin-top: 16px;
+    margin-left: 10px;
+}
+.small-con  .img{
+    margin-left: 10px;
+     width: 50px;
+     height: 70px;
+ }
+.small-con  .text{
+    width: 300px;
+    height: 70px;
+}
+
