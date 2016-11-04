@@ -1,0 +1,246 @@
+/**样式重置开始**/
+*{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+img{
+    border: 0;
+}
+/**样式重置结束**/
+/*header开始*/
+#header{
+    height: 105px;
+    background: #eeeeee;
+}
+#header .main-header{
+    width: 990px;
+    margin: 0 auto;
+    position: relative;
+    height: 105px;
+    z-index: 1;
+}
+#header #logo{
+    float: left;
+    width: 158px;
+    height: 59px;
+
+}
+#header #search{
+    margin: 18px 0 0 40px;
+    width: 214px;
+    height: 27px;
+}
+#header #skin{
+    float: right;
+    margin-right: 25px;
+    margin-top: 5px;
+    width: 120px;
+    height: 15px;
+}
+#skin li{
+    float: left;
+    margin-right: 5px;
+    width: 15px;
+    height: 15px;
+    background: url("../images/theme.gif") no-repeat;
+}
+#skin #skin-2{background-position: -20px 0;}
+#skin #skin-3{background-position: -40px 0;}
+#skin #skin-4{background-position: -60px 0;}
+#skin #skin-5{background-position: -80px 0;}
+#skin #skin-6{background-position: -100px 0;}
+#skin #skin-1.selected{background-position: 0px -16px}
+#skin #skin-2.selected{background-position: -20px -16px}
+#skin #skin-3.selected{background-position: -40px -16px}
+#skin #skin-4.selected{background-position: -60px -16px}
+#skin #skin-5.selected{background-position: -80px -16px}
+#skin #skin-6.selected{background-position: -100px -16px}
+#nav{
+    width: 990px;
+    height: 37px;
+    background:#4565a9;
+    position: absolute;
+    bottom: 0;
+}
+#nav li {
+    text-align: center;
+    line-height: 37px;
+    float: left;
+    width: 70px;
+    height: 37px;
+    /*overflow: hidden;*/
+
+}
+#nav li a{
+    color: white;
+}
+#nav li a:hover{
+    text-decoration:underline;
+ }
+#nav .sub-nav{
+    border: 1px solid grey;
+    width:550px;
+    height: 142px;
+    background:white;
+    display: none ;
+}
+#nav .sub-nav .sub-nav2{
+    width: 550px;
+    height: 71px;
+    border-top: 1px dashed;
+}
+#nav .sub-nav span{
+    float: left;
+    width: 50px;
+}
+#nav .sub-nav em{
+    float: left;
+    width: 60px;
+    height: 15px;
+    font-style: normal;
+}
+#nav .sub-nav a{
+    color: black;
+    font-size: 13px;
+}
+/*header结束*/
+/*content开始*/
+#content{
+    height: 580px;
+}
+#shop{
+    width: 990px;
+    height: 580px;
+    margin: 0 auto;
+    position: relative;
+}
+/*<!--商品分类开始-->*/
+#commodity{
+    width: 186px;
+    height: 559px;
+    position: absolute;
+    top: 10px;
+    border: 1px #6e6e6e solid;
+}
+#commodity p{
+    float: left;
+    width: 186px;
+    height: 30px;
+    background: #4069c0;
+    text-indent: 5px;
+    line-height: 30px;
+}
+#commodity .classify span{
+    margin-left: 5px;
+    float: left;
+    width: 170px;
+    height: 29px;
+    line-height: 29px;
+    border-bottom: 1px dashed black;
+    font-size: 15px;
+    font-weight: bolder;
+}
+#commodity .classify{
+    float: left;
+    width: 165px;
+    height: 130px;
+}
+#commodity  li{
+    width: 79px;
+    height: 24px;
+    float: left;
+    text-indent: 5px;
+    line-height: 24px;
+    font-size: 13px;
+}
+#commodity  li a{
+    color: black;
+    float: left;
+    width: 79px;
+    height: 24px;
+}
+#commodity  li .promoted {
+    color: red;
+}
+/*<!--商品分类结束-->*/
+/*<!--轮播图开始-->*/
+#advertisement{
+    width: 550px;
+    height: 320px;
+    position: absolute;
+    top: 10px;
+    left: 198px;
+}
+#images{
+    width: 550px;
+    height: 320px;
+    overflow: hidden;
+}
+#images-nav{
+    width: 550px;
+    height: 42px;
+    position: absolute;
+    bottom: 0;
+    cursor: pointer;
+}
+#images-nav .img-selected{
+ background: #37a7d7;
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+#images-nav div{
+    float: left;
+    width: 109px;
+    height: 42px;
+    background: black;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    margin-right: 1px;
+    color: white;
+
+}
+#images-nav div span{
+    float: left;
+    width: 109px;
+    height: 17px;
+    margin-top: 3px;
+    text-align: center;
+    font-size: 13px;
+}
+
+
+
+
+
+
+/*<!--轮播图结束-->*/
+/*<!--最新动态开始-->*/
+#dynamic{
+    width: 230px;
+    height: 320px;
+    position: absolute;
+    left: 759px;
+    top: 10px;
+    background: lemonchiffon;
+}
+/*<!--最新动态结束-->*/
+/*<!--品牌活动开始-->*/
+#activity{
+    width: 790px;
+    height: 230px;
+    background: indianred;
+    position: absolute;
+    left: 198px;
+    top: 340px;
+}
+/*<!--品牌活动结束-->*/
+/*content结束*/
+
+
+
