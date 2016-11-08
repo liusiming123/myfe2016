@@ -118,14 +118,14 @@ img{
     width: 990px;
     height: 580px;
     margin: 0 auto;
-    position: relative;
+    /*position: relative;*/
 }
 /*<!--商品分类开始-->*/
 #commodity{
     width: 186px;
     height: 559px;
     position: absolute;
-    top: 10px;
+    top: 115px;
     border: 1px #6e6e6e solid;
 }
 #commodity p{
@@ -213,12 +213,6 @@ img{
     text-align: center;
     font-size: 13px;
 }
-
-
-
-
-
-
 /*<!--轮播图结束-->*/
 /*<!--最新动态开始-->*/
 #dynamic{
@@ -227,20 +221,111 @@ img{
     position: absolute;
     left: 759px;
     top: 10px;
-    background: lemonchiffon;
+}
+#jnNoticeInfo{
+    width: 230px;
+    height: 135px;
+    margin-top: 6px;
+}
+#jnNoticeInfo h5{
+    float: left;
+    width: 228px;
+    height: 24px;
+    line-height: 24px;
+    text-indent: 3px;
+    border: 1px solid grey;
+}
+#jnNoticeInfo ul{
+    padding-top: 4px;
+    font-size: 15px;
+    border: 1px solid grey;
+    border-top: none;
+    width: 228px;
+    float: left;
+    height: 103px;
+}
+#jnNoticeInfo ul a{
+    color: black;
+}
+#jnNoticeInfo ul a:hover{
+    color: #00aeff;
 }
 /*<!--最新动态结束-->*/
 /*<!--品牌活动开始-->*/
 #activity{
     width: 790px;
     height: 230px;
-    background: indianred;
     position: absolute;
     left: 198px;
     top: 340px;
+    overflow: hidden;
+}
+#tab{
+    width: 790px;
+    height: 30px;
+    border-bottom:1px solid gainsboro;
+}
+#tab h5{
+    float: left;
+    width: 80px;
+    height: 30px;
+    text-align: center;
+    line-height: 40px;
+}
+#tab div{
+    float: right;
+    width: 216px;
+    height: 30px;
+}
+#tab div a{
+    text-align: center;
+    line-height: 23px;
+    margin-right: 4px;
+    font-size: 15px;
+    margin-top: 7px;
+    background: gainsboro;
+    float: left;
+    width: 50px;
+    height: 23px;
+    color: black;
+}
+#tab div .chos{
+    color: white;
+    background: #FA5889;
+}
+.list{
+    float: left;
+}
+#lis{
+    /*width: 3152px;*/
+    position: absolute;
+}
+.list .list1{
+    float: left;
+    width: 183px;
+    height: 188px;
+    margin: 7px;
+}
+.list .list1 span{
+    float: left;
+    width: 183px;
+    height: 24px;
+    text-align: center;
+    background: gainsboro;
+    line-height: 24px;
+    /*color: black;*/
+}
+.list .list1 span a{
+    color: grey;
+    font-size: 15px;
 }
 /*<!--品牌活动结束-->*/
 /*content结束*/
-
-
+/*底部开始*/
+#footer{
+    width: 990px;
+    margin: 0 auto;
+    text-align: center;
+}
+/*底部结束*/
 

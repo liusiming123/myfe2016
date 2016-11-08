@@ -1,0 +1,211 @@
+/*<!--商品信息开始-->*/
+#com-information{
+    width: 312px;
+    height: 560px;
+    float: right;
+    margin-top: 10px;
+    /*position: relative;*/
+}
+#small-img{
+    width: 310px;
+    height: 310px;
+    border: 1px solid grey;
+    float: left;
+}
+#drag{
+    width: 131px;
+    height: 131px;
+    background: #ffffff;
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+    border: 1px grey solid;
+    position: absolute;
+    display: none;
+}
+#big-img{
+    width: 340px;
+    height: 340px;
+    position: absolute;
+    left: 700px;
+    overflow: hidden;
+    border: 1px solid grey;
+    display: none;
+}
+#big-img span{
+    float: left;
+    width: 340px;
+    height: 18px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: black;
+    text-align: center;
+    opacity: 0.3;
+    filter: alpha(opacity=30);
+    color: white;
+    font-size: 15px;
+}
+#img{
+    position: absolute;
+}
+#com-information #magnifier{
+    cursor: pointer;
+    float: left;
+    width: 312px;
+    height: 41px;
+    background: url("../images/look.gif") no-repeat 100px 10px;
+}
+#img-color{
+    float: left;
+    width: 312px;
+    height: 80px;
+    position: relative;
+}
+#img-color .img-color{
+    position: absolute;
+    display: none;
+}
+#img-color .img-color li{
+    margin:10px 10px;
+    float: left;
+    width: 62px;
+    height: 62px;
+    cursor: pointer;
+}
+#img-color .img-color li img{
+    width: 60px;
+    height: 60px;
+    border: 1px solid gainsboro;
+}
+#img-color .img-color li img.borSel{
+    border: 1px solid grey;
+}
+#img-color .img-color.selectImg{
+    display: block;
+}
+#com-nav .navSel{
+    background: #6D84B4;
+    color: white;
+}
+#com-nav ul{
+    float: left;
+    width: 312px;
+}
+#com-nav li{
+    border: 1px solid grey;
+    border-bottom: 0;
+    font-size: 13px;
+    float: left;
+    margin-right: 8px;
+    background: #f1f1f1;
+    cursor: pointer;
+}
+#com-nav li.backgrou{
+    background: #dfdfdf;
+}
+#tab-box{
+    float: left;
+    border: 1px solid grey;
+    font-size: 14px;
+}
+#tab-box .hide{
+    display: none;
+}
+#tab-box .hide.boxSel{
+    display: block;
+}
+/*<!--商品信息结束-->*/
+/*<!--商品列表开始-->*/
+#com-list{
+    width: 460px;
+    height: 432px;
+    float: right;
+    margin:10px 10px 0 7px;
+    padding-left: 5px;
+}
+#com-list .list-contain {
+    font-size: 13px;
+    line-height: 25px;
+}
+#com-list .list-contain .jnProDetailList strong{
+    font-weight: 400
+}
+#com-list .list-contain .jnProDetailList .color_change ul{
+    width: 460px;
+    height: 40px;
+}
+#com-list .list-contain .jnProDetailList .del{
+    text-decoration: line-through;
+}
+#com-list .list-contain .jnProDetailList .tbDetailPrice strong{
+    font-size: 25px;
+    color: red;
+    font-weight: 800;
+}
+#com-list .list-contain .jnProDetailList .color_change img{
+    width: 30px;
+    height: 30px;
+    padding: 1px;
+    background: #EEE;
+    border: 1px solid #BBB;
+    cursor: pointer;
+    float: left;
+    margin-right: 18px;
+}
+#com-list .list-contain .jnProDetailList .pro_size ul{
+    width : 460px;
+    height: 35px;
+}
+#com-list .list-contain .jnProDetailList .pro_size ul li{
+    float: left;
+     width: 32px;
+     height: 32px;
+    border: 1px solid grey;
+    text-align: center;
+    line-height: 32px;
+    margin-right: 5px;
+    cursor: pointer;
+ }
+#com-list .list-contain .jnProDetailList .rating{
+    margin: 5px 0 10px 0;
+    float: left;
+    height: 16px;
+    width: 460px;
+    position: relative;
+    background: url(../images/star-matrix.gif) no-repeat 0 0;
+}
+ul.rating li a {
+    position:absolute;
+    left:0;
+    top:0;
+    width:16px;
+    height:16px;
+    text-decoration:none;
+    z-index: 5;
+}
+ul.rating li.one a {left:0}
+ul.rating li.two a {left:16px;}
+ul.rating li.three a {left:32px;}
+ul.rating li.four a {left:48px;}
+ul.rating li.five a {left:64px;}
+#com-list .list-contain .jnProDetailList .rating li a:hover {
+    z-index:2;
+    width:80px;
+    height:16px;
+    overflow:hidden;
+    left:0;
+    background: url(../images/star-matrix.gif) no-repeat 0 0;
+}
+#com-list .list-contain .jnProDetailList .rating li.one a:hover {background-position:0 -96px;}
+#com-list .list-contain .jnProDetailList .rating li.two a:hover {background-position:0 -112px;}
+#com-list .list-contain .jnProDetailList .rating li.three a:hover {background-position:0 -128px}
+#com-list .list-contain .jnProDetailList .rating li.four a:hover {background-position:0 -144px}
+#com-list .list-contain .jnProDetailList .rating li.five a:hover {background-position:0 -160px}
+
+/*#com-list .list-contain .jnProDetailList .rating a{*!/*/
+    /*/!*float: left;*!/*/
+    /*/!*width: 16px;*!/*/
+    /*/!*height: 16px;*!/*/
+
+/*}*/
+/*<!--商品列表结束-->*/

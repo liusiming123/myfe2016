@@ -17,6 +17,14 @@ $(function(){
             this.value=this.value;
         }
         $search.select();
+    }).on('blur',function(){
+        if(this.value==''){
+            this.value=this.defaultValue;
+        }
+    }).on('keydown', function (event) {
+        if(event.which==13){
+            $search.trigger('blur');
+        }
     });
     //»»·ô
     $('#skin .in').on('click',function(){
@@ -88,8 +96,17 @@ $(function(){
             $('div',$imagesNav).eq(num).addClass('img-selected').siblings().removeClass('img-selected');
         },2000);
     }
-
-
+    //ÂÖ²¥Í¼2
+   var $lis=$('#lis');
+    $lis.width($('#lis .list').width()*4);
+    $('#tab>div a').on('click',function(){
+        var $this=$(this);
+        var index=$this.index();
+        $this.addClass('chos').siblings().removeClass('chos');
+        $lis.animate({
+           left:-index*$('#lis .list').width()
+        });
+    })
 
 
 
