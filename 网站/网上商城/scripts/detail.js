@@ -1,5 +1,5 @@
 /**
- * Created by º«Ğ¡Ã« on 2016/11/7.
+ * Created by éŸ©å°æ¯› on 2016/11/7.
  */
 $(function(){
     var $drag= $('#drag');
@@ -10,7 +10,7 @@ $(function(){
     var $img = $('#img');
     var $comList = $('#com-list');
     var $changeImgcolor=$(' .color_change li',$comList);
-   //·Å´ó¾µ
+   //æ”¾å¤§é•œ
    $smallImg.on('mousemove',function(event){
        $drag.show();
        $bigImg.show();
@@ -47,7 +47,7 @@ $(function(){
         $drag.hide();
        $bigImg.hide();
     });
-    //»»Í¼Æ¬
+    //æ¢å›¾ç‰‡
     $('li',$imgColor).on('mouseover',function(){
         $thisImg=$(this).children('img');
         $thisImg.addClass('borSel');
@@ -63,7 +63,7 @@ $(function(){
         $('img',$smallImg).prop('src',$smallImg_small);
         $('img',$bigImg).prop('src',$smallImg_big);
     });
-    //Ñ¡Ïî¿¨
+    //é€‰é¡¹å¡
     $('#com-nav li').hover(function(){
         if(this.className==''){
             $(this).addClass('backgrou');
@@ -74,7 +74,7 @@ $(function(){
         $(this).removeClass('backgrou').addClass('navSel').siblings().removeClass('navSel');
         $('#tab-box div.hide').eq($index).css('display','block').siblings().css('display','none');
     });
-    //»»ÑÕÉ«
+    //æ¢é¢œè‰²
     $changeImgcolor.hover(function(){
         $(this).children('img').css('border','1px solid red');
     },function(){
@@ -93,21 +93,24 @@ $(function(){
             var $smallImg_big=$befor+"_big"+$last;
             $('img',$smallImg).prop('src',$smallImg_small);
             $('img',$bigImg).prop('src',$smallImg_big);
+            var $alt = $(this).children().prop('alt');
+            //alert($alt);
+            $('.color_change strong',$comList).text($alt);
     });
-    //³ß´ç
+    //å°ºå¯¸
     $('.pro_size ul>li',$comList).on('click',function(){
         $(this).css('background','#f60').siblings().css('background','#fff')
         var $text = $(this).text();
         $('.pro_size strong').html($text);
     });
-    //ÊıÁ¿
+    //æ•°é‡
     var $num = $('.pro_price strong',$comList).text();
     $('.pro_num select',$comList).on('change',function(){
         var $value = this.value;
         var amount = $num * $value;
         $('.pro_price strong',$comList).text(amount);
     });
-    //¸øÉÌÆ·ÆÀ·Ö
+    //ç»™å•†å“è¯„åˆ†
 
     //$('.rating a',$comList).on('mouseover',function() {
         //var $this = $(this).index();
@@ -140,20 +143,26 @@ $(function(){
         var $index = $(this).parent().index()+1;
         var $posit = -$index*16;
         $('.rating',$comList).css('background-position','0 '+$posit+'px');
-        alert('Äú¶Ô´ËÉÌÆ·µÄÆÀ·ÖÊÇ£º'+$title);
+        alert('æ‚¨å¯¹æ­¤å•†å“çš„è¯„åˆ†æ˜¯ï¼š'+$title);
     })
-    //¹ºÎï³µ
+    //è´­ç‰©è½¦
     $('#confirm-shopping img').on('click',function(){
     });
-
-
-
-
-
-
-
-
-
-
-
+//å¼¹å‡ºæ¡†
+    var $eject = $('#eject');
+    var $ejectContent = $('#eject-content');
+    $('#magnifier').on('click',function(){
+        $eject.show();
+        $ejectContent.show();
+        var $migSrc=$('img',$bigImg).prop('src');
+        $('img',$ejectContent).prop('src',$migSrc);
+    });
+    $eject.on('click',function(){
+        $eject.hide();
+        $ejectContent.hide();
+    });
+    $('#close div a',$ejectContent).on('click',function(){
+        $eject.hide();
+        $ejectContent.hide();
+    });
 });

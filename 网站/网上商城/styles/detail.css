@@ -1,4 +1,4 @@
-/*<!--…Ã∆∑–≈œ¢ø™ º-->*/
+/*<!--ÂïÜÂìÅ‰ø°ÊÅØÂºÄÂßã-->*/
 #com-information{
     width: 312px;
     height: 560px;
@@ -11,6 +11,7 @@
     height: 310px;
     border: 1px solid grey;
     float: left;
+    cursor: crosshair
 }
 #drag{
     width: 131px;
@@ -55,6 +56,7 @@
     height: 41px;
     background: url("../images/look.gif") no-repeat 100px 10px;
 }
+
 #img-color{
     float: left;
     width: 312px;
@@ -114,8 +116,8 @@
 #tab-box .hide.boxSel{
     display: block;
 }
-/*<!--…Ã∆∑–≈œ¢Ω· ¯-->*/
-/*<!--…Ã∆∑¡–±Ìø™ º-->*/
+/*<!--ÂïÜÂìÅ‰ø°ÊÅØÁªìÊùü-->*/
+/*<!--ÂïÜÂìÅÂàóË°®ÂºÄÂßã-->*/
 #com-list{
     width: 460px;
     height: 432px;
@@ -206,6 +208,51 @@ ul.rating li.five a {left:64px;}
     /*/!*float: left;*!/*/
     /*/!*width: 16px;*!/*/
     /*/!*height: 16px;*!/*/
-
 /*}*/
-/*<!--…Ã∆∑¡–±ÌΩ· ¯-->*/
+/*<!--ÂïÜÂìÅÂàóË°®ÁªìÊùü-->*/
+/*ÂºπÂá∫Â±ÇÂºÄÂßã*/
+#eject{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: black;
+    z-index: 200;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+#eject-content{
+    position: fixed;
+    top: 0;
+    left: 28%;
+    z-index: 201;
+    background: white;
+    display: none;
+}
+#eject-content img{
+    width:600px;
+    height: 600px;
+    border-top: 1px solid grey;
+    border-right: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
+    border-left:1px solid grey;
+    margin: 10px;
+}
+#close{
+    margin: 10px;
+    height: 20px;
+}
+#close #introduce{
+    float: left;
+    cursor: pointer;
+}
+#close div{
+    float: right;
+    cursor: pointer;
+}
+#close div a:hover{
+    text-decoration: underline;
+}
+/*ÂºπÂá∫Â±ÇÁªìÊùü*/

@@ -174,8 +174,8 @@ img{
     width: 550px;
     height: 320px;
     position: absolute;
-    top: 10px;
-    left: 198px;
+    top: 115px;
+    left: 378px;
 }
 #images{
     width: 550px;
@@ -219,8 +219,8 @@ img{
     width: 230px;
     height: 320px;
     position: absolute;
-    left: 759px;
-    top: 10px;
+    left: 939px;
+    top: 115px;
 }
 #jnNoticeInfo{
     width: 230px;
@@ -256,8 +256,8 @@ img{
     width: 790px;
     height: 230px;
     position: absolute;
-    left: 198px;
-    top: 340px;
+    left: 378px;
+    top: 445px;
     overflow: hidden;
 }
 #tab{
