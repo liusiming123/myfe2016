@@ -79,8 +79,7 @@ $(function(){
         $(this).children('img').css('border','1px solid red');
     },function(){
         $(this).children('img').css('border','1px solid #bbb');
-    })
-        .on('click',function(){
+    }).on('click',function(){
             var $index=$(this).index();
             var $ulImgColor = $('#img-color ul');
             $ulImgColor.eq($index).addClass('selectImg').siblings().removeClass('selectImg');

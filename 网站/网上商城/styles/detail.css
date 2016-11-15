@@ -154,6 +154,9 @@
     float: left;
     margin-right: 18px;
 }
+#com-list .list-contain .jnProDetailList .color_change img.ddd{
+    border: 1px solid red;
+}
 #com-list .list-contain .jnProDetailList .pro_size ul{
     width : 460px;
     height: 35px;

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width"/>
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html{
+            height: 100%;
+        }
+        body{
+            height: 100%;
+        }
+        #box{
+            list-style: none;
+            display: -webkit-flex;
+            /*-webkit-box-orient:block-axis*/
+            flex-direction: column;
+            height: 100%;
+            width: 100%;
+        }
+        #box li:nth-child(1){
+            background: pink;
+            height: 100px;
+        }
+        #box li:nth-child(2){
+            -webkit-flex-grow: 1;
+            background: royalblue;
+        }
+        #box li:nth-child(3){
+            background: pink;
+            height: 100px;
+        }
+        #box li{
+            margin: 2px;
+        }
+    </style>
+</head>
+<body>
+<ul id="box">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+</body>
+</html>

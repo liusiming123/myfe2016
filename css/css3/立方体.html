@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>立方体</title>
+    <style>
+        body{
+            background: black;
+            -webkit-perspective:800px;
+          /*-webkit-perspective-origin: -25%;*/
+        }
+        ul{
+            width: 200px;
+            height: 200px;
+            list-style: none;
+            margin: 100px 500px;
+            /*position: relative;*/
+            /*-webkit-perspective:800px;*/
+            -webkit-transform-style: preserve-3d;
+
+            /*-webkit-transform-origin:*/
+            animation: XXX 5s linear infinite;
+        }
+        @-webkit-keyframes XXX{
+            0%{
+
+            }
+            100%{
+                -webkit-transform:rotateY(-360deg);
+            }
+        }
+
+        ul li{
+            width: 198px;
+            height: 198px;
+            background: white;
+            opacity: 0.5;
+            border: 1px black solid;
+            border-radius: 10px;
+            text-align: center;
+            line-height: 200px;
+            font-size: 48px;
+            position: absolute;
+            /*-webkit-transform-origin: center center;*/
+        }
+        #one{
+            background: url("imgages/未标题-2.png");
+            -webkit-background-size:cover;
+            -webkit-transform:rotateX(-90deg) scale3d(1.5,1.5,1.5 ) translateZ(-100px) ;
+        }
+        #two{
+            background: url("imgages/未标题-1.png");
+            -webkit-background-size:cover;
+            -webkit-transform: scale3d(1.5,1.5,1.5 ) translateZ(100px);
+        }
+        #four{
+            -webkit-transform:rotateY(180deg) scale3d(1.5,1.5,1.5 ) translateZ(100px);
+        }
+        #three{
+            -webkit-transform:rotateY(90deg) scale3d(1.5,1.5,1.5 ) translateZ(100px);
+        }
+        #five{
+            -webkit-transform: rotateY(-90deg) scale3d(1.5,1.5,1.5 ) translateZ(100px);
+        }
+        #six{
+            -webkit-transform: rotateX(90deg) scale3d(1.5,1.5,1.5 ) translateZ(-100px);
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li id="one">1</li>
+    <li id="two">2</li>
+    <li id="three">3</li>
+    <li id="four">4</li>
+    <li id="five">5</li>
+    <li id="six">6</li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>表</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        body{
+            background: gainsboro;
+        }
+        #clock{
+            width: 400px;
+            height: 400px;
+            background: url("imgages/1-140G4104125-50.jpg") -620px -610px;
+            border: 2px solid #22b9ff;
+            
+            border-radius: 50%;
+            margin: 50px auto;
+            position: relative;
+        }
+        #dial li{
+            width: 2px;
+            height: 4px;
+            background: #22b9ff;
+            position: absolute;
+            top: 0;
+            left: 199px;
+            -webkit-transform-origin: center 200px;
+        }
+        #dial li:nth-child(5n+1){
+            height: 10px;
+        }
+
+
+        #hour,#minute,#second{
+            position: absolute;
+            /*left: 50%;*/
+            /*top: 50%;*/
+            -webkit-transform-origin: center bottom;
+        }
+        #hour{
+            width: 4px;
+            height: 120px;
+            background: white;
+            left: 198px;
+            top: 80px;
+            /*-webkit-transform: rotate(30deg);*/
+        }
+        #minute{
+            width: 4px;
+            height: 150px;
+            background: white;
+            left: 198px;
+            top: 50px;
+            /*-webkit-transform-origin: center 60px;*/
+            /*-webkit-transform: rotate(60deg);*/
+        }
+        #second{
+            width: 2px;
+            height: 180px;
+            background: red;
+            left: 199px;
+            top:20px;
+        }
+
+    </style>
+</head>
+<body>
+<div id="clock">
+    <ul id="dial">
+        <!--<li></li>-->
+    </ul>
+    <div id="hour"></div>
+    <div id="minute"></div>
+    <div id="second"></div>
+</div>
+<script src="jquery-1.12.4.js"></script>
+<script>
+    $(function(){
+        var $second = $('#second');
+        var $minute = $('#minute');
+        var $hour = $('#hour');
+        var date,second,minute,hour;
+        var $html='';
+        for(i=0;i<60;i++){
+            $html+="<li style='-webkit-transform: rotate("+i*6+"deg)'></li>";
+        }
+        $('#dial').html($html);
+        play();
+        setInterval(play,1000);
+        function play(){
+            date=new Date();
+            second = date.getSeconds();
+            minute = date.getMinutes()+second/60;
+            hour =date.getHours()+minute/60;
+            $second.css('-webkit-transform','rotate('+second*6+'deg)');
+            $minute.css('-webkit-transform','rotate('+minute*6+'deg)');
+            $hour.css('-webkit-transform','rotate('+hour*30+'deg)');
+        }
+    });
+</script>
+</body>
+</html>
