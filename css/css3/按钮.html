@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个性按钮</title>
+    <style>
+        #container{
+            margin-bottom: 20px;
+            margin-right: 20px;
+            width: 49px;
+            height: 49px;
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+            -webkit-perspective: 800px;
+        }
+        #btn img,#home img{
+            width: 42px;
+            height: 42px;
+            position: absolute;
+            -webkit-transition:-webkit-transform 0.8s linear ;
+        }
+        #btn {
+            /*-webkit-animation: XXX 2s ease forwards;*/
+            -webkit-transition:-webkit-animation 1s ease-out ;
+        }
+        @-webkit-keyframes big {
+            0%{
+                width: 42px;
+                height: 42px;
+                opacity: 1;
+            }
+            50%{
+                width: 60px;
+                height: 60px;
+                opacity: 0.5;
+            }
+            100%{
+                width: 42px;
+                height: 42px;
+                opacity: 1;
+            }
+        }
+        .selected{
+            -webkit-animation:big 0.5s ease-out forwards;
+
+        }
+        @-webkit-keyframes XXX {
+            0%{
+            }
+            100%{
+                -webkit-transform:rotateZ(-360deg);
+            }
+        }
+        @-webkit-keyframes XXXback {
+            0%{
+                -webkit-transform:rotateZ(-360deg);
+            }
+            100%{
+                -webkit-transform:rotateZ(0deg);
+            }
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+        <div id="btn">
+            <img src="img/close.png" alt=""/>
+            <img src="img/full.png" alt=""/>
+            <img src="img/open.png" alt=""/>
+            <img src="img/prev.png" alt=""/>
+            <img src="img/refresh.png" alt=""/>
+        </div>
+        <div id="home">
+            <img src="img/home.png" alt="" class="home"/>
+        </div>
+</div>
+<script src="jquery-1.12.4.js"></script>
+<script>
+    $(function(){
+        var $btn = $('#btn');
+        var tag= 0;
+        var btn = $('img',$btn);
+        $('#home img').on('click',function(){
+            if(tag==0){
+                $(this).css('-webkit-animation','XXX 2s ease forwards');
+                btn.each(function(index,elem){
+                    $(elem).css('-webkit-transform','rotateZ(-'+(18*(index+1))+'deg) translateY(-200px)');
+                });
+                tag=1;
+            }else{
+                $(this).css('-webkit-animation','XXXback 2s ease forwards');
+                btn.each(function(index,elem){
+                    $(elem).css('-webkit-transform','rotateZ(0deg) translateY(0px)');
+                });
+                tag=0;
+            }
+            return false;
+        });
+        var index;
+        btn.on('click',function(){
+            index=$(this).index();
+            $(this).addClass('selected').siblings().removeClass('selected');
+            setTimeout(function(){
+                btn.eq(index).attr('class','');
+            },500);
+        });
+
+    });
+</script>
+</body>
+</html>

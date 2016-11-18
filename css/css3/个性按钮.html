@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #container{
+            margin-bottom: 20px;
+            margin-right: 20px;
+            width: 49px;
+            height: 49px;
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+            -webkit-perspective: 800px;
+        }
+        #btn img,#home img{
+            width: 42px;
+            height: 42px;
+            position: absolute;
+            -webkit-transition:-webkit-transform 0.8s linear ;
+        }
+        #btn{
+            /*-webkit-animation: XXX 2s ease forwards;*/
+            -webkit-transition: -webkit-animation 1s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="btn">
+            <img src="img/close.png" alt=""/>
+            <img src="img/full.png" alt=""/>
+            <img src="img/open.png" alt=""/>
+            <img src="img/prev.png" alt=""/>
+            <img src="img/refresh.png" alt=""/>
+        </div>
+        <div id="home">
+            <img src="img/home.png" alt="" class="home"/>
+        </div>
+    </div>
+    <script src="jquery-1.12.4.js"></script>
+
+</body>
+</html>

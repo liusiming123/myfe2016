@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>旋转木马</title>
+    <style>
+        body{
+            -webkit-perspective: 800px;
+            -webkit-perspective-origin: center -50%;
+        }
+        #container{
+            width: 200px;
+            height: 200px;
+            position: relative;
+            margin: 100px auto;
+            -webkit-transform-style:preserve-3d;
+            -webkit-transition:all 2s ease-out ;
+        }
+        img{
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <img src="muma/未标题-1.png" alt="" style=" -webkit-transform: rotateY(40deg) translatez(300px)"/>
+        <img src="muma/未标题-2.png" alt="" style=" -webkit-transform: rotateY(80deg) translatez(300px)"/>
+        <img src="muma/未标题-3.png" alt="" style=" -webkit-transform: rotateY(120deg) translatez(300px)"/>
+        <img src="muma/未标题-4.png" alt="" style=" -webkit-transform: rotateY(160deg) translatez(300px)"/>
+        <img src="muma/未标题-5.png" alt="" style=" -webkit-transform: rotateY(200deg) translatez(300px)"/>
+        <img src="muma/未标题-6.png" alt="" style=" -webkit-transform: rotateY(240deg) translatez(300px)"/>
+        <img src="muma/未标题-7.png" alt="" style=" -webkit-transform: rotateY(280deg) translatez(300px)"/>
+        <img src="muma/未标题-8.png" alt="" style=" -webkit-transform: rotateY(320deg) translatez(300px)"/>
+        <img src="muma/未标题-9.png" alt="" style=" -webkit-transform: rotateY(360deg) translatez(300px)"/>
+    </div>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(function(){
+            var num=0;
+            var timer;
+            var $container = $('#container');
+            play();
+            $container.on('mouseover',function(){
+                clearInterval(timer);
+            }).on('mouseout',function(){
+                play();
+            }).on('click',function(){
+                num++;
+                $(this).css('-webkit-transform','rotateY('+num*40+'deg)');
+            });
+            function play(){
+                timer = setInterval(function(){
+                    num++;
+                    $container.css('-webkit-transform','rotateY('+num*40+'deg)');
+                },2000);
+             }
+
+
+        });
+
+    </script>
+</body>
+</html>

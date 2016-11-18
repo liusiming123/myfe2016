@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>轮播图</title>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+        }
+        #container{
+            width: 200px;
+            height: 200px;
+            margin:100px auto;
+            position: relative;
+        }
+        #img{
+            -webkit-perspective: 800px;
+        }
+        #img img{
+            position: absolute;
+            top:0;
+            left: 0;
+            opacity: 0;
+            -webkit-transform-origin: center bottom;
+        }
+        span{
+            width: 100px;
+            height: 100px;
+            /*background: pink;*/
+            /*border: 1px solid pink;*/
+            /*border-radius: 50%;*/
+            position: absolute;
+            top: 100px;
+            margin-top: -50px;
+            text-align: center;
+            line-height: 100px;
+            font-size: 100px;
+            color: white;
+            -webkit-text-stroke: 1px aqua;
+            cursor: pointer;
+        }
+        #prve{
+            left: -110px;
+        }
+        #next{
+            right: -110px;
+        }
+        .show{
+            -webkit-animation: show 1s ease-in forwards;
+        }
+        @-webkit-keyframes show {
+            from{
+                opacity: 0;
+                -webkit-transform: rotateX(-180deg);
+
+            }
+            to{
+                opacity: 1;
+                -webkit-transform: rotateX(-360deg);
+            }
+        }
+        .hide{
+            -webkit-animation: hide 0.5s ease forwards;
+        }
+        @-webkit-keyframes hide {
+            from{
+                opacity: 1;
+                -webkit-transform: rotateX(-360deg);
+            }
+            to{
+                opacity: 0;
+                -webkit-transform: rotateX(-540deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="img">
+            <img src="muma/未标题-1.png" alt="" class="show"/>
+            <img src="muma/未标题-2.png" alt="" />
+            <img src="muma/未标题-3.png" alt=""/>
+            <img src="muma/未标题-4.png" alt=""/>
+        </div>
+        <span id="prve">&lt;</span>
+        <span id="next">&gt;</span>
+    </div>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(function(){
+            var num=0;
+            var img = $('#img img');
+           $('#prve').on('click',function(){
+               img.eq(num).removeClass().addClass('hide');
+               num--;
+               if(num==-1){
+                   num=img.length-1;
+               }
+               $('img').eq(num).removeClass().addClass('show');
+
+           });
+            $('#next').on('click',function(){
+               img.eq(num).removeClass().addClass('hide');
+                num++;
+                if(num==img.length){
+                    num=0;
+                }
+                $('img').eq(num).removeClass().addClass('show');
+
+            });
+        });
+    </script>
+</body>
+</html>

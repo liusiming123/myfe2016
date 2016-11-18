@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body{
+            -webkit-perspective: 800px;
+            -webkit-perspective-origin: center -50%;
+        }
+        #container{
+            width: 200px;
+            height: 200px;
+            position: relative;
+            margin: 100px auto;
+            -webkit-transform-style:preserve-3d;
+            -webkit-transition:all 2s ease-out;
+        }
+        img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            -webkit-transition:all 1s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+    </div>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(function(){
+            var num=0;
+            var num1=0;
+            var html='';
+            var time,timer;
+            var container = $('#container');
+            for(var i=0;i<9;i++){
+                html+="<img src='muma/未标题-"+(1+i)+".png'/>"
+            }
+            container.html(html);
+             timer = setInterval(function(){
+                $('img',container).eq(num).css("-webkit-transform"," rotateY("+(num+1)*40+"deg) translatez(280px)");
+                 num++;
+                },200);
+            setTimeout(function(){
+                clearInterval(timer);
+            },2000);
+            play();
+            container.on('click',function(){
+                num1++;
+                $(this).css('-webkit-transform','rotateY('+num1*40+'deg)');
+            }).on('mouseover',function(){
+                clearInterval(time);
+            }).on('mouseout',function(){
+                play();
+            });
+            function play(){
+                time =  setInterval(function(){
+                    num1++;
+                    container.css('-webkit-transform','rotateY('+num1*40+'deg)');
+                },3000);
+            }
+
+        });
+    </script>
+</body>
+</html>
