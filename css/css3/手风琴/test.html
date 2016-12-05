@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #container{
+            margin-left: 100px;
+            width: 1200px;
+            height: 600px;
+            overflow: hidden;
+            position: absolute;
+
+        }
+        #container a{
+            float: left;
+            height: 600px;
+            width: 100px;
+            overflow: hidden;
+            -webkit-transition: width 1s ease-in-out;
+        }
+        #container a img{
+            height: 600px;
+            position: absolute;
+
+        }
+        #container  a:hover{
+            width: 700px
+        }
+        #container a span{
+            position: absolute;
+            height: 30px;
+            width: 100%;
+            bottom: 0;
+            opacity: 0.7;
+            background:gray;
+            line-height: 30px;
+            text-indent: 10px;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <a href="#nogo" class="a1"><img src="mimi/888.jpg" alt=""/><span>照片1</span></a>
+        <a href="#nogo" class="a2"><img src="mimi/222.jpg" alt=""/><span>照片2</span></a>
+        <a href="#nogo" class="a3"><img src="mimi/333.jpg" alt=""/><span>照片3</span></a>
+        <a href="#nogo" class="a4"><img src="mimi/111.jpg" alt=""/><span>照片4</span></a>
+        <a href="#nogo" class="a5"><img src="mimi/555.jpg" alt=""/><span>照片5</span></a>
+        <a href="#nogo" class="a6"><img src="mimi/777.jpg" alt=""/><span>照片6</span></a>
+    </div>
+</body>
+</html>

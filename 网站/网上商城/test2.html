@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #small-pic{
+            width: 310px;
+            height: 310px;
+            overflow: hidden;
+            float: left;
+            border: 1px solid grey;
+            margin-right: 20px;
+        }
+        #big-pic{
+            width: 340px;
+            height: 340px;
+            overflow: hidden;
+            /*position: relative;*/
+            /*display: none;*/
+        }
+        #big-pic img{
+            /*position: absolute;*/
+            position: relative;
+        }
+        #change-img{
+            width: 290px;
+            height:90px;
+            overflow: hidden;
+            clear: both;
+        }
+        #change-img  img{
+            margin:2px;
+            border: 1px solid grey;
+        }
+        #color img{
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="small-pic">
+        <div id="small-img">
+            <img src="images/pro_img/blue_one_small.jpg" alt=""/>
+            <img src="images/pro_img/blue_two_small.jpg" alt=""/>
+            <img src="images/pro_img/blue_three_small.jpg" alt=""/>
+            <img src="images/pro_img/yellow_one_small.jpg" alt=""/>
+            <img src="images/pro_img/yellow_two_small.jpg" alt=""/>
+            <img src="images/pro_img/yellow_three_small.jpg" alt=""/>
+            <img src="images/pro_img/green_one_small.jpg" alt=""/>
+            <img src="images/pro_img/green_two_small.jpg" alt=""/>
+        </div>
+        <div id="drag"></div>
+    </div>
+    <div id="big-pic">
+        <img src="images/pro_img/blue_one_big.jpg" alt=""/>
+        <img src="images/pro_img/blue_two_big.jpg" alt=""/>
+        <img src="images/pro_img/blue_three_big.jpg" alt=""/>
+        <img src="images/pro_img/yellow_one_big.jpg" alt=""/>
+        <img src="images/pro_img/yellow_two_big.jpg" alt=""/>
+        <img src="images/pro_img/yellow_three_big.jpg" alt=""/>
+        <img src="images/pro_img/green_one_big.jpg" alt=""/>
+        <img src="images/pro_img/green_two_big.jpg" alt=""/>
+    </div>
+    <div id="change-img">
+        <img src="images/pro_img/blue_one.jpg" alt=""/>
+        <img src="images/pro_img/blue_two.jpg" alt=""/>
+        <img src="images/pro_img/blue_three.jpg" alt=""/>
+        <img src="images/pro_img/yellow_one.jpg" alt=""/>
+        <img src="images/pro_img/yellow_two.jpg" alt=""/>
+        <img src="images/pro_img/yellow_three.jpg" alt=""/>
+        <img src="images/pro_img/green_one.jpg" alt=""/>
+        <img src="images/pro_img/green_two.jpg" alt=""/>
+    </div>
+    <div id="color">
+        <img src="images/pro_img/blue.jpg" alt=""/>
+        <img src="images/pro_img/yellow.jpg" alt=""/>
+        <img src="images/pro_img/green.jpg" alt=""/>
+    </div>
+    <script src="scripts/jquery-1.12.4.js"></script>
+    <script>
+        $(function(){
+           $('#change-img img').on('click',function(){
+               var $index =$(this).index();
+                $('#small-img img').eq($index).show().siblings().hide();
+               $('#big-pic img').eq($index).show().siblings().hide();
+           });
+            $('#color img').on('click',function(){
+
+            });
+
+
+
+
+
+        });
+    </script>
+</body>
+</html>

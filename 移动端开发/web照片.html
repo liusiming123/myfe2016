@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+        <title>web</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            body{
+                background: black;
+            }
+            #content img{
+                border: 0;
+                margin-right: 2px;
+            }
+            #content img:nth-child(4n){
+                margin-right: 0;
+            }
+            #bigImg{
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                display: none;
+
+            }
+        </style>
+    </head>
+    <body>
+    <div id="content"></div>
+    <div id="bigImg"></div>
+    <script src="zepto.min.js"></script>
+    <script>
+        $(function(){
+            var $content = $('#content');
+            var $bigImg = $('#bigImg');
+            var $margin = 2;
+            var html='';
+            for(var i=0;i<24;i++){
+                html = $("<img src='../css/css3/124/img/0"+(i+1)+".png'>");
+                html.css({
+                    width:($(document.body).width()-3*$margin)/4,
+                    height:($(document.body).width()-3*$margin)/4
+                });
+                $content.append(html);
+            }
+            var index
+            $('img',$content).on('singleTap',function(){
+                index = $(this).index();
+                $content.hide();
+                $bigImg.show().css({
+                    background:'url("../css/css3/124/img/0'+(index+1)+'.png") no-repeat center',
+                    backgroundSize:'contain'
+                });
+            });
+            $bigImg.on('singleTap',function(){
+                $content.show();
+                $bigImg.hide();
+            }).on('swipeLeft',function(){
+                index++;
+                if(index==24){
+                    index=0;
+                }
+                $bigImg.show().css({
+                    background:'url("../css/css3/124/img/0'+(index+1)+'.png") no-repeat center',
+                    backgroundSize:'contain'
+                });
+            }).on('swipeRight',function(){
+
+                if(index==0){
+                    index=24;
+                }
+                index--;
+                $bigImg.show().css({
+                    background:'url("../css/css3/124/img/0'+(index+1)+'.png") no-repeat center',
+                    backgroundSize:'contain'
+                });
+            });
+
+
+        });
+    </script>
+    </body>
+</html>

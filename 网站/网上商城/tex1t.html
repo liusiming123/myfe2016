@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        ul{
+            list-style: none;
+        }
+        .ddd img{
+            width: 30px;
+            height: 30px;
+            padding: 1px;
+            background: #EEE;
+            cursor: pointer;
+            float: left;
+            margin-right: 18px;
+        }
+        .ddd img.select1{
+            border: 1px solid #BBB;
+        }
+        .ddd img.select{
+            border:1px solid red;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li class="ddd"><img class="select1" src="images/pro_img/blue.jpg" /></li>
+    <li class="ddd"><img class="select1" src="images/pro_img/yellow.jpg" /></li>
+    <li class="ddd"><img class="select1" src="images/pro_img/green.jpg" /></li>
+</ul>
+<script src="scripts/jquery-1.12.4.js" ></script>
+<script>
+    $(function(){
+        $('.ddd').on('mouseover',function(){
+            var $this=$(this);
+            $this.children().addClass('select');
+            $('.ddd').on('mouseout',function(){
+                $this.children().removeClass('select');
+            });
+        }).on('click',function(){
+//            $('.ddd').off('mouseout');
+            $('this').children().addClass('select');
+            $('this').siblings().children().removeClass('select');
+        });
+
+
+
+
+
+    });
+</script>
+</body>
+</html>

@@ -18,11 +18,11 @@
             width: 42px;
             height: 42px;
             position: absolute;
-            -webkit-transition:-webkit-transform 0.8s linear ;
+            -webkit-transition:-webkit-transform 0.6s linear ;
         }
         #btn {
             /*-webkit-animation: XXX 2s ease forwards;*/
-            -webkit-transition:-webkit-animation 1s ease-out ;
+            -webkit-transition:-webkit-animation 0.6s ease-out ;
         }
         @-webkit-keyframes big {
             0%{
@@ -85,13 +85,19 @@
             if(tag==0){
                 $(this).css('-webkit-animation','XXX 2s ease forwards');
                 btn.each(function(index,elem){
-                    $(elem).css('-webkit-transform','rotateZ(-'+(18*(index+1))+'deg) translateY(-200px)');
+                    $(elem).css({
+                            'transition-delay':index*40+'ms',
+                            '-webkit-transform':'translate('+(-180) * Math.sin((index * 22.5)*Math.PI/180)+'px,'+(-180) * Math.cos((index * 22.5)*Math.PI/180)+'px) rotate(-360deg)'
+                     });
                 });
                 tag=1;
             }else{
                 $(this).css('-webkit-animation','XXXback 2s ease forwards');
                 btn.each(function(index,elem){
-                    $(elem).css('-webkit-transform','rotateZ(0deg) translateY(0px)');
+                    $(elem).css({
+                        'transition-delay':(btn.length-index)*40+'ms',
+                        '-webkit-transform':'translate(0px) rotate(0deg)'
+                    });
                 });
                 tag=0;
             }

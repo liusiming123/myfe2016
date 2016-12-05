@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>时钟</title>
+</head>
+<body>
+<span></span>
+<script>
+     var aSpan=document.getElementsByTagName('span')[0];
+var date=new Date();
+var nowYear=date.getYear();
+var nowMonth=date.getMonth()+1;
+var nowDate=date.getDate();
+var nowHours=date.getHours();
+var nowMinutes=date.getMinutes();
+ var nowSeconds=date.getSeconds();
+setInterval(function(){
+    var date=new Date();
+    var nowYear=date.getFullYear();
+    var nowMonth=date.getMonth()+1;
+    var nowDate=date.getDate();
+    var nowHours=date.getHours();
+    var nowMinutes=date.getMinutes();
+    var nowSeconds=date.getSeconds();
+//    nowSeconds=nowSeconds+1;
+        aSpan.innerHTML=("现在是:" +nowYear+"年" +nowMonth+"月" +nowDate+"日" +nowHours+"时" + nowMinutes+"分" +nowSeconds+"秒" +"(星期"+date.getDay()+")"+"欢迎您的到访！");
+},1000);
+
+
+</script>
+</body>
+</html>

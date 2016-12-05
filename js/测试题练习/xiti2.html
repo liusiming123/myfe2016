@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #content{
+            width: 516px;
+            height: 690px;
+        }
+        #content .selected{
+            display: block;
+        }
+        #content img{
+              display: none;
+          }
+    </style>
+</head>
+    <body>
+        <div id="content">
+        <img class="selected" src="../轮播图/11.jpg" alt=""/>
+        <img src="../轮播图/22.jpg" alt=""/>
+        </div>
+        <script>
+            var oContent=document.getElementById('content');
+            var aImg=oContent.getElementsByTagName('img');
+            for(var i=0;i<aImg.length;i++) {
+                oContent.onclick = function () {
+                    if (aImg[0].className == '') {
+                        aImg[0].className ='selected';
+                    } else {
+                        aImg[0].className = '';
+                        aImg[1].className='selected'
+                    }
+                }
+            }
+
+        </script>
+    </body>
+</html>

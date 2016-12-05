@@ -30,40 +30,13 @@
 <script src="jquery-1.12.4.js"></script>
 <script>
     $(function(){
-        var num=9;
-        var num1=0;
-        var html='';
-        var time,timer;
-        var container = $('#container');
-        for(var i=0;i<9;i++){
-            html+="<img src='muma/未标题-"+(i+1)+".png'/>"
+        var a=0;
+        for(var i=0;i<4;i++){
+            for(var j=0;j<6;j++){
+                a++;
+            }
         }
-        container.html(html);
-        timer = setInterval(function(){
-            num--;
-            $('img',container).eq(num).css("-webkit-transform"," rotateY("+(-num*40)+"deg) translatez(280px)");
-//            console.log(1)
-        },200);
-        setTimeout(function(){
-            clearInterval(timer);
-//            $('img',container).eq(8).css("-webkit-transform","translatez(280px)");
-        },1800);
-        play();
-        container.on('click',function(){
-            num1++;
-            $(this).css('-webkit-transform','rotateY('+num1*40+'deg)');
-        }).on('mouseover',function(){
-            clearInterval(time);
-        }).on('mouseout',function(){
-            play();
-        });
-        function play(){
-            time =  setInterval(function(){
-                num1++;
-                container.css('-webkit-transform','rotateY('+num1*40+'deg)');
-            },3000);
-        }
-
+        console.log(a);
     });
 </script>
 </body>

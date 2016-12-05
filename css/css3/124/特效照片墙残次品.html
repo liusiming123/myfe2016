@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>G-Dragon</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            html{
+                background:url("../旋转的照片墙/img/bg.jpg");
+
+            }
+            #container{
+                width: 750px;
+                height: 500px;
+                margin: 50px auto;
+                position: relative;
+                -webkit-perspective:800px;
+            }
+            #photo{
+                height: 500px;
+                transition-delay:0.5s;
+                -webkit-transform-style: preserve-3d;
+            }
+            .img2{
+                width: 125px;
+                height: 125px;
+                position: absolute;
+                cursor: pointer;
+                -webkit-transition: all 1s ease-out;
+            }
+            #change{
+                position: absolute;
+                top: 540px;
+                left: 150px;
+                width: 100px;
+                height: 40px;
+                background: lightcoral;
+                border-radius: 10px;
+                text-align: center;
+                line-height: 40px;
+                color: white;
+                cursor: pointer;
+            }
+            #bang{
+                position: absolute;
+                top: 540px;
+                left: 450px;
+                width: 100px;
+                height: 40px;
+                background: palegreen;
+                border-radius: 10px;
+                text-align: center;
+                line-height: 40px;
+                color: white;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <div id="photo">
+
+            </div>
+            <span id="change">变换</span>
+            <span id="bang">爆炸</span>
+        </div>
+    </body>
+    <script src="../jquery-1.12.4.js"></script>
+    <script>
+        $(function(){
+            var small_Height =125;
+            var small_Width =125;
+            var big_Height =500;
+            var big_Width =750;
+            var bodyWidth = $('body').width();
+            var bodyHeight = $('body').height();
+            var $change = $('#change');
+            var $bang = $('#bang');
+            var $photo= $('#photo');
+            var sum= 0;
+            for(var i=0;i<24;i++){
+                var img = new Image;
+                img.onload=function(){
+                    $photo.append('<div class="img2"></div>');
+                    sum++;
+                    if(sum==24){
+                        loadSecess();
+                    }
+                };
+                img.src='img/0'+(i+1)+'.png';
+            }
+            function loadSecess(){
+                var $img2 = $('#photo .img2');
+                var index =0;
+                for(var i=0;i<4;i++){
+                    for(var j=0;j<6;j++){
+                        $img2.eq(index).css({
+                            'left':j*small_Width,
+                            'top':i*small_Height,
+                            "background":'url("img/01.png") '+(-j*small_Width)+'px '+(-i*small_Height)+'px'
+                        }).attr({
+                            'i':i,
+                            'j': j
+                         });
+                        index++;
+                    }
+                }
+                var s=1;
+                var deg=0;
+                $change.on('click',function(){
+                    deg = deg==0?360:0;
+                    s++;
+                    if(s==25){
+                        s=1;
+                    }
+                    var t=0;
+                    var timer = setInterval(function(){
+
+                        var left = -$img2.eq(t).attr('j')*small_Width;
+                        var top = -$img2.eq(t).attr('i')*small_Height;
+                        $img2.eq(t).css({
+                            "-webkit-transform":'rotateY('+deg+'deg)',
+                            "background":'url("img/0'+(s)+'.png") '+left+'px '+top+'px'
+                        });
+//                        $photo.css({
+//                            "background":'url("img/0'+(s-1)+'.png")'
+//                        });
+                         t++;
+                        if(t==0){
+                            clearInterval(timer);
+                        }
+                    },30);
+                });
+                $bang.on('click',function(){
+                    deg = deg==0?360:0;
+                    s++;
+                    $photo.css({
+                        "background":'url("img/0'+(s)+'.png")'
+                    });
+                    for(var k=0;k<24;k++){
+                        var left = -$img2.eq(k).attr('j')*small_Width;
+                        var top = -$img2.eq(k).attr('i')*small_Height;
+
+                        $img2.eq(k).css({
+                            '-webkit-transform':"translate3d("+Math.random()*100+"px,"+Math.random()*100+"px,"+Math.random()*500+"px) rotateY("+deg+"deg)",
+                            "background":'url("img/0'+(s-1)+'.png") '+left+'px '+top+'px',
+                            "opacity":0
+                        });
+                    }
+                });
+
+
+
+
+
+
+
+
+            }
+        });
+    </script>
+</html>
