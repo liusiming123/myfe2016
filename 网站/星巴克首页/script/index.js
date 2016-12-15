@@ -33,10 +33,12 @@ $(function(){
         },'500');
     });
     $('.haschild',$subMenu).on(typeEvent,function(){
-            $(this).children('.three-menu').toggle('500');
+            $(this).children('.three-menu').stop().toggle('500');
         return false;
     });
-
+    $(window).on('scroll',function(){
+            console.log(123)
+    });
 
 
 

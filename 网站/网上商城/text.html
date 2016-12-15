@@ -9,7 +9,7 @@
         list-style: none;
     }
     
-    .ddd img {
+    .ddd{
         width: 30px;
         height: 30px;
         padding: 1px;
@@ -22,7 +22,6 @@
     .select1 {
         border: 1px solid #BBB;
     }
-    
     .select {
         border: 1px solid red;
     }
@@ -31,25 +30,25 @@
 
 <body>
     <ul>
-        <li class="ddd"><img class="select1" src="images/pro_img/blue.jpg" /></li>
-        <li class="ddd"><img class="select1" src="images/pro_img/yellow.jpg" /></li>
-        <li class="ddd"><img class="select1" src="images/pro_img/green.jpg" /></li>
+        <li class="ddd"></li>
+        <li class="ddd"></li>
+        <li class="ddd"></li>
     </ul>
     <script src="scripts/jquery-1.12.4.js"></script>
     <script>
     $(function() {
         $('.ddd').on('mouseover', function() {
             var $this = $(this);
-            $this.children().addClass('select');
+            $this.addClass('select');
             addOut($this);
             // $('.ddd').on('mouseout', function() {
-            //     $this.children().removeClass('select');
+            //     $this.removeClass('select');
             // });
         }).on('click', function() {
             //            $('.ddd').off('mouseout');
             removeOut($(this));
-            $(this).children().addClass('select');
-            $(this).siblings().children().removeClass('select');
+            $(this).addClass('select');
+            $(this).siblings().removeClass('select');
         });
 
         function removeOut(obj) {
@@ -58,7 +57,7 @@
 
         function addOut(obj) {
             obj.on('mouseout', function() {
-                obj.children().removeClass('select');
+                obj.removeClass('select');
             });
         }
     });

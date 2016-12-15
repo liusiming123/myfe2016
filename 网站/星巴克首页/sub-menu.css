@@ -34,7 +34,6 @@
     width: 250px;
     height: 45px;
     line-height: 45px;
-
 }
 
 #sub-menu .sub-menu1 li .ch{
@@ -58,6 +57,9 @@
 }
 #sub-menu .sub-menu2 li .haschild{
     position: relative;
+}
+#sub-menu .sub-menu2 li .haschild:hover span{
+    border-top-color:#b89f7a;
 }
 #sub-menu .sub-menu2 span{
     position: absolute;

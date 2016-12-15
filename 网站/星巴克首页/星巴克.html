@@ -11,9 +11,10 @@
                 width: 95%;
                 height: 104px;
                 margin: 0 auto;
+                display: -webkit-flex;
             }
             #menu{
-                width: 35%;
+                width: 30px;
                 height: 104px;
                 float: left;
             }
@@ -25,13 +26,15 @@
                 display: block;
                 width: 100%;
                 cursor: pointer;
-                text-indent: 3px;
+                text-indent:3px;
                 font-size: 12px;
             }
             #logo{
                 width: 30%;
                 height: 104px;
                 float: left;
+                -webkit-flex-grow: 1;
+
             }
             #logo img{
                 width: 60px;
@@ -40,7 +43,7 @@
                 margin: 16px auto;
             }
             #login{
-                width: 35%;
+                width: 80px;
                 height: 104px;
                 float: left;
             }
@@ -50,10 +53,10 @@
             }
             #login-reg{
                 width: 100%;
-                float: right;
+                float: left;
             }
             #login-reg a,#login-reg span{
-                float: right;
+                float: left;
                 font-size: 15px;
             }
             #login-reg a{
@@ -350,8 +353,6 @@
             }
             @media (max-width: 767px) {
                 #logo img{
-                    margin-top: 15%;
-                    width: 30%;
                     height: auto;
                 }
                 #bner-rewards.rewards{

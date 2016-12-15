@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title></title>
+
+    </head>
+    <body>
+        <ul>
+            <li class="a b">1</li>
+            <li class="liu">2</li>
+            <li class="a">3</li>
+        </ul>
+        <script>
+            function getClassName(claName,context){
+                context = context||document;
+                if(context.getElementsByClassName(claName)){
+                    return context.getElementsByClassName(claName);
+                }else{
+                    var all = context.getElementsByTagName('*');
+                    var result =[];
+                    var reg = new RegExp('\\b'+claName+'\\b');
+                    for(var i=0;i<all.length;i++){
+                        if(reg.test(all[i].className)){
+                            result.push(all[i]);
+                        }
+                    }
+                }
+            }
+            var oUl = document.getElementsByTagName('ul')[0];
+            var aLi = getClassName('liu',oUl);
+            for(var i=0;i<aLi.length;i++){
+                aLi[i].style.background = 'yellow';
+            }
+
+        </script>
+    </body>
+</html>
