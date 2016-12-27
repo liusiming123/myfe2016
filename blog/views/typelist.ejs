@@ -1,0 +1,28 @@
+<form class="BlogCatalogs">
+    <h3>博客分类 <span>(点击分类名编辑)</span></h3>
+    <table cellpadding="1" cellspacing="1">
+        <tbody><tr>
+            <th>序号</th>
+            <th>分类名</th>
+            <th>文章</th>
+            <th>操作</th>
+        </tr>
+        <%
+        for(var i=0;i<types.length;i++){
+        %>
+        <tr >
+            <td class="idx"><%=types[i].type_id%></td>
+            <td class="name"><a href="editCatalog.htm" title="点击修改博客分类"><%=types[i].type_name%></a></td>
+            <td class="num">3</td>
+            <td class="opts">
+                <a href="/changeType?id=<%= types[i].type_id %>" title="点击修改博客分类" class="change">修改</a>
+                <a href="#" class="delType">删除</a>
+            </td>
+        </tr>
+        <%
+        }
+        %>
+
+
+        </tbody></table>
+</form>

@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="zh-CN" xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="Content-Language" content="zh-CN">
+  <title>博客设置/分类管理 Johnny的博客 - SYSIT个人博客</title>
+  <link rel="stylesheet" href="/stylesheets/space2011.css" type="text/css" media="screen">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/jquery.css" media="screen">
+  <style type="text/css">
+    body,table,input,textarea,select {font-family:Verdana,sans-serif,宋体;}	
+  </style>
+</head>
+<body>
+<!--[if IE 8]>
+<style>ul.tabnav {padding: 3px 10px 3px 10px;}</style>
+<![endif]-->
+<!--[if IE 9]>
+<style>ul.tabnav {padding: 3px 10px 4px 10px;}</style>
+<![endif]-->
+<div id="OSC_Screen"><!-- #BeginLibraryItem "/Library/OSC_Banner.lbi" -->
+<%include header.ejs%>
+<%include adminMenu.ejs%>
+<div id="AdminContent">
+<div class="MainForm BlogCatalogManage">
+<form id="CatalogForm" action="/addBlogType" method="post">
+    <h3> 添加博客分类 </h3>
+    <div id="error_msg" class="error_msg" style="display:none;"></div>
+    <label>分类名称:</label><input id="txt_link_name" name="typeName" size="15" tabindex="1" type="text">
+    <label>排序值:</label><input name="sort_order" value="0" size="3" type="text">
+    <span class="submit">
+          <input value="添加&nbsp;»" tabindex="3" class="BUTTON SUBMIT" type="submit">
+        </span>
+</form>
+	<%include typelist.ejs%>
+</div>
+</div>
+	<div class="clear"></div>
+</div>
+</div>
+	<div class="clear"></div>
+	<div id="OSC_Footer">© 赛斯特(WWW.SYSIT.ORG)</div>
+</div>
+<script src="/javascripts/jquery-1.12.4.js"></script>
+<script>
+	$(function(){
+		$(".delType").on('click',function(){
+			$that = $(this);
+			var typeId = $(this).parent().siblings('.idx').html();
+			//url, data, callback, dataType
+			$.get('/delType',{typeId:typeId},function(date){
+				if(date == 'success'){
+					$that.parents('tr').remove();
+				}else{
+					alert('删除失败');
+				}
+			},'text');
+		});
+
+	});
+</script>
+</body>
+</html>

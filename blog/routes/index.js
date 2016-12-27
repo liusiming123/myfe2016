@@ -1,0 +1,22 @@
+var express = require('express');
+var router = express.Router();
+var user = require('../controllers/user');
+var admin = require('../controllers/admin');
+
+router.get('/',user.index);
+router.get('/login',user.login);
+router.get('/logout',user.logout);
+router.get('/reg',user.reg);
+router.get('/adminIndex',admin.adminIndex);
+router.get('/blogType',admin.blogType);
+router.get('/newBlog',admin.newBlog);
+router.post('/addBlogType',admin.addBlogType);
+router.post('/addBlog',admin.addBlog);
+router.post('/checkLogin',user.checkLogin);
+router.post('/regist',user.regist);
+router.get('/blogs',admin.blogs);
+router.get("/blogComments",admin.blogComments);
+router.get("/delBlog",admin.delBlog);
+router.get('/delType',admin.delType);
+router.get('/changeType',admin.changeType);
+module.exports = router;
