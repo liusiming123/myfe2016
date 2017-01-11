@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+</head>
+<body>
+<div id="div">
+
+    {{me}}
+    <input type="button" v-on:click="greet" value="按钮">
+</div>
+<script src="vue.js"></script>
+<script>
+    var vm = new Vue({
+        el:"#div",
+        data: {
+            me:0
+        },
+        methods:{
+          greet:function(){
+              this.me +=1;
+          }
+        }
+    });
+</script>
+</body>
+</html>

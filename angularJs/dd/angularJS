@@ -1,0 +1,57 @@
+angularJS
+
+function  
+
+directive  (1)重写了HTML 标签（a input textarea form）
+           (2)ng标签 
+           (3)自定义directive 
+
+           ng-app  ng-controller ng-repeat ng-click 
+           ng-show ng-disable ng-checked 表达式（true false） 支持逻辑运算
+
+           ng-show="myForm.name && myForm.password"
+
+<input type="text password file">
+<input type="url number email ">
+
+长度 email格式  
+
+-  a-zA-Z
+
+AngularJS
+
+MVC
+1：入口地址(ci index.php 环境变量配置、整体框架路径的加载和core file加载 跳转到主路由文件入口  把控制权交给路由) ---config
+2：router形式
+3：MVC框架
+4：基础API
+5：http协议API的高度封装
+6：功能模块封装
+7：input filter/output filter
+
+http://localhost/ci/index.php/user/login
+
+
+MVC框架 ----数据是如何传输
+
+m--c--v
+
+var firstController=function($scope){
+	$scope.data=[
+		{
+			id:1,
+			name:'laoshan'
+		}
+	];
+
+}
+
+$this->load->view('index.php',data); ---angualr标签 ng-model
+
+
+<div ng-controller="firstController">
+
+</div>
+<div ng-controller="secondController">
+
+</div>

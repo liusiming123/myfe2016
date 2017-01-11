@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    {{message}}
+    <!--<div id="div"  v-html="message">-->
+    <div id="div">
+        {{firstName}} + {{secondName}} = {{getfullName()}}
+        <!--<input type="text" v-model="firstName">-->
+        <!--<input type="text" v-model="secondName">-->
+        <!--<input type="text" v-model="fullName">-->
+    </div>
+
+    <script src="vue.js"></script>
+<script>
+    var vm =new Vue({
+        el:"#div",
+        data:{
+            firstName:"zhang",
+            secondName:"san"
+        },
+        computed:{
+            fullName:{
+                get:function(){
+                    return this.firstName+" "+this.secondName;
+                },
+                set:function(val){
+                    this.firstName = val.split(" ")[0];
+                    this.firstName = val.split(" ")[1];
+                }
+            }
+        }
+//        methods:{
+//            getfullName:function(){
+//                return this.firstName + this.secondName;
+//            }
+//        }
+    });
+
+</script>
+</body>
+</html>

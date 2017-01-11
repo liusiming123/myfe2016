@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        h1{
+            margin-top: 50px;
+            text-align: center;
+        }
+        .bg{
+            display: block;
+            width: 200px;
+            height: 50px;
+            background: gainsboro;
+            border: 1px grey solid;
+            line-height: 50px;
+            font-size: 20px;
+            text-indent: 5px;
+            cursor: pointer;
+        }
+        ul{
+            width: 200px;
+            margin: 0 auto;
+        }
+        #add{
+            font-size: 20px;
+            margin: 20px auto;
+            width: 200px;
+            border-top: 1px solid black;
+        }
+        .orange{
+            background: orange;
+        }
+    </style>
+</head>
+<body>
+    <h1>SERVICES</h1>
+
+    <div id="shopping">
+
+        <ul>
+            <li v-for="item in items" class="bg" v-on:click="add(item)" v-bind:class="{orange:item.bg}">
+                {{item.name}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;￥{{item.money}}
+            </li>
+        </ul>
+    <div id="add">
+        total:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;￥{{num}}
+    </div>
+    </div>
+    <script src="vue.js"></script>
+    <script>
+//        var flag=true;
+        var vm = new Vue({
+            el:"#shopping",
+            data:{
+                items:[
+                    {name:"aaa",money:3000,bg:false},
+                    {name:"bbb",money:3111,bg:false},
+                    {name:"ccc",money:3151,bg:false},
+                    {name:"ddd",money:3156,bg:false},
+                    {name:"eee",money:4000,bg:false}
+                ],
+                num:0
+            },
+            methods:{
+                add:function(item){
+                    if(item.bg==false){
+                        this.num += item.money;
+                        item.bg=true;
+                    }else{
+                        this.num -= item.money;
+                        item.bg=false;
+                    }
+//                    flag =!flag;
+
+                }
+        }
+
+
+        });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+@charset "utf-8";
+@import "1.scss";
+$font:18px;
+$font:20px !default;
+/* 哈哈哈哈哈 */
+// 啦啦啦啦啦啦啦
+$bg:background;
+body{
+	#{$bg}:$color;
+	font: 12px/#{$font};
+	background:url("images/#{$bg}.jpg");
+
+	 div{
+	 	color: $color;
+	 	border: 2px solid #000;
+		}
+}
+@function width($b){
+	@return $b+100px;
+}
+
+ @mixin border(){
+	border:2px #000 solid;
+ 	padding: 20px;
+}
+.cc{
+	width:width(300px);
+	@include border();
+}
+.aa{
+	
+	@include border();padding:30px;
+}
+
+
+
+

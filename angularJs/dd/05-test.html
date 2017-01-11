@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div ng-app="">
+		<div ng-controller="firstController">
+			<!-- {{name | number}} -->
+			<!-- {{123456.789 | number : 2}} -->
+			<!-- {{234 | currency : "￥"}} -->
+			<!-- {{today | date : 'yyyy'}} -->
+			<!-- <input type="text" ng-model="limitnum"> -->
+			<!-- {{[1,2,3,4,5,6,7,8,9] | limitTo : 3}} -->
+			<!-- <input type="text"> -->
+			<!-- {{message | lowercase}} -->
+			<!-- {{message | uppercase}} -->
+			<!-- {{[1,2,3,4,5,6,7,8,9]}} -->
+			<p>
+				<!-- {{ data.city | filter : {py:'a'} }} -->
+				{{ data.city | orderBy : '-py' }}
+			</p>
+
+		</div>
+		
+	</div>
+	
+
+	<script src="../angular-1.2.18/angular.js"></script>
+	<script src="./app/05-test.js"></script>
+</body>
+</html>

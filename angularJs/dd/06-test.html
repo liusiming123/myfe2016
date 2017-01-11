@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="../bootstrap3/css/bootstrap.css" />
+</head>
+<body>
+	<!-- 表单验证： 如何数据绑定 显示出错信息 避免提交没有验证过的表单 验证表单 整个Form验证 防止多次提交 -->
+	<!-- input 属性 ng-model ng-required 是否必填 true
+	ng-minlength  ng-maxlength  ng-pattern="/^[a-zA-Z]{1}/" ng-change 值变化的回调 -->
+
+	<!-- formName.inputFieldName.$error     字段的错误信息
+	formName.inputFieldName.$pristine  字段是否未更改
+	formName.inputFieldName.$dirty     字段是否更改
+	formName.inputFieldName.$valid     字段是否有效
+	formName.inputFieldName.$invalid   字段无效 -->
+
+	<!-- <form name="myForm">
+		<input type="text" name="username" ng-required="true" ng-minlength="5" ng-maxlength="10">
+	</form>
+	{{myForm.username.$error}} -->
+
+	<div ng-app="myApp" style="margin-top:100px">
+		<form action="" ng-controller="firstController" name="myForm" class="container">
+			<div class="form-group">
+			    <label class="col-sm-2">用户名</label>
+			    <div class="col-sm-10">
+			    	<input type="text" name="username" ng-required='true' ng-minlength="5" ng-maxlength="10" class="form-control" ng-pattern="/^[a-zA-Z]{1}/" ng-model="data.username" placeholder="用户名">
+			    	<!-- {{myForm.username.$error}} -->
+			    	<div ng-show="myForm.username.$error.maxlength" class="alert alert-danger help-block">
+			    		用户名长度超过10
+			    	</div>
+			    	<div ng-show="myForm.username.$error.minlength" class="alert alert-danger help-block">
+			    		用户名长度低于5
+			    	</div>
+			    	<div ng-show="myForm.username.$error.pattern" class="alert alert-danger help-block">
+			    		用户名首字母不为字母
+			    	</div>
+			    </div>
+			</div>
+			<div class="form-group">
+			    <label class="col-sm-2">密 码</label>
+			    <div class="col-sm-10">
+			    	<input type="password" name="password" ng-required='true' ng-minlength="5" ng-maxlength="30" class="form-control" ng-pattern="/^[a-zA-Z]{1}/" ng-model="data.password" placeholder="密 码">
+			    	<!-- {{myForm.username.$error}} -->
+			    	<div ng-show="myForm.password.$error.maxlength" class="alert alert-danger help-block">
+			    		密码长度超过30
+			    	</div>
+			    	<div ng-show="myForm.password.$error.minlength" class="alert alert-danger help-block">
+			    		密码长度低于5
+			    	</div>
+			    </div>
+			</div>
+			<div class="form-group">
+			    <label class="col-sm-2">确认密码</label>
+			    <div class="col-sm-10">
+			    	<input type="password" name="passwordConfirm" ng-required='true' ng-minlength="5" ng-maxlength="30" class="form-control" ng-pattern="/^[a-zA-Z]{1}/" ng-model="data.passwordConfirm" placeholder="确认密码">
+			    	<!-- {{myForm.username.$error}} -->
+			    	<div ng-show="myForm.password.$dirty && myForm.passwordConfirm.$dirty && data.password != data.passwordConfirm" class="alert alert-danger help-block">
+			    		密码与确认密码不一致
+			    	</div>
+			    </div>
+			</div>
+		</form>
+	</div>
+
+
+	<script src="../angular-1.2.18/angular.js"></script>
+	<script src="./app/06-test.js"></script>
+</body>
+</html>
