@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        li{
+            cursor: pointer;
+        }
+        .bg{
+            color:red;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="div">
+        <input type="text" v-model="me" v-on:keyup="change"/>{{me}}
+        <input type="button" value="AddLI" v-on:click="add(me)"/>
+        <ul id="ul">
+            <li v-for='value in showObjs' v-bind:class="{bg:value.flag}" v-on:click="click(value)" >
+                {{value.content}}
+            </li>
+        </ul>
+    </div>
+    <script src="vue.js"></script>
+    <script>
+        var vm = new Vue({
+            el:"#div",
+            data:{
+                me:null,
+                objs:[],
+                showObjs:[]
+            },
+            methods:{
+                add:function(me){
+                   this.objs.push({
+                       content:me,
+                       flag:false
+                   });
+                    this.me=null;
+                    this.showObjs = this.objs;
+                },
+                click:function(value){
+                    if(!value.flag){
+                        value.flag=true;
+                    }else{
+                        value.flag=false;
+                    }
+                },
+                change:function(){
+                   this.showObjs = this.objs.filter(function(a){
+                       return a.content.includes(vm.me);
+                   });
+
+                }
+            }
+        });
+    </script>
+</body>
+</html>
