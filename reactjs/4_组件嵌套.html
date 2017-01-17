@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id="container">
+
+</div>
+    <script src="react-15.3.1/build/react.js"></script>
+    <script src="react-15.3.1/build/react-dom.js"></script>
+    <script src="react-15.3.1/browser.min.js"></script>
+    <script type="text/babel">
+        var SubMessage = React.createClass({
+            render:function(){
+                return(
+                <h1>啦啦啦啦啦啦</h1>
+                );
+            }
+        })
+        var Message = React.createClass({
+            render:function(){
+                return(
+                    <div>
+                        <SubMessage/>
+                        <div>124</div>
+                    </div>
+                );
+            }
+        })
+        ReactDOM.render(
+                <Message/>
+                ,
+                document.getElementById("container")
+        );
+
+    </script>
+</body>
+</html>

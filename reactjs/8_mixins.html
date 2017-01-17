@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id="container">
+
+</div>
+<script src="react-15.3.1/build/react-with-addons.js"></script>
+<script src="react-15.3.1/build/react-dom.js"></script>
+<script src="react-15.3.1/browser.min.js"></script>
+<script type="text/babel">
+    var Liu = React.createClass({
+        mixins : [React.addons.LinkedStateMixin],
+        getInitialState:function(){
+                return{
+                    num: ""
+                };
+        },
+        render:function(){
+            return(
+                    <div>
+                    <input type="text" valueLink={this.linkState('num')}/>
+                    <p>{this.state.num}</p>
+                    </div>
+            );
+        }
+    });
+    ReactDOM.render(
+    <Liu/>
+            ,
+            document.getElementById('container')
+    )
+</script>
+</body>
+</html>
