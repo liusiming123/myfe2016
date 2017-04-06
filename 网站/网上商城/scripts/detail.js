@@ -143,7 +143,7 @@ $(function(){
         var $posit = -$index*16;
         $('.rating',$comList).css('background-position','0 '+$posit+'px');
         alert('您对此商品的评分是：'+$title);
-    })
+    });
     //购物车
     $('#confirm-shopping img').on('click',function(){
     });

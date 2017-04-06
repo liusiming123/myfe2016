@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id="container">
+</div>
+<script src="react-15.3.1/build/react-with-addons.js"></script>
+<script src="react-15.3.1/build/react-dom.js"></script>
+<script src="react-15.3.1/browser.min.js"></script>
+<script type="text/babel">
+    var Form = React.createClass({
+        getInitialState:function(){
+            return{
+                    uname:'',
+                    school:'',
+                    sex:''
+            };
+        },
+        submitHandler:function(e){
+           console.log({
+               uname:this.state.uname,
+               sex:this.state.sex,
+               school:this.state.school
+           });
+            e.preventDefault();
+        },
+        unameHandler:function(e){
+            this.setState({
+                uname: e.target.value
+            });
+        },
+        sexHanlder:function(e){
+          this.setState({
+              sex: e.target.value
+          });
+        },
+        schoolHanlder:function(e){
+            this.setState({
+               school: e.target.value
+            });
+        },
+        render:function(){
+            return(
+                <form onSubmit={this.submitHandler}>
+                    <p>
+                        用户名:<input type="text" value={this.state.uname} onChange={this.unameHandler}/>
+                    </p>
+                    <p>
+                        性别:
+                        男<input type="radio" name="sex" value="男" onChange={this.sexHanlder}/>
+                        女<input type="radio" name="sex" value="女" onChange={this.sexHanlder}/>
+                    </p>
+                    <p>
+                        学校:
+                        <select value={this.state.school} onChange={this.schoolHanlder}>
+                            <option>黑大</option>
+                            <option>林大</option>
+                            <option>理工</option>
+                            <option>农大</option>
+                        </select>
+                    </p>
+                    <p>
+                        <input type="submit" name=""/>
+                    </p>
+                </form>
+            );
+        }
+    });
+    ReactDOM.render(
+            <Form/>
+            ,
+            document.getElementById('container')
+    )
+</script>
+</body>
+</html>

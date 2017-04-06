@@ -1,0 +1,441 @@
+
+body{
+    background: #eff3f5;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.personal-center{
+    float: left;
+    width: 310px;
+
+    margin-top: 67px;
+
+
+}
+.personal-center .nav li{
+    height: 60px;
+    line-height: 60px;
+    background: #ebeff2;
+    width: 310px;
+    display: none;
+
+
+
+}
+
+.personal-center .nav :hover{
+    background-color: #ffffff;
+}
+
+.personal-center .nav .menu a{
+    color: #607684;
+    height: 60px;
+    line-height: 60px;
+
+}
+.personal-center .nav span {
+    position: relative;
+    width: 225px;
+    height: 60px;
+    display: block;
+    background: url("images/求职者-精灵侧栏-灰色标.png") 105px 20px no-repeat;
+
+}
+.selected{
+    background: url("images/求职者-精灵侧栏-灰色标.png") -484px 25px no-repeat ;
+}
+.personal-center  .menu-two,.menu-three,.menu-four,.menu-five,.menu-six{
+    width: 310px;
+    display: block;
+}
+
+
+.personal-center  .menu-two{
+    background: url("images/我的简历-精灵.png") 104px -340px no-repeat;
+}
+.personal-center .menu-three{
+    background: url("images/我的简历-精灵.png") 102px -403px no-repeat;
+}
+.personal-center .menu-four{
+    background: url("images/我的简历-精灵.png") 102px -460px no-repeat;
+}
+.personal-center .menu-five{
+    background: url("images/我的简历-精灵.png") 102px -525px no-repeat;
+}
+.personal-center .menu-six{
+    background: url("images/我的简历-精灵.png") 104px -590px no-repeat;
+}
+/*.personal-center span :hover,.personal-center .nav span :hover{
+    color:#5de1a8;
+
+
+}*/
+.personal-center .menu-two a,.menu-three a,.menu-four a,.menu-five a,.menu-five a,.menu-six a{
+    color: #6a6e71;
+    height: 60px;
+    line-height: 60px;
+    margin-left: 153px;
+
+}
+/*.personal-center{
+    text-align: center;
+}*/
+
+.personal-center  .nav a{
+    font-size: 17px;
+    color:#6a6e71 ;
+
+}
+.personal-center  span{
+    font-size: 17px;
+    color: #6a6e71;
+    height: 60px;
+    line-height: 60px;
+    cursor: pointer;
+}
+
+.personal-center .nav .menu-one,.personal-center .nav .menu-two{
+    text-align: right;
+}
+.border{
+    border-right: 5px solid #5ce1a8;
+}
+.content{
+    width: 800px;
+    margin-top: 60px;
+    margin-left: 50px;
+    /*background: #ff0000;*/
+
+    float: left;
+    position: relative;
+}
+.container{
+    width: 1170px;
+    margin: 0 auto;
+    background: #ffff00;
+}
+.personal-head-portrait{
+    position: absolute;
+    left: 103px;
+    top: 13px;
+    border-radius: 75px;
+
+}
+.personal-head-portrait-img{
+    width: 140px;
+    height: 140px;
+
+    border-radius: 80px;
+    border: 10px solid rgba(255,255,255,0.5)  ;
+
+}
+.personal-title .job-hunter{
+    position: absolute;
+    top: 120px;
+    left: 300px;
+    font-size: 22px;
+    color:#133c50;
+}
+.personal-title .job-hunter-message{
+    color: #737b7e;
+    font-size: 14px;
+    position: absolute;
+    left: 300px;
+    top: 156px;
+}
+.personal-title .frame{
+    padding-right: 10px;
+
+    width: 15px;
+    height: 15px;
+}
+.personal-title .ture-name {
+    position: absolute;
+    display: block;
+    width: 180px;
+    height: 25px;
+    left: 606px;
+    top: 130px;
+    font-size: 15px;
+    color: #737b7e;
+    background: url("images/我的简历-精灵.png") 135px -663px no-repeat;
+
+
+}
+.line{
+    margin-top: 24px;
+    margin-left: 30px;
+}
+.content{
+    background: #ffffff;
+    height: 4000px;
+}
+.content .job-experience{
+    margin-top: 20px;
+    font-size: 20px;
+    text-align: center;
+    color: #484e52;
+}
+.content .job{
+    overflow: hidden;
+}
+.content .job .company-name{
+    font-size: 17px;
+    color: #484e52;
+    float: left;
+    width: 100%;
+}
+.content .job .duty{
+    width: 100%;
+}
+.content .job-remark{
+    width: 530px;
+}
+.content .job .duty,.content .job-remark{
+
+    font-size: 16px;
+    color: #85898c;
+    clear: both;
+    margin-top: 10px;
+    float: left;
+
+}
+.content .date{
+
+
+    float: left;
+    margin-top: 10px;
+    color: #a7abad;
+    font-size: 16px;
+    margin-right: 60px;
+}
+.content .job .company-logo{
+    clear: both;
+    border: 1px solid #eff3f5;
+    width: 80px;
+    height: 80px;
+    margin-left: 60px;
+    margin-top: 20px;
+
+    float: left;
+    overflow: hidden;
+
+}
+.content .job .company-name-copy{
+    font-size: 17px;
+    color: #484e52;
+    float: left;
+    width: 100%;
+
+
+
+}
+
+.content  .duty-copy,.content .job-remark-copy{
+    font-size: 16px;
+    color: #85898c;
+}
+.content  .duty-copy{
+    clear: both;
+    margin-top: 10px;
+    float: left;
+}
+.content .job-remark-copy{
+    clear: both;
+    margin-top: 10px;
+    float: left;
+    width: 437px;
+
+
+}
+
+.menu .a1{
+    width: 5px;
+    height: 50px;
+    float: right;
+    border-right: 5px solid #5ce1a8;
+    margin-top: 5px;
+}
+.job-experience-box{
+    float: left;
+    margin-top: 50px;
+    margin-left: 60px;
+    margin-bottom: 10px;
+
+}
+.job-experience-box-copy{
+
+    float: left;
+    margin-top: 25px;
+    margin-left: 10px;
+
+}
+.content .date-copy{
+    float: left;
+    margin-top: 10px;
+
+    color: #a7abad;
+    font-size: 16px;
+}
+.content .job .duty-copy{
+    width: 100%;
+}
+.content .job .company-logo-copy{
+    clear: both;
+    border: 1px solid #eff3f5;
+    width: 80px;
+    height: 80px;
+    margin-left: 60px;
+    margin-top: 20px;
+
+    float: left;
+    overflow: hidden;
+
+}
+.if{
+    margin-top: 20px;
+    margin-left: 130px;
+    font-size: 14px;
+    color: #94a49d;
+}
+
+
+span{display:inline-block;*display:inline-block;zoom:1;}
+.bg{width:450px;height:20px;border-radius:10px;background:#eff3f5;margin-left: 8px;}
+.main{height:20px;border-radius:10px;width: 400px;background: #49d599;}
+.progress-bar{margin-bottom: 12px;}
+.bg-java,.bg-css3,.bg-php{width:450px;height:20px;border-radius:10px;background:#eff3f5;margin-left: 8px}
+.bg-java{margin-left: 5px;}
+.main-java{height:20px;border-radius:10px;width: 370px;background: #49d599;}
+.main-css3,.main-php{height:20px;border-radius:10px;width: 450px;background: #49d599;}
+.num,.num-css3,.num-java,.num-php{margin-left: 40px}
+.bar{margin-left:15px}
+.name{font-size: 16px;float: left;margin-left: 30px;}
+.num,.num-php,.num-java,.num-css3{margin-left: 20px;font-size: 16px}
+#a1{
+    margin-left: 45px;
+    margin-top: 20px;
+}
+.option{
+    margin-top: 25px;
+    margin-left: 220px;
+    font-size: 14px;
+    color: #94a49d;
+
+}
+.optionsRadios2,.optionsRadios1{
+    margin-left: 30px;
+}
+.radio-no{
+    margin-left: 90px;
+}
+.hint{
+    margin-left: 120px;
+    font-size: 14px;
+    color: #94a49d;
+}
+.if-duty{
+    font-size: 14px;
+    color: #94a49d;
+    margin-left: 130px;
+    margin-top: 25px;
+}
+.if-duty-WEB-wage,.if-duty-PHP-wage{
+    width: 180px;
+    height: 45px;
+    background:#f5f5f5;
+    border: none;
+
+}
+.if-duty-WEB-wage{
+    margin-left: 22px;
+    font-size: 14px;
+    color: #94a49d;
+    outline: none;
+}
+.if-duty-PHP-wage{
+    margin-left: 22px;
+    font-size: 14px;
+    color: #94a49d;
+    outline: none;
+}
+.if-duty-select-PHP{
+    margin-top: 10px;
+}
+.if-duty-select{
+    font-size: 14px;
+    color: #94a49d;
+    margin-left: 220px;
+    margin-top: 25px;
+}
+.WEB,.PHP{
+    margin-left: 30px;
+}
+.WEB-wage{
+    margin-left: 40px;
+}
+.PHP-wage{
+    margin-left: 55px;
+}
+.interview-video{
+    margin-left: 50px;
+}
+.interview-time{
+    margin-left: 70px;
+    margin-top: 25px;
+    font-size: 14px;
+    color: #94a49d;
+}
+.interview-time-select{
+    margin-left: 130px;
+    margin-top: 25px;
+
+}
+.interview-time-matter{
+    width: 535px;
+    height: 135px;
+    border: none;
+    background: #f5f5f5;
+    font-size: 14px;
+    color: #94a49d;
+    outline: none;
+}
+.flow{
+    margin-top: 15px;
+    margin-left: 165px;
+    font-size: 14px;
+    color: #94a49d;
+}
+.commit{
+    margin-left: 415px;
+    margin-top: 45px;
+}
+.cancel{
+    width: 180px;
+    height: 46px;
+    text-align:center;
+    line-height:23px;
+    font-size: 15px;
+    border: none;
+    background: white;
+    color: #94a49d;
+
+}
+.commit-interview{
+    width: 180px;
+    height: 46px;
+    line-height: 23px;
+    text-align: center;
+    font-size: 15px;
+    background: #5ce1a8;
+    color: white;
+    border: none;
+}

@@ -1,0 +1,115 @@
+.work-experience{
+    width: 668px;
+    height: 566px;
+    padding-left: 132px;
+}
+
+/*.work-experience h1{*/
+    /*width: 668px;*/
+    /*height: 50px;*/
+    /*text-align: center;*/
+    /*line-height: 50px;*/
+    /*color: #484e52;*/
+    /*font-size: 20px;*/
+/*}*/
+.work-experience p.font-size{
+    font-size: 14px;
+    color: #93a39c;
+    height: 35px;
+    line-height: 35px;
+    width: 390px;
+    display: inline-block;
+}
+.work-experience input[type="text"]{
+    width: 388px;
+    height: 44px;
+    color: #93a39c;
+    font-size: 24px;
+    outline: none;
+    border: 1px solid #eff3f5;
+    background: #f5f5f5;
+}
+.work-experience input[type="text"].year,.work-experience input[type="text"].month{
+    width: 175px;
+}
+.work-experience textarea{
+    width: 535px;
+    height: 135px;
+    border: 1px solid #eff3f5;
+    resize: none;
+    background:#f5f5f5 ;
+    color: #93a39c;
+    font-size: 24px;
+}
+.work-experience .button{
+    cursor: pointer;
+    text-align: center;
+    float: left;
+    line-height: 45px;
+    height: 45px;
+    width: 150px;
+    background: white;
+    /*border: 1px solid #5ce1a8;*/
+    color: #8e8e8e;
+}
+.work-experience .button.cancel{
+    margin-left: 33px;
+}
+.work-experience input[type="submit"]{
+    height: 45px;
+    width: 188px;
+    background: #5ce1a8;
+    border: 1px solid #58d7a0;
+    font-size: 20px;
+    color: white;
+}
+.work-experience .heng{
+    margin: 0 3px;
+    display: inline-block;
+    width: 30px;
+    height: 6px;
+    border-top:2px solid #c9d1ce;
+    /*border-bottom: #b2bdb8;*/
+}
+#files{
+    display: none;
+}
+#prvid{
+    width: 127px;
+    height: 125px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#prvid img{
+    width: 127px;
+    height: 125px;
+    position: absolute;
+}
+.files{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 127px;
+    height: 125px;
+}
+.upload-picture{
+    float: right;
+    width: 127px;
+    height: 125px;
+    margin-top: 35px;
+    margin-right: 130px;
+    position: relative;
+}
+
+
+
+
+
+
+
+
+
+
+
+
