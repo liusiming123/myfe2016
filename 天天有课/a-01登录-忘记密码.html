@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="天天有课"/>
+    <meta name="description" content="天天有课"/>
+    <meta name="天天有课" content="天天有课"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name='apple-touch-fullscreen' content='yes'>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>天天有课|忘记密码</title>
+    <link rel="icon" href="img/logo.png" type="image/x-icon">
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="img/logo.png">
+    <link rel="apple-touch-icon-precomposed" sizes="120x120"
+          href="img/logo.png">
+    <link rel="apple-touch-icon-precomposed" sizes="196x196"
+          href="img/logo.png">
+    <link rel="stylesheet" href="css/resect.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="css/forget.css">
+</head>
+<body>
+
+<header id="header">
+    <div class="container clearfix">
+        <div class="arrow fl"><a href="a-01登录.html"><img src="img/11icn_back.png" alt=""></a></div>
+        <div class="h2 login fl">
+            <h2>忘记密码</h2>
+        </div>
+        <div class="h2 register fr">
+            <h2><a href="a-02注册-手机号密码.html">注册</a></h2>
+        </div>
+    </div>
+</header>
+
+<form action="" method="post">
+
+    <div id="login">
+
+        <div class="username">
+            <i class="icon fl"></i>
+            <input type="tel" class="fl" placeholder="请输入手机号">
+        </div>
+        <div class="password">
+            <i class="icon fl"></i>
+            <input type="number" class="fl" placeholder="请输入验证码">
+            <button class="get-code">获取验证码</button>
+        </div>
+
+    </div>
+
+    <div id="submit">
+        <input type="submit" value="下一步">
+    </div>
+
+</form>
+<script>
+    document.oncontextmenu = new Function("event.returnValue=false;");
+    document.onselectstart = new Function("event.returnValue=false;");
+</script>
+<script>
+//    测试跳转使用
+    var oBtn = document.getElementById('submit');
+    oBtn.onclick = function () {
+        window.location.href='a-01登录-重置密码.html';
+        return false;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,364 @@
+@charset "UTF-8";
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.clearfix {
+    overflow: hidden;
+    _zoom: 1;
+}
+
+.hide {
+    display: none;
+}
+
+body {
+    background-color: #f5f5f5;
+    font-family: AvenirRoman, HelveticaNeue-Light, Helvetica Neue, arial, Hiragino Sans GB, 冬青黑体, Microsoft YaHei New, Microsoft Yahei, 微软雅黑, 宋体, SimSun, STXihei, 华文细黑, sans-serif;
+    font-weight: 400;
+}
+
+img {
+    vertical-align: middle;
+    border: 0
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+button, input, optgroup, select, textarea {
+    color: inherit;
+    font: inherit;
+    margin: 0
+}
+
+button, html input[type=button], input[type=reset], input[type=submit] {
+    -webkit-appearance: button;
+    cursor: pointer
+}
+
+/*header*/
+#header {
+    width: auto;
+    height: 4.2666rem;
+    background-color: #2c93e0;
+    padding: 0 1.3333rem;
+    line-height: 4.2666rem;
+}
+
+#header .container {
+    width: 100%;
+}
+
+#header .arrow, #header .arrow a, #header .h2 {
+    height: 100%;
+    width: 33.3333%;
+    display: block;
+    font-size: 1.6rem;
+    color: #fff;
+}
+
+#header .arrow img {
+    width: 0.88888rem;
+    height: 1.5111rem;
+}
+
+#header .h2.login {
+    text-align: center;
+}
+
+#header .h2 a {
+    color: #fff;
+}
+
+/*menu*/
+#menu {
+    width: 100%;
+    height: 3.466667rem;
+    border-bottom: 0.088889rem solid #e6e6e6;
+}
+
+#menu .to-evaluate, #menu .evaluated {
+    width: 50%;
+    height: 100%;
+    line-height: 3.466667rem;
+    color: #737373;
+    font-size: 1.244444rem;
+    text-align: center;
+}
+
+#menu .evaluated {
+    color: #2c93e0;
+    border-bottom: 0.08888rem solid #2c93e0;
+}
+
+/*评价列表*/
+.container .details {
+    margin: 0.8888rem auto;
+    background-color: #ffffff;
+}
+
+.container .details .teacher {
+    width: 100%;
+    height: 6.9333rem;
+    border-top: 0.08888rem solid #e6e6e6;
+    border-bottom: 0.08888rem solid #e6e6e6;
+    background-color: #fff;
+    position: relative;
+}
+
+.container .details .teacher .class, .container .details .teacher .class.one-to-one {
+    width: 4.4444rem;
+    height: 2.2222rem;
+    line-height: 2.2222rem;
+    text-align: center;
+    background-color: #2c93e0;
+    color: #ffffff;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.container .details .teacher .class.home-teacher {
+    background-color: #37b073;
+}
+
+.container .details .teacher .img {
+    width: 5.24444rem;
+    height: 100%;
+    display: inline-block;
+    margin-left: 5.3333rem;
+    position: relative;
+}
+
+.container .details .teacher .img img {
+    /*border: none;*/
+    vertical-align: middle;
+    position: absolute;
+    top: 50%;
+    margin-top: -2.62222rem;
+    left: 0;
+    width: 5.2444rem;
+    height: 5.2444rem;
+    border-radius: 50%;
+    border: 0.0888rem solid #e6e6e6;
+}
+
+.container .details .teacher .info {
+    height: 100%;
+    width: 60%;
+    margin-left: 0.97777rem;
+}
+
+.container .details .teacher .info .name, .container .details .teacher .info .details {
+    color: #656565;
+    font-size: 1.2444rem;
+    margin-top: 1.68888rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    /*display: inline-block;*/
+}
+
+.container .details .teacher .info .name h4 {
+    display: inline-block;
+    line-height: 1.3333rem;
+}
+
+.container .details .teacher .info .name a {
+    display: inline-block;
+    width: 1.2444rem;
+    height: 1.3333rem;
+    margin-left: 0.4444rem;
+    background: url("../img/28_01花.png") no-repeat center;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+    transition: all .2s ease;
+    text-align: center;
+}
+
+.container .details .teacher .info .details {
+    margin-top: 0.7rem;
+}
+
+.container .flower-give {
+    position: absolute;
+    top: 1.299999rem;
+    right: 0.8888rem;
+    transition: all .2s ease;
+}
+
+.container .flower-give .flower {
+    width: 4.4444rem;
+    height: 2.66666rem;
+    line-height: 2.66666rem;
+    background-color: #e66d6d;
+    border-radius: 0.4rem;
+    display: flex;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 0.8888rem;
+    margin: 0 auto;
+}
+
+.container .flower-give .flower img {
+    width: 1.2444rem;
+    height: 1.3333rem;
+    margin-top: 0.6666rem;
+    margin-right: 0.44444rem;
+}
+
+.container .flower-give .text {
+    color: #787878;
+    font-size: 0.8888rem;
+    margin-top: 0.53333rem;
+    display: inline-block;
+}
+
+.container .flower-already {
+    position: absolute;
+    top: 1.299999rem;
+    right: 2.2222rem;
+    transition: all .2s ease;
+}
+
+.container .flower-already .flower {
+    width: 4.4444rem;
+    height: 2.66666rem;
+    line-height: 2.66666rem;
+    border-radius: 0.4rem;
+    display: flex;
+    justify-content: center;
+    color: #e66d6d;
+    font-size: 0.8888rem;
+    margin: 0 auto;
+}
+
+.container .flower-already .flower img {
+    width: 1.2444rem;
+    height: 1.3333rem;
+    margin-top: 0.6666rem;
+    margin-right: 0.44444rem;
+}
+
+.container .flower-already .text {
+    color: #787878;
+    font-size: 0.8888rem;
+    margin-top: 0.53333rem;
+    display: inline-block;
+}
+
+/*评价印象*/
+.container .impression {
+    width: 100%;
+    height: 12.26666rem;
+    border-top: 0.0888888rem solid #e6e6e6;
+    border-bottom: 0.0888888rem solid #e6e6e6;
+    background-color: #fff;
+}
+
+.container .impression .h3 {
+    width: 94.444%;
+    height: 3.64444rem;
+    line-height: 3.64444rem;
+    color: #656565;
+    font-size: 1.24444rem;
+    border-bottom: 0.0888888rem solid #e6e6e6;
+    margin: 0 auto;
+}
+
+.container .impression .h3 h3 {
+    padding: 0 0.44444rem;
+}
+
+.container .impression .impression-options {
+    height: 8.53333rem;
+    width: 94.444%;
+    margin: 0 auto;
+}
+
+.container .impression .impression-options .line {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.container .impression .impression-options .line .option {
+    width: 8.711111rem;
+    height: 2.4888888rem;
+    line-height: 2.4888888rem;
+    text-align: center;
+    border: 0.0888888rem solid #e6e6e6;
+    border-radius: 0.4444rem;
+    margin-top: 0.977777rem;
+    color: #646464;
+}
+
+.container .impression .impression-options .line .option.selected {
+    background-color: #2c93e0;
+    color: #ffffff;
+}
+
+/*评论输入框*/
+.container .input {
+    width: 100%;
+    height: 12.26666rem;
+    background-color: #fff;
+    border-top: 0.08888rem solid #e6e6e6;
+    border-bottom: 0.08888rem solid #e6e6e6;
+    margin-bottom: 5rem;
+    margin-top: 0.8888rem;
+}
+
+.container .input textarea{
+    display: block;
+    margin: 0 auto;
+    width: 91%;
+    height: 8rem;
+    padding: 4.1%;
+    border: none;
+    outline:none;
+    color: #979797;
+    font-size:1.2rem;
+    text-align: left;
+    background-color: #ffffff;
+    resize: none;
+    line-height: 1.777rem;
+}
+
+#limit{
+    float: right;
+    color: #959595;
+    font-size:0.8888rem;
+    margin-right: 1.33333rem;
+}
+
+    /*底部提交按钮*/
+#btn {
+    width: 100%;
+    height: 4.266666rem;
+    line-height: 4.266666rem;
+    background-color: #2c93e0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+#btn a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #ffffff;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+

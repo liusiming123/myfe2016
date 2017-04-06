@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,
+                   initial-scale=1.0,
+                   maximum-scale=1.0,
+                   user-scalable=no">
+    <title>帐号信息</title>
+    <link rel="stylesheet" type="text/css" href="css/resect.css">
+    <link rel="stylesheet" type="text/css" href="css/media.css">
+    <link rel="stylesheet" type="text/css" href="css/个人中心-帐号信息.css">
+</head>
+<body>
+<div id="head">
+    <a><img src="img/11icn_back.png"></a>
+    帐号信息
+</div>
+<div id="content">
+    <div class="main1">
+        <div class="null"></div>
+        <div class="son-content" id="touxiang">
+            <span>头像</span>
+            <span class="touxiang"></span>
+            <span class="last"></span>
+        </div>
+    </div>
+    <div class="main1">
+        <div class="null"></div>
+        <div class="son-content">
+            <span>昵称</span>
+            <span>我是小白兔</span>
+            <span class="last"></span>
+        </div>
+        <div class="son-content">
+            <span>个人签名</span>
+            <span>书上有路勤为径，学海无涯苦作舟</span>
+            <span class="last"></span>
+        </div>
+        <div class="son-content">
+            <span>手机号</span>
+            <span>137636XXXXX</span>
+            <span class="last"></span>
+
+        </div>
+        <div class="son-content">
+            <span>邮箱</span>
+            <span>sjs2345@163.com</span>
+            <span class="last"></span>
+        </div>
+
+    </div>
+    <div class="main1">
+        <div class="null"></div>
+        <div class="son-content">
+            <span>账户安全设置</span>
+            <span></span>
+            <span class="last"></span>
+        </div>
+    </div>
+</div>
+<div id="mask"></div>
+<div id="foot">
+    <div class="son-content" style="border-bottom: 0.089rem solid rgb(240, 240, 240)">
+        拍照
+    </div>
+
+    <div class="son-content">
+        从相册选择
+    </div>
+    <hr>
+    <div class="son-content">
+        取消
+    </div>
+</div>
+<script src="js/jquery.js"></script>
+<script>
+    $(document).ready(function () {
+            $('#touxiang').on('click',function () {
+                $('#mask').toggle();
+                $("#mask").css("height",$(document).height());
+                $("#mask").css("width",$(document).width());
+                $('#mask').css('backgroundColor','gray');
+                $('#mask').css('opacity','0.3');
+                $('#foot').slideDown(300);
+            });
+            $('#mask').on('click',function () {
+                $('#mask').toggle();
+                $('#mask').css('opacity','0');
+                $('#foot').slideUp(300);
+            });
+            $(document).on('scroll',function () {
+            $('#mask').toggle();
+            $('#mask').css('opacity','0');
+            $('#foot').slideUp(300);
+        })
+        }
+    );
+</script>
+</body>
+</html>

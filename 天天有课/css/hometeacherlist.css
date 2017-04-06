@@ -1,0 +1,157 @@
+body {
+    background-color: #fff;
+    font-family: AvenirRoman, HelveticaNeue-Light, Helvetica Neue, arial, Hiragino Sans GB, 冬青黑体, Microsoft YaHei New, Microsoft Yahei, 微软雅黑, 宋体, SimSun, STXihei, 华文细黑, sans-serif;
+    font-weight: 400;
+    position: relative;
+}
+a{
+    text-decoration: none;
+}
+#head{
+    width: 100%;
+    height: 4.178rem;
+    background: #2C93E0;
+    border-bottom: 0.089rem solid #2786CC;
+    position: relative;
+}
+#head .content{
+    width: 3.2rem;
+    position: absolute;
+    left: 50%;
+    margin-left: -1.6rem;
+    margin-top: 1.289rem;
+    font-size: 1.6rem;
+    color: #FFFFFF;
+}
+#head .screen{
+    width: 2.84rem;
+    font-size: 1.42rem;
+    position: absolute;
+    right: 0;
+    margin-top:1.379rem ;
+    margin-right:1.33rem;
+    color: #FFFFFF;
+}
+#head a{
+    line-height: 1.42rem;
+    color: #FFFFFF;
+}
+
+#selected{
+    width: 100%;
+    height: 3.56rem;
+    background: #F5F5F5;
+    border-bottom: 0.089rem solid #E6E6E6;
+    display: -webkit-box;
+    -webkit-box-pack:justify;
+    text-align: center;
+    line-height: 3.56rem;
+}
+#selected .new{
+    /*width: 4.978rem;*/
+    width: 33.3%;
+    color: #2C93E0;
+}
+#selected .sex,#selected .allCity{
+    width: 33.3%;
+    /*width: 2.489rem;*/
+    color: #737373;
+}
+#selected .arrow{
+    margin-left: 0.44rem;
+}
+#selected .arrow img{
+    height: 0.44rem;
+}
+#people{
+    width: 100%;
+    height: 9.33rem;
+    border-bottom: 0.089rem solid #E6E6E6;
+    position: relative;
+}
+#people .manImg,#people2 .manImg{
+    height: 5.24rem;
+    width: 5.24rem;
+    border: 0.089rem solid #E6E6E6;
+    border-radius:100%;
+    background-image:url("../img/1.jpg") ;
+    background-position:-1.78rem -1.33rem;
+    background-repeat: no-repeat;
+    background-size:100%;
+    position: absolute;
+    left:1.33rem ;
+    top:1.78rem;
+}
+#people .manImg img{
+    
+    height: 5.24rem;
+    width: 5.24rem;
+}
+#people .basicIfm,#people2 .basicIfm{
+position: absolute;
+    top:1.33rem;
+    left: 7.91rem;
+    text-align: left;
+    /*line-height: 1.33rem;*/
+}
+#people .bsLone,#people2 .bsLone{
+    margin-top: 0.53rem;
+}
+#people .bsLtwo,#people .bsLthree,#people2 .bsLtwo,#people2 .bsLthree{
+    margin-top: 0.62rem;
+}
+#people .bsOne,#people2 .bsOne{
+    font-size: 1.42rem;
+    color: #646464;
+}
+#people .bsTwo,#people2 .bsTwo{
+    font-size: 1.067rem;
+    color: #646464;
+}
+#people .bs,#people2 .bs{
+    font-size: 1.067rem;
+    color: #969696;
+}
+
+#people .bsThree,#people2 .bsThree{
+    font-size: 1.156rem;
+    color: #636363;
+}
+/*#people .choice{*/
+    /*position: absolute;*/
+    /*top: 1.78rem;*/
+    /*right: 0.89rem;*/
+    /*background: black;*/
+/*}*/
+#people .attention,#people2 .attention{
+    top: 1.78rem;
+    right: 1.6rem;
+    position: absolute;
+}
+#people .attention img,#people2 .attention img{
+    width: 2.13rem;
+    height: 3.2rem;
+}
+#people .money,#people2 .money{
+    position: absolute;
+    right: 0.89rem;
+    bottom: 1.24rem;
+}
+#people .money-one,#people2 .money-one{
+    display: inline-block;
+    font-size: 0.89rem;
+    color: #646464;
+}
+#people .money-two,#people2 .money-two{
+    display: inline-block;
+    font-size: 1.42rem;
+    color: #e05e1f;
+}
+#people2{
+    width: 100%;
+    height: 9.33rem;
+    margin-top: 0.89rem;
+    border-top: 0.089rem solid #E6E6E6;
+    border-bottom: 0.089rem solid #E6E6E6;
+    position: relative;
+}

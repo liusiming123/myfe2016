@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="天天有课"/>
+    <meta name="description" content="天天有课"/>
+    <meta name="天天有课" content="天天有课"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name='apple-touch-fullscreen' content='yes'>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>天天有课|评价</title>
+    <link rel="icon" href="img/logo.png" type="image/x-icon">
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="img/logo.png">
+    <link rel="apple-touch-icon-precomposed" sizes="120x120"
+          href="img/logo.png">
+    <link rel="apple-touch-icon-precomposed" sizes="196x196"
+          href="img/logo.png">
+    <link rel="stylesheet" href="css/resect.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="css/evaluate3.css">
+</head>
+<body>
+
+<header id="header">
+    <div class="container clearfix">
+        <div class="arrow fl"><a href="01-首页.html"><img src="img/11icn_back.png" alt=""></a></div>
+        <div class="h2 login fl">
+            <h2>评价</h2>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    <div class="details">
+        <div class="teacher clearfix">
+            <div class="class"><span>班课</span></div>
+            <div class="img fl"><img src="img/test.png" alt=""></div>
+            <div class="info fl">
+                <div class="name"><h4 class="fl">王永强</h4></div>
+                <div class="details"><span class="">高考语文冲刺复习一对一</span></div>
+                <div class="flower-give">
+                    <div class="flower">
+                        <img src="img/28_02花white.png" alt="">
+                        <span>送花</span>
+                    </div>
+                    <span class="text">送朵花给老师吧</span>
+                </div>
+                <div class="flower-already hide">
+                    <div class="flower">
+                        <img src="img/28_01花.png" alt="">
+                        <span>+1</span>
+                    </div>
+                    <span class="text">已送给老师</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="impression">
+        <div class="h3"><h3>老师给你的印象是：</h3></div>
+        <div class="impression-options">
+            <div class="line">
+                <div class="option">上课准时</div>
+                <div class="option selected">幽默风趣</div>
+                <div class="option">亲切随和</div>
+            </div>
+            <div class="line">
+                <div class="option selected">讲解透彻</div>
+                <div class="option">学富五车</div>
+                <div class="option">成绩喜人</div>
+            </div>
+        </div>
+    </div>
+    <div class="input">
+        <textarea name="" id="text" maxlength="100"
+                  onkeyup="javascript:setShowLength(this, 100, 'limit');">老师水平怎么样？教学效果好不好？说说你的感受吧！</textarea>
+        <span class="limit" id="limit">32/100字</span>
+    </div>
+</div>
+
+<div id="btn">
+    <a href="#" class="submit">提交</a>
+</div>
+
+<script>
+    document.oncontextmenu = new Function("event.returnValue=false;");
+    document.onselectstart = new Function("event.returnValue=false;");
+</script>
+<script>
+
+    var aOption = document.getElementsByClassName('option');
+    var oGiveFlower = document.getElementsByClassName('flower-give')[0];
+    var oAlreadyGive = document.getElementsByClassName('flower-already')[0];
+    var oTextarea = document.getElementById('text');
+
+    for (var i = 0; i < aOption.length; i++) {
+        aOption[i].onclick = function () {
+            toggleClass(this, 'selected');
+        }
+    }
+
+    oGiveFlower.onclick = function () {
+        toggleClass(this, 'hide');
+        toggleClass(oAlreadyGive, 'hide');
+    };
+
+    oAlreadyGive.onclick = function () {
+        toggleClass(this, 'hide');
+        toggleClass(oGiveFlower, 'hide');
+    };
+
+    oTextarea.onfocus = function () {
+        var str = '老师水平怎么样？教学效果好不好？说说你的感受吧！';
+        if (this.innerHTML == str) {
+            this.innerHTML = '';
+        }
+    };
+
+    oTextarea.onblur = function () {
+        if (this.innerHTML == '') {
+            this.innerHTML = '老师水平怎么样？教学效果好不好？说说你的感受吧！';
+        }
+    };
+
+    function setShowLength(obj, maxlength, id) {
+        var rem = obj.value.length;
+        var wid = id;
+        if (rem < 0) {
+            rem = 0;
+        }
+        document.getElementById(wid).innerHTML = rem + '/' + maxlength + '字';
+    }
+
+    function hasClass(obj, cls) {
+        return obj.className.match(new RegExp('(\\s|^)' + cls + '(\\s|$)'));
+    }
+
+    function addClass(obj, cls) {
+        if (!this.hasClass(obj, cls)) obj.className += " " + cls;
+    }
+
+    function removeClass(obj, cls) {
+        if (hasClass(obj, cls)) {
+            var reg = new RegExp('(\\s|^)' + cls + '(\\s|$)');
+            obj.className = obj.className.replace(reg, ' ');
+        }
+    }
+
+    function toggleClass(obj, cls) {
+        if (hasClass(obj, cls)) {
+            removeClass(obj, cls);
+        } else {
+            addClass(obj, cls);
+        }
+    }
+
+</script>
+</body>
+</html>

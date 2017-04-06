@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加上课的人</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+    <link rel="stylesheet" href="css/resect.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="css/LArea.min.css">
+    <link rel="stylesheet" href="css/add-inclass.css">
+</head>
+<body>
+<header id="header">
+    <div class="container clearfix">
+        <div class="arrow fl"><a href="index.html"><img src="img/11icn_back.png" alt=""></a></div>
+        <div class="h2 login fl">
+            <h2>上课人信息 </h2>
+        </div>
+        <div class="h2 register fr">
+            <h2>保存</h2>
+        </div>
+    </div>
+</header>
+<div class="container">
+    <div class="name">
+        <div class="nameSpace">
+            姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名
+        </div>
+        <input class="inp" type="text" placeholder="请输入学生名字">
+    </div>
+    <div class="name mt" id="sex">
+        <div class="nameSpace">
+            性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别
+        </div>
+        <span class="containerFont" id="inp1">请选择</span><img class="containerImg" id="arrow" src="img/22icn_go_gray.png"
+                                                             alt="">
+    </div>
+    <div class="name mt" id="nianjikuang">
+        <div class="nameSpace">
+            年&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;级
+        </div>
+        <span class="containerFont" id="nianjineirong">请选择</span><img class="containerImg"id="arrow2" src="img/22icn_go_gray.png" alt="">
+    </div>
+    <div class="name">
+        <div class="nameSpace">
+            所在区域
+        </div>
+        <input id="location" class="inp locationinp" type="text" readonly="" name="input_area" placeholder="请选择"/>
+        <!--&lt;!&ndash;<span class="containerFont">请选择</span>-->
+        <img class="containerImg" src="img/22icn_go_gray.png" alt="">
+    </div>
+    <div class="name">
+        <div class="nameSpace">
+            详细地址
+        </div>
+        <input class="inp" type="text" placeholder="请填写详细地址">
+    </div>
+</div>
+<div id="mask"></div>
+<div id="foot">
+    <div class="son-content" id="man" style="border-bottom: 0.089rem solid rgb(240, 240, 240)">
+        男
+    </div>
+
+    <div class="son-content" id="women">
+        女
+    </div>
+    <!--<hr>-->
+    <div class="footLine"></div>
+    <div class="son-content" id="hid">
+        取消
+    </div>
+</div>
+<div id="nianji">
+    <div id="nianjihead">
+        <span class="spans span1" id="quxiao">取消</span>
+        <span class="spans span2" id="wancheng">完成</span>
+    </div>
+    <div id="nianjicontent">
+        <div id="xueli">
+            <span id="xiaoxuesheng" class="flag">小学</span><br>
+            <span id="chuzhongsheng">初中</span><br>
+            <span id="gaozhongsheng">高中</span><br>
+        </div>
+
+        <div id="xiaoxue">
+            <span>一年级</span><br>
+            <span>二年级</span><br>
+            <span>三年级</span><br>
+            <span>四年级</span><br>
+            <span>五年级</span><br>
+            <span>六年级</span><br>
+        </div>
+        <div id="chuzhong">
+            <span>七年级</span><br>
+            <span>八年级</span><br>
+            <span>九年级</span><br>
+        </div>
+        <div id="gaozhong">
+            <span>高一</span><br>
+            <span>高二</span><br>
+            <span>高三</span><br>
+        </div>
+    </div>
+
+</div>
+<script src="js/jquery.js"></script>
+<script>
+    $(document).ready(function () {
+        var nianji;
+                $('#sex').on('click', function () {
+                    $('#mask').toggle();
+                    $("#mask").css("height", $(document).height());
+                    $("#mask").css("width", $(document).width());
+                    $('#mask').css('backgroundColor', 'gray');
+                    $('#mask').css('opacity', '0.3');
+                    $('#foot').slideDown(300);
+                    $('#man').on('click', function () {
+                        $('#inp1').html($("#man").text());
+                        $('#arrow').css('display', 'none');
+                        show();
+                    });
+                    $('#women').on('click', function () {
+                        $('#inp1').html($("#women").text());
+                        $('#arrow').css('display', 'none');
+                        show();
+                    });
+                    $('#hid').on('click', show);
+                });
+
+                function show() {
+                    $('#mask').toggle();
+                    $('#mask').css('opacity', '0');
+                    $('#foot').slideUp(300);
+                    $('#nianji').slideUp(300);
+                }
+
+                $('#mask').on('click', show);
+                $(document).on('scroll', function () {
+                    $('#mask').toggle();
+                    $('#mask').css('opacity', '0');
+                    $('#foot').slideUp(300);
+                });
+                //点击显示右侧几年级
+        $('#nianjikuang').on('click',function () {
+            $('#mask').toggle();
+            $("#mask").css("height", $(document).height());
+            $("#mask").css("width", $(document).width());
+            $('#mask').css('backgroundColor', 'gray');
+            $('#mask').css('opacity', '0.3');
+            $('#nianji').slideDown(300);
+        });
+        $('#xiaoxue span').on('click',function () {
+//            alert($(this).text());
+            nianji=$(this).text();
+            $('#nianjineirong').html(nianji);
+            $('#arrow2').css('display', 'none');
+            show();
+        });
+                $('#xiaoxuesheng').on('click', function () {
+                    $('#chuzhongsheng').removeClass("flag");
+                    $('#gaozhongsheng').removeClass("flag");
+                    if (!$('#xiaoxuesheng').attr("class")) {
+                        $('#xiaoxue').css('display', 'block');
+                        $('#gaozhong').css('display', 'none');
+                        $('#chuzhong').css('display', 'none');
+
+
+                    }
+                    $(this).addClass('flag');
+                });
+                $('#chuzhongsheng').on('click', function () {
+                    $('#xiaoxuesheng').removeClass("flag");
+                    $('#gaozhongsheng').removeClass("flag");
+                    if (!$('#chuzhongsheng').attr("class")) {
+                        $('#xiaoxue').css('display', 'none');
+                        $('#gaozhong').css('display', 'none');
+                        $('#chuzhong').css('display', 'block');
+                        $('#chuzhong span').on('click',function () {
+//                            alert($(this).text());
+                            nianji=$(this).text();
+                            $('#nianjineirong').html(nianji);
+                            $('#arrow2').css('display', 'none');
+                            show();
+                        });
+                    }
+                    $(this).addClass('flag');
+                });
+        $('#gaozhongsheng').on('click', function () {
+            $('#xiaoxuesheng').removeClass("flag");
+            $('#chuzhongsheng').removeClass("flag");
+            if (!$('#gaozhongsheng').attr("class")) {
+                $('#xiaoxue').css('display', 'none');
+                $('#gaozhong').css('display', 'block');
+                $('#chuzhong').css('display', 'none');
+                $('#gaozhong span').on('click',function () {
+//                    alert($(this).text());
+                    nianji=$(this).text();
+                    $('#nianjineirong').html(nianji);
+                    $('#arrow2').css('display', 'none');
+                    show();
+                });
+            }
+            $(this).addClass('flag');
+        });
+        $('#quxiao').on('click',show);
+        $('#wancheng').on('click',show);
+            }
+    );
+
+</script>
+<script src="js/LAreaData1.js"></script>
+<script src="js/LAreaData2.js"></script>
+<script src="js/LArea.js"></script>
+<script>
+    var area1 = new LArea();
+    area1.init({
+        'trigger': '#location', //触发选择控件的文本框，同时选择完毕后name属性输出到该位置
+        'valueTo': '#value1', //选择完毕后id属性输出到该位置
+        'keys': {
+            id: 'id',
+            name: 'name'
+        }, //绑定数据源相关字段 id对应valueTo的value属性输出 name对应trigger的value属性输出
+        'type': 1, //数据源类型
+        'data': LAreaData //数据源
+    });
+    area1.value = [1, 13, 3];//控制初始位置，注意：该方法并不会影响到input的value
+    var area2 = new LArea();
+    area2.init({
+        'trigger': '#demo2',
+        'valueTo': '#value2',
+        'keys': {
+            id: 'value',
+            name: 'text'
+        },
+        'type': 2,
+        'data': [provs_data, citys_data, dists_data]
+    });
+</script>
+</body>
+</html>

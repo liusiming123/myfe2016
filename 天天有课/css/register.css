@@ -1,0 +1,230 @@
+@charset "UTF-8";
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.clearfix {
+    overflow: hidden;
+    _zoom: 1;
+}
+
+body {
+    background-color: #f5f5f5;
+    font-family: AvenirRoman, HelveticaNeue-Light, Helvetica Neue, arial, Hiragino Sans GB, 冬青黑体, Microsoft YaHei New, Microsoft Yahei, 微软雅黑, 宋体, SimSun, STXihei, 华文细黑, sans-serif;
+    font-weight: 400;
+}
+
+img {
+    vertical-align: middle;
+    border: 0
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+button, input, optgroup, select, textarea {
+    color: inherit;
+    font: inherit;
+    margin: 0
+}
+
+button, html input[type=button], input[type=reset], input[type=submit] {
+    -webkit-appearance: button;
+    cursor: pointer
+}
+
+/*header*/
+#header {
+    width: auto;
+    height: 4.2666rem;
+    background-color: #2c93e0;
+    padding: 0 1.3333rem;
+    line-height: 4.2666rem;
+}
+
+#header .container {
+    width: 100%;
+}
+
+#header .arrow, #header .arrow a, #header .h2 {
+    height: 100%;
+    width: 33.3333%;
+    display: block;
+    font-size: 1.6rem;
+    color: #fff;
+}
+
+#header .arrow img {
+    width: 0.88888rem;
+    height: 1.5111rem;
+}
+
+#header .h2.login {
+    text-align: center;
+}
+
+#header .h2.register {
+    text-align: right;
+}
+
+#header .h2 a {
+    color: #fff;
+}
+
+/*logo*/
+#logo {
+    width: auto;
+    height: 16.3555rem;
+    background: url("../img/33icn_ttc168.png") no-repeat center center;
+    -webkit-background-size: 7.4666rem;
+    background-size: 7.4666rem;;
+}
+
+/*登录框*/
+#login {
+    width: auto;
+}
+
+#login .username, #login .password {
+    width: auto;
+    height: 4.2666rem;
+    line-height: 4.2666rem;
+    background-color: #fff;
+    border-top: 2px solid #e6e6e6;
+    padding: 0 1.3333rem;
+    font-size: 1.2444rem;
+}
+
+#login .password {
+    border-bottom: 2px solid #e6e6e6;
+    position: relative;
+}
+
+#login .icon {
+    display: inline-block;
+    height: 100%;
+    width: 1.9555rem;
+    margin-right: 0.8888rem;
+}
+
+#login .username .icon {
+    background: url("../img/31icn_mob.png") no-repeat center center;
+    -webkit-background-size: 1.9555rem;
+    background-size: 1.9555rem;;
+}
+
+#login .password .icon {
+    background: url("../img/32icn_password.png") no-repeat center center;
+    -webkit-background-size: 1.9555rem;
+    background-size: 1.9555rem;;
+}
+
+#login .password.code .icon {
+    background: url("../img/35icn_输入验证码.png") no-repeat center center;
+    -webkit-background-size: 1.9555rem;
+    background-size: 1.9555rem;;
+}
+
+#login input {
+    display: inline-block;
+    width: 85%;
+    height: 95%;
+    outline: none;
+    border: none;
+}
+
+#login .get-code {
+    width: 10.6666rem;
+    outline: none;
+    border: none;
+    background-color: #e66d6d;
+    /*float: right;*/
+    color: #ffffff;
+    position: absolute;
+    right: 0;
+    top: -0.044444rem;
+}
+
+/*用户协议*/
+#protocol {
+    width: auto;
+    padding: 0 1.33333rem;
+    margin-top: 1.33333rem;
+    height: 1.06666rem;
+    line-height: 1.06666rem;
+}
+
+#protocol a {
+    display: inline-block;
+}
+
+#protocol a.checkbox {
+    width: 1.06666rem;
+    height: 1.06666rem;
+    background: url("../img/34_02勾框.png") no-repeat center center;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+
+#protocol a.checkbox.disagree {
+    background: url("../img/34_01空框.png") no-repeat center center;
+}
+
+#protocol span {
+    height: 1.06666rem;
+    line-height: 1.06666rem;
+    font-size: 1.06666rem;
+    color: #979797;
+    margin-left: 0.4444rem;
+}
+
+#protocol span a {
+    color: #2c93e0;
+}
+
+/*登录按钮*/
+#submit {
+    margin: 3.5555rem auto 1.7777rem auto;
+    width: 13.3333rem;
+    height: 3.5555rem;
+}
+
+#submit input {
+    color: #ffffff;
+    width: 100%;
+    height: 100%;
+    background-color: #c8c8c8;
+    border-radius: 0.4444rem;
+    outline: none;
+    border: none;
+    font-size: 1.4222rem;
+}
+
+#submit.done {
+    margin: 4.2666rem auto 4.2666rem auto;
+}
+
+/*向手机号发送验证码*/
+#text {
+    width: auto;
+    padding: 0 1.3333rem;
+    margin-bottom: 1.2444rem;
+    font-size:1.06666rem;
+}
+
+#text span{
+    display: block;
+    height: 1.5555rem;
+    line-height: 1.5555rem;
+}
+
+#text span b{
+    color: #2c93e0;
+}

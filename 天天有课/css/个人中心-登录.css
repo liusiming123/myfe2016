@@ -1,0 +1,234 @@
+html,body{
+    width: 100%;
+    height: 100%;
+}
+body {
+    background-color: #fff;
+    font-family: AvenirRoman, HelveticaNeue-Light, Helvetica Neue, arial, Hiragino Sans GB, 冬青黑体, Microsoft YaHei New, Microsoft Yahei, 微软雅黑, 宋体, SimSun, STXihei, 华文细黑, sans-serif;
+    font-weight: 400;
+    background-color: rgb(240, 240, 240);
+
+}
+#info{
+    width: 100%;
+    height: 18rem;
+    background-image: url("../img/换肤图片/换肤1友谊唯美720.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 18.8rem;
+    background-position: center center;
+    overflow: hidden;
+    position: relative;
+    color: rgb(255,255,255);
+    font-size: 1.24rem;
+}
+/*#imgmain{
+	position:absolute;
+	top:0;
+	display:block;
+	width:100%;
+	height: 18.6rem;
+}*/
+#headImage{
+    display: block;
+    width: 6.66rem;
+    height: 6.66rem;
+    border: 0.089rem solid rgb(226,227,228);
+    border-radius: 3.33rem;
+    margin: 1.7rem auto 0 auto;
+}
+#clothImage{
+    display: block;
+    width: 2.66rem;
+    height: 2.66rem;
+    border-radius: 1.33rem;
+    position: absolute;
+    top: 0.88rem;
+    right: 0.88rem;
+}
+#arrowImage{
+    display: block;
+    width: 0.89rem;
+    height: 1.46rem;
+    position: absolute;
+    top: 6rem;
+    right: 1.33rem;
+}
+#font{
+    font-size: 1.06rem;
+    margin-top: 0.97rem;
+    text-align: center;
+}
+#info-footer{
+    position: absolute;
+    width: 100%;
+    height: 5.89rem;
+}
+#info-bottom{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 5.89rem;
+    display: -webkit-box;
+    -webkit-box-pack: justify;
+    font-size:2.8rem ;
+}
+.btn{
+    text-align: center;
+    width: 8rem;
+    font-size: 1.24rem;
+}
+.btn span{
+    display: block;
+    height: 2.3rem;
+}
+.btn span.select{
+    line-height: 2.3rem;
+}
+.line{
+    position: absolute;
+    width: 0.089rem;
+    height: 2.8rem;
+    background-color: rgb(230,230,230);
+    top: 1.55rem;
+    left: 10.6rem;
+}
+.line.right{
+    left: 21.33rem;
+}
+#content{
+    width: 100%;
+    /*height: 100%;*/
+    /*background-color: rgb(240,240,240);*/
+}
+.main1{
+    width: 100%;
+    height: 10rem;
+    font-size: 1.4285rem;
+}
+.null{
+    width: 100%;
+    height: 1.11rem;
+}
+
+.son-content{
+    font-size: 1.42rem;
+    color: rgb(99,99,99);
+    width: 100%;
+    height: 4.22rem;
+    background-color: rgb(255,255,255);
+    margin-bottom: 0.08rem;
+    text-indent: 1.78rem;
+}
+.son-content span{
+    display: inline-block;
+    height: 4.22rem;
+    line-height: 4.22rem;
+}
+.son-content span.img{
+    background-image: url("../img/18icn_eva.png") ;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: 1.68rem 1.68rem;
+    background-position: center center;
+}
+.last{
+    float: right;
+    overflow: hidden;
+    margin-right: 1.51rem;
+}
+.lastimg{
+    margin-top:1rem ;
+    width: 0.89rem;
+    height: 1.42rem;
+}
+/*nav*/
+#nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 4.1777rem;
+    /*line-height: 4.1777rem;*/
+    /*background-color: #fafafa;*/
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fafafa), color-stop(1, #f1f1f1));
+    border-top: 0.0888888rem #d2d2d2 solid;
+    /*display: box;*/
+    display: -webkit-box;
+    display: -moz-box;
+}
+
+#nav a {
+    display: block;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    text-align: center;
+    color: #969696;
+    text-shadow: 0 1px 1px white;
+    font-size: 0.8888rem;
+    text-decoration: none;
+}
+
+#nav .icon {
+    width: 1.9555rem;
+    height: 1.9555rem;
+    margin: 0.5555rem auto 0.44444rem auto;
+}
+
+#nav .teacherIcon .icon {
+    background: url("../img/10_02icn_tec_def.png.png") no-repeat center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+#nav .teacherIcon.active .icon {
+    background: url("../img/10_01icn_tec_sel.png.png") no-repeat center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+#nav .HomeTeacherIcon .icon {
+    background: url("../img/10_04icn_tut_def.png") no-repeat center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+#nav .HomeTeacherIcon.active .icon {
+    background: url("../img/10_03icn_tut_sel.png") no-repeat center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+#nav .sweepIcon .icon {
+    background: url("../img/10_06icn_scan_sel.png") no-repeat center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+#nav .sweepIcon.active .icon {
+    background: url("../img/10_05icn_scan_clk.png") no-repeat center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+#nav .syllabusIcon .icon {
+    background: url("../img/10_08icn_tit_def.png") no-repeat center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+#nav .syllabusIcon.active .icon {
+    background: url("../img/10_07icn_tit_sel.png") no-repeat center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+#nav .userIcon .icon {
+    background: url("../img/10_10icn_psn_def.png") no-repeat center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+#nav .userIcon.active .icon {
+    background: url("../img/10_09icn_psn_sel.png") no-repeat center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+}

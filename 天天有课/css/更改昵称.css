@@ -1,0 +1,71 @@
+*{
+	margin:0;
+	padding:0;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-color: #fff;
+    font-family: AvenirRoman, HelveticaNeue-Light, Helvetica Neue, arial, Hiragino Sans GB, 冬青黑体, Microsoft YaHei New, Microsoft Yahei, 微软雅黑, 宋体, SimSun, STXihei, 华文细黑, sans-serif;
+    font-weight: 400;
+    background-color: rgb(240, 240, 240);
+
+}
+#head {
+    width: 100%;
+    height: 4.44rem;
+    background-color: rgb(44, 147, 224);
+    color: white;
+    position: relative;
+    line-height: 4.44rem;
+    text-align: center;
+    font-size: 1.6rem;
+    overflow: hidden;
+}
+#head img {
+    display: block;
+    width: 1.06rem;
+    height: 1.64rem;
+    position: absolute;
+    top: 1.47rem;
+    left: 1.37rem;
+}
+#head span{
+    position: absolute;
+    display: inline-block;
+    right: 1.15rem;
+}
+
+#content {
+    width: 100%;
+    /*height: 100%;*/
+    /*background-color: rgb(240, 240, 240);*/
+}
+.null {
+    width: 100%;
+    height: 1.11rem;
+}
+.son-content {
+    font-size: 1.42rem;
+    color: rgb(99, 99, 99);
+    width: 100%;
+    height: 4.26rem;
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 0.08rem;
+    text-indent: 1.78rem;
+    position: relative;
+}
+.inp{
+    border: none;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    text-indent: 0.88rem;
+    font-size: 1.24rem;
+    padding:0;
+}

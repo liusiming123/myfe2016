@@ -1,0 +1,71 @@
+html,body {
+    width: 100%;
+    height: 100%;
+}
+body {
+    background-color: #fff;
+    font-family: AvenirRoman, HelveticaNeue-Light, Helvetica Neue, arial, Hiragino Sans GB, 冬青黑体, Microsoft YaHei New, Microsoft Yahei, 微软雅黑, 宋体, SimSun, STXihei, 华文细黑, sans-serif;
+    font-weight: 400;
+    background-color: rgb(240, 240, 240);
+	position: relative;
+}
+#head {
+    width: 100%;
+    height: 4.44rem;
+    background-color: rgb(44, 147, 224);
+    color: white;
+    position: relative;
+    line-height: 4.44rem;
+    text-align: center;
+    font-size: 1.6rem;
+}
+#head img {
+    display: block;
+    width: 0.88889rem;
+    height: 1.5111rem;
+    position: absolute;
+    top: 1.47rem;
+    left: 1.37rem;
+}
+#content {
+    width: 100%;
+    /*height: 100%;*/
+    /*background-color: rgb(240, 240, 240);*/
+}
+.null {
+    width: 100%;
+    height: 1.11rem;
+}
+.son-content {
+    font-size: 1.42rem;
+    color: rgb(99, 99, 99);
+    width: 100%;
+    height: 4.26rem;
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 0.4rem;
+    text-indent: 1.78rem;
+    position: relative;
+}
+.inp{
+    border: none;
+    display: block;
+    /*position: absolute;*/
+    width: 100%;
+    height: 100%;
+    font-size: 1.24rem;
+    outline: none;
+    text-indent: 0.88rem;
+    -webkit-appearance: none;
+    padding:0;
+}
+#next{
+    width: 13.3rem;
+    height: 3.55rem;
+    margin: 0 auto;
+    background-color: rgb(200,200,200);
+    border-radius: 0.44rem;
+    color: white;
+    font-size: 1.42rem;
+    line-height: 3.55rem;
+    text-align: center;
+}
