@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+img{
+    display: block;
+    border: 0;
+}
+input{
+    border: 0;
+    outline: none;
+}

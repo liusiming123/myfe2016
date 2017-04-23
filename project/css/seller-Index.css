@@ -1,0 +1,29 @@
+#seller-snack{
+    margin-top: 30px;
+}
+.search{
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+#seller-snack .row{
+    width: 1200px;
+    margin: 0 auto;
+}
+#seller-snack .row .food-name h4{
+    color: #999999;
+}
+#seller-snack .row .food-name{
+    text-align: center;
+}
+#seller-snack .row .food-name span strong{
+    color: red;
+    font-size: 20px;
+    text-align: center;
+}
+#seller-snack .row .food-shop .btn-danger{
+    margin-left: 30px;
+}
+#seller-snack .row .food-shop .collect{
+    background: white;
+    color: #dd546d;
+}

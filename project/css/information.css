@@ -1,0 +1,245 @@
+.warp{
+    background: #F5F8FA;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+#menu{
+    width: 160px;
+    background: white;
+    margin-top: 20px;
+    margin-left: 95px;
+    padding-bottom: 50px;
+    float: left;
+}
+#menu p{
+    float: left;
+    width: 140px;
+    height: 50px;
+    color: #dd546d;
+    font-size: 17px;
+    font-weight: 900;
+    line-height: 50px;
+    margin-left: 10px;
+    border-bottom: 2px solid #dd546d;
+    text-align: center;
+    background:url("../images/icon.png") no-repeat 15px 17px;
+}
+#menu ul{
+    overflow: hidden;
+    width: 120px;
+    text-align: center;
+    padding-bottom:20px;
+    border-bottom: 1px solid #ddd;
+    margin-left: 20px;
+}
+#menu span{
+    float: left;
+    font-size: 15px;
+    width: 120px;
+    height: 50px;
+    line-height: 50px;
+    background: url("../images/icon.png") no-repeat;
+
+}
+#menu span.span1{
+    background-position:-175px  19px ;
+}
+#menu span.span2{
+    background-position:5px  -62px ;
+}
+#menu span.span3{
+    background-position:-174px  -67px ;
+}
+#menu ul li a{
+    width: 120px;
+    height: 40px;
+    float: left;
+    line-height: 40px;
+    color: #999;
+    font-size: 13px;
+}
+#menu ul li a.sty-color{
+    color: #dd546d;
+}
+
+/*个人信息上传照片*/
+#person-information{
+    margin: 20px;
+    float: left;
+    width: 950px;
+    background: white;
+    color: #999;
+    padding-bottom: 80px;
+}
+#person-information h3{
+    border-bottom: 1px solid #dd546d;
+    float: left;
+    width: 890px;
+    height: 50px;
+    font-weight: 900;
+    line-height: 50px;
+    color: #dd546d;
+    margin-left: 30px;
+}
+#person-information .upload-picture{
+    position: relative;
+    width: 120px;
+    float: left;
+    margin-top: 30px;
+    margin-left: 60px;
+    margin-bottom: 20px;
+}
+#person-information .upload-picture input{
+    display: none;
+}
+#person-information .upload-picture label{
+    display: block;
+    color: white;
+    font-size: 13px;
+    width: 80px;
+    height: 30px;
+    background: #dd546d;
+    cursor: pointer;
+    text-align: center;
+    line-height: 30px;
+    border: 1px solid #ddd;
+    margin-top: 20px;
+    margin-left: 7px;
+}
+#person-information .upload-picture #prvid{
+    width: 100px;
+    height: 100px;
+    border: 1px solid #ddd;
+}
+#person-information .upload-picture #prvid img{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+/*个人信息用户名*/
+#person-information .username{
+    margin-left: 70px;
+    margin-top: 60px;
+    width:600px;
+    height: 123px;
+    color: #999;
+    float: left;
+}
+#person-information .username .diaplay-submit{
+    width: 80px;
+    height: 30px;
+    border: 1px solid #aaaaaa;
+    background: #dd546d;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+    display: none;
+    margin-left: 100px;
+}
+#person-information .username span{
+    display: inline-block;
+}
+#person-information .username .change{
+    margin-left: 100px;
+    cursor: pointer;
+    font-size: 13px;
+    color: #dd546d;
+    text-align: center;
+    line-height: 30px;
+
+}
+#person-information .sel-describe{
+    clear: both;
+    margin-left: 60px;
+    margin-bottom: 20px;
+}
+#person-information .sel-describe p{
+    float: left;
+    width: 110px;
+}
+#person-information .sel-describe textarea{
+    width: 600px;
+    height: 80px;
+    border: 1px solid #dd546d;
+    outline: none;
+    resize: none;
+}
+#person-information .information-content{
+    padding-top: 20px;
+    width: 800px;
+    border-top: 1px solid #ddd;
+    margin-left: 65px;
+    clear: both;
+    height: 500px;
+}
+#person-information .information-content p{
+    width: 100px;
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+}
+#person-information .information-content input[type=text]{
+    text-indent: 5px;
+    margin: 5px 0;
+    width: 400px;
+    height: 25px;
+    border: 1px solid #dd546d;
+}
+#person-information .information-content input[type=radio]{
+    display: none;
+}
+#person-information .information-content .sex,#person-information .information-content .member{
+    margin-right: 10px;
+    width: 13px;
+   display: inline-block;
+    height: 13px;
+    background: url("../images/frame.png");
+    background-size: 13px 13px;
+    margin-bottom: 0;
+}
+#person-information .information-content div.realname{
+    display: none;
+}
+#person-information .information-content div{
+    margin-top: 30px;
+}
+#person-information .information-content select{
+    width: 125px;
+    height: 30px;
+    border: 1px solid #dd546d;
+    outline: none;
+    color: #888;
+    margin-right: 8px;
+}
+#person-information .information-content input[type=submit]{
+    width: 100px;
+    height: 40px;
+    border: 1px solid #aaaaaa;
+    background: #dd546d;
+    color: white;
+    font-size: 13px;
+    margin-top: 30px;
+    margin-left: 400px;
+    cursor: pointer;
+}
+#fbg{
+    width: 100%;
+    height: 1311px;
+    background: rgba(0,0,0,0.3);
+    position: fixed;
+    top: -150px;
+    z-index: 998;
+    display: none;
+}
+#mask{
+    display: none;
+}
+#mask .edit-address{
+    position: fixed;
+    top: -150px;
+    z-index: 999;
+    background: white;
+    width: 800px;
+    margin: 200px 0 0 250px;
+}

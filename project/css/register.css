@@ -1,0 +1,213 @@
+section{
+    width:100%;
+    height:724px;
+    background: #eff3f5;
+}
+section .wrap{
+    margin:0 auto;
+    width:1170px;
+    height:724px;
+    /*position:relative;*/
+    background: #fff;;
+}
+section .wrap .section_content .user .section_content_list_username span.tip-uname
+,section .wrap .section_content .seller .section_content_list_username span.tip-uname1
+,section .wrap .section_content .user .section_content_list_password span.tip-pwd
+,section .wrap .section_content .seller .section_content_list_password span.tip-pwd1{
+    width: 130px;
+    height: 21px;
+    background: none;
+    left: 430px;
+    color: red;
+}
+.section_placeholder{
+    height:15px;
+    background:#eff3f5 ;
+}
+.section_content{
+    height:632px;
+}
+.section_content_title{
+    text-align: center;
+}
+.section_content_placeholder{
+    height:36px;
+}
+h1{
+    font-size: 30px;
+}
+.section_content_list_username{
+    border-bottom:1px solid #eff3f5;
+    width:593px;
+    height:71px;
+    margin-left:288px;
+    position:relative;
+}
+.section_content_list_username span,.section_content_list_password span.ph{
+    position:absolute;
+    left:110px;
+    top:27px;
+    width:17px;
+    height:24px;
+    background: url("../images/sprite.png") -7px -6px;
+}
+.section_content_list_username input{
+    position:relative;
+    left:157px;
+    top:18px;
+    width:436px;
+    height:43px;
+    font-size: 16px;
+}
+.section_content_list_password input{
+    position:relative;
+    left:157px;
+    top:18px;
+    width:436px;
+    height:43px;
+    font-size: 16px;
+}
+.section_content_list_password{
+    border-bottom:1px solid #eff3f5;
+    width:593px;
+    height:71px;
+    margin-left:288px;
+    position:relative;
+}
+.section_content_list_password span{
+    position:absolute;
+    left:110px;
+    top:27px;
+    width:17px;
+    height:24px;
+    background: url("../images/sprite.png") -7px -52px;
+}
+.section_content_list_verification2 input{
+    position:relative;
+    left:157px;
+    top:18px;
+    width:188px;
+    height:43px;
+    font-size: 16px;
+}
+.section_content_list_verification2{
+    border-bottom:1px solid #eff3f5;
+    width:593px;
+    height:71px;
+    position:relative;
+    margin-left:288px;
+}
+.section_content_list_verification2 span{
+    position:absolute;
+    left:110px;
+    top:27px;
+    width:28px;
+    height:28px;
+    background: url("../images/sprite.png") -7px -99px;
+}
+.captcha{
+    position:absolute;
+    top:18px;
+    right:140px;
+}
+.captcha img{
+    width:100px;
+    height:35px;
+}
+.section_content_list_verification2_refresh{
+    width:19px;
+    height:19px;
+    position:absolute;
+    top:30px;
+    right:70px;
+    background: url("../images/sprite.png") -7px -144px;
+}
+div.section_content_list_role{
+    margin:0 auto;
+    width:620px;
+    height:80px;
+    color: #606060;
+}
+.section_content_list_mentor{
+    float:left;
+    width:200px;
+    height:50px;
+    border:1px solid #eff3f5;
+    font-size: 15px;
+    text-align: center;
+    line-height: 50px;;
+    margin-top:15px;;
+    margin-left: 100px;
+    cursor:pointer;
+}
+.section_content_list_seeker{
+    float:right;
+    width:200px;
+    height:50px;
+    border:1px solid gainsboro;
+    font-size: 15px;
+    text-align: center;
+    line-height: 50px;;
+    margin-top:15px;;
+    margin-right: 95px;
+    cursor:pointer;
+}
+.section_content_list_role .selected{
+    border:1px solid #dd546d;
+    color: #dd546d;
+}
+.section_content_list_rule{
+    text-align: center;
+    font-size: 13px;
+    color:#a4afba;
+}
+div.section_content_list_submit{
+    margin:0 auto;
+    width:594px;
+    height:120px;
+}
+.section_content_list_submit input{
+    width:402px;
+    height:52px;
+    background:#dd546d;
+    font-size: 17px;
+    color:#fff;
+    margin-top:16px;
+    margin-left:98px;
+    cursor: pointer;
+    /*position:relative;*/
+    /*left:98px;*/
+    /*top:16px;*/
+}
+.section_content_list_submit_login{
+    margin-top:14px;
+}
+.section_content_list_submit_login a{
+    float: right;
+    font-size: 13px;;
+    color:#a4afba;
+    margin-right: 90px;
+}
+
+/*.section_content_list_username .msg_username{*/
+    /*position:absolute;*/
+    /*left:430px;*/
+    /*top:30px;*/
+    /*color:red;*/
+    /*font-size: 16px;*/
+    /*z-index: 2;*/
+/*}*/
+/*.section_content_list_password .msg_psd{*/
+    /*position:absolute;*/
+    /*left:430px;*/
+    /*top:30px;*/
+    /*color:red;*/
+    /*font-size: 16px;*/
+    /*z-index: 2;*/
+/*}*/
+/*.captcha_msg{*/
+    /*position:absolute;*/
+    /*right: -30px;*/
+    /*top:30px;*/
+    /*color: red;*/
+/*}*/

@@ -1,0 +1,21 @@
+/*footer开始*/
+#footer{
+    clear: both;
+    height: 200px;
+    background: #555555;
+    color: #dd546d;
+    text-indent: 300px;
+    line-height: 30px;
+}
+#footer .footer-left{
+    margin-top: 60px;
+    width: 40%;
+    float: left;
+    height: 140px;
+}
+#footer .footer-right{
+    margin-top: 60px;
+    width: 50%;
+    float: left;
+    height: 140px;
+}

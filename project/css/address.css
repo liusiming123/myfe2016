@@ -1,0 +1,120 @@
+#address{
+    margin: 20px;
+    float: left;
+    width: 950px;
+    background: white;
+    color: #999;
+    padding-bottom: 80px;
+}
+#address .address{
+    font-size: 13px;
+}
+#address h3{
+    border-bottom: 1px solid #dd546d;
+    float: left;
+    width: 890px;
+    height: 50px;
+    font-weight: 900;
+    line-height: 50px;
+    color: #dd546d;
+    margin-left: 30px;
+}
+/*地址*/
+#address .address ul{
+    margin-left: 30px;
+}
+#address .address li{
+    position: relative;
+    margin-top:20px ;
+}
+#address .address li.user-addresslist{
+    display:block;
+    width: 254px;
+    height: 151px;
+    float: left;
+    background: url(../images/peraddbg.png) no-repeat scroll 0 0;
+    margin-right:10px ;
+    padding:10px ;
+}
+#address .address li.user-addresslist.defaultAddr{
+    background: url(../images/peraddressbg.png) no-repeat scroll 0 0;
+}
+#address .address-left{
+    width:100%;
+    position: relative;
+    line-height: 23px;
+}
+
+#address li .new-addr-btn{
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+}
+#address li .new-addr-btn a,#address li .deftip a{
+    color: #999;
+}
+#address li.defaultAddr .deftip a{
+    color: #dd546d;
+}
+#address li .deftip{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+#address li .new-addr-btn a:hover,#address li .deftip a:hover {
+    color: #dd546d;
+}
+
+#address .add-address,#mask .add-address{
+    padding-top: 20px;
+    width: 800px;
+    margin-left: 65px;
+    clear: both;
+    height: 500px;
+}
+#address .add-address div,#mask .add-address div{
+    margin-top: 30px;
+}
+#address .add-address p,#mask .add-address p{
+    width: 100px;
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    float: left;
+}
+#address .add-address input[type=text],#mask .add-address input[type=text]{
+    text-indent: 5px;
+    margin: 5px 0;
+    width: 400px;
+    height: 25px;
+    border: 1px solid #dd546d;
+}
+#address .add-address select,#mask .add-address select{
+    width: 125px;
+    height: 30px;
+    border: 1px solid #dd546d;
+    outline: none;
+    color: #888;
+    margin-right: 8px;
+}
+#address .add-address textarea,#mask .add-address textarea{
+    width:500px;
+    height: 150px;
+    border: 1px solid #dd546d;
+    outline: none;
+    font-size: 18px;
+    resize: none;
+    line-height: 30px;
+    text-indent: 20px;
+}
+#address .add-address input[type=submit],#mask .add-address input[type=submit]{
+    width: 100px;
+    height: 40px;
+    border: 1px solid #aaaaaa;
+    background: #dd546d;
+    color: white;
+    font-size: 13px;
+    margin-top: 30px;
+    margin-left: 500px;
+    cursor: pointer;
+}

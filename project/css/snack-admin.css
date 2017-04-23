@@ -1,0 +1,67 @@
+#header .search{
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+#snack-admin{
+    margin: 20px;
+    float: left;
+    width: 950px;
+    background: white;
+    padding-bottom: 80px;
+    color: #999;
+}
+#snack-admin .snack-admin-title{
+    border-bottom: 1px solid #dd546d;
+    width: 890px;
+    height: 50px;
+    margin: 0 0 0 30px;
+    font-size:18px ;
+}
+#snack-admin h3{
+    float: left;
+    width: 600px;
+    height: 50px;
+    font-weight: 900;
+    color: #dd546d;
+    line-height: 50px;
+    margin: 0 0 0 30px;
+}
+#snack-admin .row{
+    clear: both;
+    padding-left: 5px;
+    padding-top: 20px;
+    width: 910px;
+    margin: 0 auto;
+}
+#snack-admin .row .food-name h4{
+    color: #999999;
+}
+#snack-admin .row .food-name{
+    text-align: center;
+}
+#snack-admin .row .food-name span strong{
+    color: red;
+    font-size: 20px;
+    text-align: center;
+}
+#snack-admin .row .food-shop .btn-danger{
+    margin-left: 5px;
+}
+#snack-admin .row .food-shop .collect{
+    background: white;
+    color: #dd546d;
+}
+#snack-admin .row .thumbnail.add-snack{
+    overflow: hidden;
+    cursor: pointer;
+}
+#snack-admin .row .add-snack p{
+    width: 100%;
+    height: 50px;
+    float: left;
+    color: #dd546d;
+    font-size: 20px;
+    text-align: center;
+    line-height: 50px;
+    margin-bottom: 0;
+}

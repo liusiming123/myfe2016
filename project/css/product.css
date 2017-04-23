@@ -1,0 +1,241 @@
+
+.warpper{
+    width: 1200px;
+    margin: 50px auto;
+}
+.food{
+    width: 500px;
+    height: 660px;
+    float: left;
+}
+.shop{
+    width: 650px;
+    height: 660px;
+    float: left;
+    margin-left: 50px;
+    color: #777;
+}
+.food_img{
+    width: 500px;
+    height: 500px;
+    border: 1px solid grey;
+
+}
+.food_img img{
+    width: 500px;
+}
+.food .collect{
+    margin-top: 24px;
+}
+.food .collect a{
+    color: #dd546d;
+    margin-left: 30px;
+}
+.food .collect span{
+    display: inline-block;
+    height: 24px;
+    width: 100px;
+    line-height: 24px;
+    font-size: 20px;
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+    background-image: url("../images/icon1.png");
+}
+.food .btn{
+    margin-top: 30px;
+    width: 500px;
+    height: 60px;
+}
+.food .btn .last{
+    float: left;
+}
+.food .btn .next{
+    float: right;
+}
+.food .btn button{
+    width: 80px;
+    height: 30px;
+    border-radius: 40px;
+    background: white;
+    border: 2px solid  #777;
+    font-size: 20px;
+    color:  #888;
+    cursor: pointer;
+    outline: none;
+}
+.food .btn button:hover{
+    border: 2px solid  #dd546d;
+    color:  #dd546d;
+}
+.shop h1{
+    width: 300px;
+    float: left;
+}
+.shop p{
+    clear: both;
+    margin-top: 70px;
+}
+.shop .seller{
+    width: 350px;
+    height: 42px;
+    float: left;
+    line-height: 42px;
+    color: #dd546d;
+}
+.price{
+    margin-top: 30px;
+    height: 55px;
+    border-bottom: 1px solid #eee
+}
+.price > span{
+    float: left;
+    height: 55px;
+    line-height: 55px;
+
+}
+.price_1{
+    float: left;
+    margin-left: 60px;
+    height: 55px;
+    line-height: 55px;
+}
+
+.comment{
+    clear: both;
+    border-bottom: 1px solid #eee;
+    width: 520px;
+    height: 72px;
+    position: relative;
+    margin: 20px 0;
+    line-height: 72px;
+}
+.comment span{
+    float: left;
+}
+
+.comment .line{
+    border-left: 1px solid #eee;
+    height: 26px;
+    width: 1px;
+    float: left;
+    margin: 23px 42px;
+}
+.shop_number{
+    margin-top: 30px;
+    height: 50px;
+}
+.shop_number .button{
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 10px;
+    width: 15px;
+    height: 15px;
+    color: #dd546d;
+    font-size: 16px;
+    line-height: 13px;
+    border: 1px solid #dd546d;
+    text-align: center;
+    border-radius: 50%;
+}
+.shop_number input{
+    width: 45px;
+    height: 30px;
+    line-height: 30px;
+    border-color: #eee;
+    text-align: center;
+    display: inline-block;
+}
+.shop_car,.buy{
+    margin-top: 40px;
+    float: left;
+    width: 160px;
+    height: 42px;
+    border-radius: 3px;
+    border: 1px solid #dd546d ;
+    text-align: center;
+    line-height: 42px;
+    cursor: pointer;
+}
+.shop_car{
+    color: #dd546d;
+}
+.buy{
+    color: white;
+    margin-left: 20px;
+    background: #dd546d;
+}
+
+
+
+#comment{
+    margin-top: 20px;
+    margin-left: 20px;
+    float: left;
+    width: 950px;
+    background: white;
+    color: #999;
+}
+#comment h3{
+    border-top:4px solid #dd546d;
+    border-bottom:4px solid #dd546d;
+    float: left;
+    width: 100px;
+    height: 40px;
+    font-weight: 900;
+    line-height: 40px;
+    color: #dd546d;
+    margin-left: 50px;
+    text-align: center;
+}
+#comment ul li{
+    width: 890px;
+    padding: 20px 0;
+    float: left;
+    margin-left: 30px;
+    border-bottom: 1px solid #ddd;
+}
+#comment ul li .photo{
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    margin: 10px 30px;
+}
+#comment ul li .photo img {
+    width: 80px;
+}
+#comment ul li .comment-people{
+    width: 140px;
+    text-align: center;
+    float: left;
+}
+#comment ul li .comment-content{
+    width: 460px;
+    float: left;
+}
+#comment ul li .comment-content p{
+    margin-top: 20px;
+    text-indent: 10px;
+}
+#comment ul li .comment-content img{
+    width: 130px;
+    height: 130px;
+    margin-left: 40px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+}
+#comment ul li .comment-snack{
+    width: 190px;
+    float: left;
+    text-align: center;
+}
+#comment ul li .comment-snack p{
+    margin-top: 50px;
+}
+#comment ul li .comment-time{
+    float: left;
+    width: 100px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+

@@ -1,0 +1,133 @@
+#addcomment {
+    background: #f5f5f5;
+}
+#addcomment .comment-content{
+    width: 1200px;
+    height:750px;
+    margin: 0 auto;
+}
+#addcomment .comment-content .comment-title{
+    margin: 0 auto;
+    width: 1000px;
+    height: 120px;
+    border-bottom: 1px solid #dd546d;
+}
+#addcomment .comment-content .comment-title h1{
+    margin-left: 100px;
+    margin-top: 30px;
+    color: #dd546d;
+    float: left;
+    width: 450px;
+    height: 86px;
+    line-height: 86px;
+    background: url("../images/zhoummei.png") no-repeat right;
+}
+#addcomment .comment-content .star{
+    width: 900px;
+    height: 50px;
+    margin: 40px auto;
+}
+#addcomment .comment-content .comment-description{
+    width: 900px;
+    margin: 40px auto;
+ }
+#addcomment .comment-content .star p,#addcomment .comment-content .comment-description p,#addcomment .comment-content .upload p{
+    margin: 5px 0 10px 20px;;
+    color:#a4afba;
+    float: left;
+}
+#addcomment .comment-content .rating{
+    margin: 8px 0 10px 20px;
+    float: left;
+    height: 16px;
+    width: 460px;
+    position: relative;
+    background: url(../images/star-matrix.gif) no-repeat 0 0;
+}
+#addcomment .comment-content ul.rating li a {
+    position:absolute;
+    left:0;
+    top:0;
+    width:16px;
+    height:16px;
+    text-decoration:none;
+    z-index: 5;
+}
+#addcomment .comment-content ul.rating li.one a {left:0}
+#addcomment .comment-content ul.rating li.two a {left:16px;}
+#addcomment .comment-content ul.rating li.three a {left:32px;}
+#addcomment .comment-content ul.rating li.four a {left:48px;}
+#addcomment .comment-content ul.rating li.five a {left:64px;}
+#addcomment .comment-content ul.rating li a:hover {
+    z-index:2;
+    width:80px;
+    height:16px;
+    overflow:hidden;
+    left:0;
+    background: url(../images/star-matrix.gif) no-repeat 0 0;
+}
+#addcomment .comment-content ul.rating li.one a:hover {background-position:0 -96px;}
+#addcomment .comment-content ul.rating li.two a:hover {background-position:0 -112px;}
+#addcomment .comment-content ul.rating li.three a:hover {background-position:0 -128px}
+#addcomment .comment-content ul.rating li.four a:hover {background-position:0 -144px}
+#addcomment .comment-content ul.rating li.five a:hover {background-position:0 -160px}
+
+#addcomment .comment-content .comment-description textarea{
+    margin-left: 38px;
+    width:500px;
+    height: 150px;
+    border: 1px solid #dd546d;
+    outline: none;
+    font-size: 18px;
+    resize: none;
+    line-height: 30px;
+    text-indent: 20px;
+}
+#addcomment .comment-content input[type=submit]{
+    clear: both;
+    width: 150px;
+    height: 50px;
+    background: #dd546d;
+    color: white;
+    margin-left: 600px;
+}
+/*上传图片*/
+#addcomment .comment-content .upload{
+    width: 900px;
+    margin: 40px auto;
+}
+#files{
+    display: none;
+}
+#prvid{
+    width: 127px;
+    height: 125px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#prvid img{
+    width: 127px;
+    height: 125px;
+    position: absolute;
+}
+.files{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 127px;
+    height: 125px;
+}
+.upload-picture{
+    border: 1px solid #dd546d;
+    width: 127px;
+    height: 125px;
+    position: relative;
+    left:138px;
+    margin-bottom: 20px;
+}
+#addcomment .comment-content .upload span{
+    margin-left:138px;
+    color:#a4afba;
+}
+

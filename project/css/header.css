@@ -1,0 +1,161 @@
+/*header开始*/
+html body{
+    width: 100%;
+    height: 100%;
+}
+#header .header-box{
+    width: 1200px;
+    margin: 0 auto;
+    height: 100px;
+}
+#header .header-box .logo{
+    width: 200px;
+    float: left;
+}
+#header .header-box .logo img{
+    width: 190px;
+}
+#header .header-box .search{
+    margin-left: 130px;
+    margin-top: 25px;
+    float: left;
+    width: 500px;
+    height: 50px;
+    border: 2px solid #dd546d;
+    border-radius: 25px;
+}
+#header .header-box .search .search-input{
+    border: none;
+    width: 400px;
+    height: 50px;
+    margin-left: 20px;
+    font-size: 20px;
+    outline: none;
+}
+#header .header-box .search .search-icon{
+    margin-top: 10px;
+    float: right;
+    width: 78px;
+    height: 30px;
+    border-left: 2px solid #dd546d;
+    background:url("../images/search-icon.png") no-repeat 27px 8px;
+}
+#header .header-box .login{
+    margin-top: 40px;
+    margin-right: 40px;
+    float: right;
+    color: #dd546d;
+    width: 130px;
+}
+#header .header-box .login a{
+    color: #dd546d;
+}
+#header .header-box .login .click-warp{
+    float: left;
+    width: 130px;
+    height: 26px;
+}
+#header .header-box .login .click-warp span{
+    cursor: pointer;
+    float: left;
+}
+#header .header-box .login span.icon{
+    margin-top: 3px;
+    margin-left: 10px;
+}
+#header .header-box .login span.name{
+    margin-left: 30px;
+}
+#header .header-box .login ul{
+    width: 130px;
+    text-align: center;
+    z-index: 110;
+    position: relative;
+    display: none;
+}
+#header .header-box .login ul li{
+    float: right;
+    width: 130px;
+    height: 40px;
+    background: #ddd;
+    line-height: 40px;
+    border-top: 1px solid #ccc;
+}
+#header .header-box .login ul li a{
+    color: white;
+}
+#header .header-box .login ul li a:hover{
+    color: #dd546d;
+}
+
+/*nav开始*/
+#nav{
+    position: relative;
+    height: 50px;
+    background: #dd546d;
+    z-index: 100;
+}
+#nav .nav-box{
+    width: 1200px;
+    margin: 0 auto;
+    height: 50px;
+}
+#nav #sidebar{
+    position: relative;
+    margin-left: 20px;
+    float: left;
+    width: 200px;
+    cursor: pointer;
+}
+#nav #sidebar span{
+    width: 200px;
+    height: 50px;
+    float: left;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    background: #444;
+}
+#nav #sidebar .sidebar-sub{
+    clear: both;
+    position: absolute;
+    top: 50px;
+}
+#nav #sidebar .sidebar-sub li{
+    width: 200px;
+    height: 51px;
+    background: #888;
+    line-height: 50px;
+    text-align: center;
+}
+#nav #sidebar .sidebar-sub li a{
+    float: left;
+    width: 200px;
+    height: 51px;
+    color: white;
+}
+#nav #sidebar .sidebar-sub li a:hover{
+    color: #dd546d;
+    background: gainsboro;
+
+}
+#nav .nav-sub li{
+    float: left;
+    height: 50px;
+    width: 130px;
+    text-align: center;
+    margin-right: 2px;
+}
+#nav .nav-sub li.bg{
+    background: #b1133f;
+}
+#nav .nav-sub li:hover{
+    background: #b1133f;
+}
+#nav .nav-sub li a{
+    float: left;
+    height: 50px;
+    width: 130px;
+    color: white;
+    line-height: 50px;
+}

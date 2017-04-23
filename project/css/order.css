@@ -1,0 +1,96 @@
+#order{
+    margin: 20px;
+    float: left;
+    width: 950px;
+    background: white;
+    padding-bottom: 80px;
+    color: #999;
+}
+#order h3{
+    border-bottom: 1px solid #dd546d;
+    float: left;
+    width: 890px;
+    height: 50px;
+    font-weight: 900;
+    line-height: 50px;
+    color: #dd546d;
+    margin-left: 30px;
+}
+#order .order-top{
+    margin: 0 auto;
+    overflow: hidden;
+    width: 890px;
+    border-bottom: 1px solid #EEE;
+    padding:10px 0;
+}
+#order .order-top .th{
+    float: left;
+    text-align: center;
+}
+#order .order-top .th.th-item{
+    width: 445px;
+}
+#order .order-top .th.th-price,#order .order-top .th.th-number,#order .order-top .th.th-amount,#order .order-top .th.th-status,#order .order-top .th.th-change{
+    width: 89px;
+}
+#order .order-status{
+    width: 890px;
+    margin: 0 auto;
+    padding:10px 0;
+    overflow: hidden;
+}
+#order .order-status .order-content{
+    border: 1px solid #EEE;
+    overflow: hidden;
+}
+#order .order-status .order-content li{
+    font-size: 15px;
+    float: left;
+    text-align: center;
+}
+#order .order-status .order-content li.td.td-item{
+    width: 445px;
+}
+#order .order-status .order-content li.td.td-price,#order .order-status .order-content li.td.td-number,#order .order-status .order-content li.td.td-amount,#order .order-status .order-content li.td.td-status,#order .order-status .order-content li.td.td-change{
+    width: 88px;
+}
+#order .order-status .order-content li.td.td-item .item-pic{
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    border: 1px solid #EEE;
+    margin: 10px;
+    float: left;
+}
+#order .order-status .order-content li.td.td-item .item-pic img{
+    width: 80px;
+}
+#order .order-status .order-content li.td.td-item .item-info{
+    float: left;
+    margin-top: 35px;
+    text-align: left;
+}
+#order .order-status .order-content li.td.td-item .item-info p{
+    color: #999;
+}
+#order .order-status .order-content li.td.td-price .item-price{
+    margin-top: 35px;
+}
+#order .order-status .order-content li.td-number .item-number{
+    margin-top: 35px;
+}
+#order .order-status .order-content li.td-amount .item-amount{
+    margin-top: 35px;
+}
+#order .order-status .order-content li.td-status .item-status{
+    margin-top: 35px;
+}
+#order .order-status .order-content li.td-change .am-btn{
+    margin-top: 35px;
+    background: #dd546d;
+    color: white;
+    width: 70px;
+    height: 25px;
+    border: none;
+    cursor: pointer;
+}

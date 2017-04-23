@@ -1,0 +1,131 @@
+/*bner开始*/
+#bner{
+     background:rgb(251, 213, 181);
+    -webkit-transition:background 0.8s ease 0.5s;
+}
+#bner .bner-box{
+    position: relative;
+    width: 930px;
+    height: 408px;
+    overflow: hidden;
+    margin-left: 295px;
+}
+#bner .bner-box .bner-warp a.img-block{
+    display: block;
+}
+#bner .bner-box .bner-warp a{
+    display: none;
+}
+#bner .bner-box .bner-warp a img{
+    width: 930px;
+}
+#bner .bner-box .bner-tab{
+    position: absolute;
+    margin-top: 9px;
+    top: 0;
+    right: 0;
+    width: 220px;
+    background: rgba(255,255,255,0.3);
+    padding-bottom: 10px;
+}
+#bner .bner-box .bner-tab span{
+    cursor: pointer;
+    float: left;
+    width: 220px;
+}
+#bner .bner-box .bner-tab span img{
+    width: 190px;
+    margin-top: 10px;
+    margin-left: 15px;
+    opacity: 0.4;
+}
+#bner .bner-box .bner-tab span img.img-opacity{
+    opacity: 1;
+}
+/*content开始*/
+#content{
+    width: 1200px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+#content .snack-title{
+    overflow: hidden;
+    margin-bottom: 10px;
+    margin-top: 10px;
+
+}
+#content .snack-title .snack-title-l{
+    float: left;
+    width: 130px;
+    height: 30px;
+    text-align: center;
+    background:#dd546d ;
+    border-radius: 15px;
+    color: white;
+    line-height: 30px;
+    margin-left: 20px;
+}
+#content .snacks {
+    overflow: hidden;
+}
+#content .snacks li{
+    border: 2px solid gainsboro;
+    border-radius: 5px;
+    width: 250px;
+    height: 430px;
+    float: left;
+    margin: 10px 20px;
+}
+#content .snacks li img{
+    width: 250px;
+}
+#content .snacks .snack-details{
+    line-height: 25px;
+    width: 250px;
+    /*height: 80px;*/
+    color: grey;
+    text-align: center;
+}
+#content .snacks .snack-details .snack-name{
+    margin-top: 10px;
+    font-size: 20px;
+}
+#content .snacks .snack-details .snack-introduce{
+    font-size: 13px;
+    margin-top: 10px;
+}
+#content .snacks .snack-details .snack-price{
+    margin-top: 10px;
+    color: #dd546d;
+    font-size: 23px;
+}
+#content .snacks .add-cart{
+    border: 0;
+    width: 100px;
+    height: 40px;
+    background: #dd546d;
+    color: white;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+#content .snacks button{
+    cursor: pointer;
+}
+#content .snacks .collect{
+    border:1px solid gainsboro;
+    width: 70px;
+    height: 40px;
+    color: grey;
+    margin-top: 20px;
+    margin-left: 5px;
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,70 @@
+#comment{
+    margin: 20px;
+    float: left;
+    width: 950px;
+    background: white;
+    color: #999;
+    padding-bottom: 80px;
+}
+#comment h3{
+    border-bottom: 1px solid #dd546d;
+    float: left;
+    width: 890px;
+    height: 50px;
+    font-weight: 900;
+    line-height: 50px;
+    color: #dd546d;
+    margin-left: 30px;
+}
+#comment ul li{
+    width: 890px;
+    padding: 20px 0;
+    float: left;
+    margin-left: 30px;
+    border-bottom: 1px solid #ddd;
+}
+#comment ul li .photo{
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    margin: 10px 30px;
+}
+#comment ul li .photo img {
+    width: 80px;
+}
+#comment ul li .comment-people{
+    width: 140px;
+    text-align: center;
+    float: left;
+}
+#comment ul li .comment-content{
+    width: 460px;
+    float: left;
+}
+#comment ul li .comment-content p{
+    margin-top: 20px;
+    text-indent: 10px;
+}
+#comment ul li .comment-content img{
+    width: 130px;
+    height: 130px;
+    margin-left: 40px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+}
+#comment ul li .comment-snack{
+    width: 190px;
+    float: left;
+    text-align: center;
+}
+#comment ul li .comment-snack p{
+    margin-top: 50px;
+}
+#comment ul li .comment-time{
+    float: left;
+    width: 100px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+
