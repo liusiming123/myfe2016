@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ol, ul {
+    list-style: none;
+}
+img {
+    border: 0
+}
+body{
+    font-weight: 400;
+    font-size:12px;
+    padding-top: 0.75rem;
+    padding-bottom:0.75rem;
+}
+.title{
+    text-align: center;
+
+    font-size: 0.26rem;
+    color: #5f5f5f;
+}
+.form{
+    padding-top:0.72rem ;
+    margin: 0 auto;
+    width: 5.2rem;
+}
+.form .login{
+    padding-bottom: 0.43rem ;
+}
+.form .login.fx{
+    padding-left: .2rem;
+}
+.form .login h4{
+    font-size: 0.2rem;
+    color: #5f5f5f;
+    float: left;
+    line-height: .6rem;
+}
+.form .login .login-input{
+    height: .56rem;
+    border:0.02rem solid #ececec;
+    width: 2.03rem;
+    border-radius: 0.1rem;
+    outline: none;
+    font-size: 0.2rem;
+    margin-left: 0.05rem;
+}
+.form .login .code{
+    float: right;
+}
+.form .login .code .code-img{
+    margin-top: 0.05rem;
+    margin-right: 0.1rem;
+    width: 1.04rem;
+    height: 0.5rem;
+}
+.form .login .code span{
+    float: right;
+    line-height: 0.6rem;
+}
+.form .login .code span img{
+    margin-top: 0.15rem;
+    width: 0.31rem;
+    height: 0.31rem;
+}
+.form .login .login-input.login-phone-num{
+    width: 3.66rem;
+}
+
+.form .login .login-btn{
+    width: 1.44rem;
+    height: 0.6rem;
+    border: 0.01rem solid #f1f1f1;
+    background: #3290ea;
+    color: white;
+    font-size: 0.24rem ;
+    outline: none;
+    border-radius: 0.1rem;
+    margin-left: 0.16rem;
+}
+.form .submit{
+    margin-top:0.47rem ;
+    height: 0.66rem;
+    width: 3.75rem;
+    border-radius: 0.1rem;
+    border: 0.01rem solid #a3c3e1;
+    background: #3290ea;
+    color: white;
+    font-size: 0.24rem;
+    text-align: center;
+    margin-left: 0.63rem;
+}

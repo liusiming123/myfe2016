@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>啦啦啦</title>
+    <link rel="stylesheet" href="swiper.min.css">
+    <link rel="stylesheet" href="animate.css">
+    <link rel="stylesheet" href="test.css">
+    <script src="rem.js"></script>
+</head>
+<body>
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide as1">
+            <img  class="ani img1" src="fh1.png" alt=""swiper-animate-effect="fadeInDown" swiper-animate-duration="1s" swiper-animate-delay="0.3s">
+            <img  class="ani img2" src="ft1-REAL.png" alt=""swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="0.3s">
+            <img  class="ani img3" src="ft1-icon.png" alt=""swiper-animate-effect="fadeInRight" swiper-animate-duration="1s" swiper-animate-delay="0.3s">
+            <img  class="ani img4" src="logo@1x2017.png" alt=""swiper-animate-effect="fadeInRight" swiper-animate-duration="1s" swiper-animate-delay="0.3s">
+            <img src="fh-icon.png" alt="" class="down">
+        </div>
+        <div class="swiper-slide as2">
+            <img  class="ani img1" src="fh2.png" alt=""swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="0.3s">
+            <div class="ani content1" swiper-animate-effect="fadeInRight" swiper-animate-duration="1s" swiper-animate-delay="0.3s">
+                <p>哈哈哈哈</p>
+                <p>嘿嘿嘿嘿</p>
+                <p>呵呵呵</p>
+                <p>哈哈哈哈</p>
+                <p>嘿嘿嘿嘿</p>
+                <p>呵呵呵</p>
+            </div>
+        <img  class="ani img2" src="-fh2-1.png" alt=""swiper-animate-effect="fadeInRight" swiper-animate-duration="1s" swiper-animate-delay="0.3s">
+        </div>
+        <div class="swiper-slide as3">
+            <img  class="ani img1" src="ft3-num1.png" alt=""swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="0.3s">
+            <img  class="ani img2" src="ft3-font.png" alt=""swiper-animate-effect="fadeInRight" swiper-animate-duration="1s" swiper-animate-delay="0.3s">
+            <div class="ani content1" swiper-animate-effect="fadeInRight" swiper-animate-duration="1s" swiper-animate-delay="0.5s">
+            <p>哈哈哈哈</p>
+            <p>嘿嘿嘿嘿</p>
+            <p>呵呵呵</p>
+            <p>哈哈哈哈</p>
+        </div>
+        </div>
+        <div class="swiper-slide as4">
+            <img  class="ani img1" src="fh4.png" alt=""swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="0.3s">
+            <div class="ani content1" swiper-animate-effect="fadeInRight" swiper-animate-duration="1s" swiper-animate-delay="0.5s">
+                <p>通过基金投资的形式参与到「有一居」的海外项目开发，经验丰富的投资和运营团队将帮你赚取可观的资产回报。保证资金灵活的最佳方式。</p>
+                <p class="right">「有一居」专注日本旅居开发</p>
+            </div>
+            <img  class="ani img2" src="ft4-num.png" alt=""swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="0.5s">
+            <h5>* 想了解更多房产基金相关信息，欢迎来电垂询：400-640-7878</h5>
+        </div>
+        <div class="swiper-slide as5">Slide 5</div>
+    </div>
+
+</div>
+<script src="jquery-3.1.1.min.js"></script>
+<script src="swiper.min.js"></script>
+<script src="swiper.animate.js"></script>
+
+<script>
+    var swiper = new Swiper ('.swiper-container', {
+        direction: 'vertical',
+        loop: false,
+
+        // 如果需要分页器
+//        pagination: '.swiper-pagination',
+        paginationType:'progress',
+//        paginationClickable: false,
+
+
+        onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
+            swiperAnimateCache(swiper); //隐藏动画元素
+            swiperAnimate(swiper); //初始化完成开始动画
+        },
+        onSlideChangeEnd: function(swiper){
+            swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+        }
+
+
+    })
+</script>
+</body>
+</html>

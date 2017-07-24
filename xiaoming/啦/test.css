@@ -1,0 +1,135 @@
+html,body{
+    width: 100%;
+    height: 100%;
+}
+body{
+    font-size: 12px;
+}
+* {
+    margin: 0;
+    padding: 0;
+
+}
+img{
+    display: block;
+}
+.swiper-container{
+    width: 100%;
+    height: 100%;
+}
+.as1{
+    background: url("1f9693142aa3296b264d55d3175daad2.png") 0 0 no-repeat;
+    background-size: cover;
+}
+.as2{
+    background: url("b47228edc523f10949dfc07f9afac89a.png") 0 0 no-repeat;
+    background-size: cover;
+}
+.as3{
+    background: url("42637b61c1c9ed5e2f6afc9d1278ae22.png") 0 0 no-repeat;
+    background-size: cover;
+}
+.as4{
+    background: url("23f0154723f6b4b8498654e85c86833d.png") 0 0 no-repeat;
+    background-size: cover;
+}
+.as1 .img1{
+    width: 5.3rem;
+    margin: .9rem auto .6rem auto;
+}
+.as1 .img2{
+    width: 2.2rem;
+    margin-left: 0.5rem ;
+    float: left;
+}
+.as1 .img3{
+    width: 0.7rem;
+    float: left;
+}
+.as1 .img4{
+    width: 1.5rem;
+    float: right;
+    margin-right: 0.5rem;
+}
+.as2 .img1{
+    width: 1rem;
+    margin-top: 0.8rem;
+    margin-left: 0.5rem;
+    float: left;
+}
+.as2 .content1{
+    float: left;
+    color: #fff;
+    margin-left: 0.4rem;
+    margin-top: 0.8rem;
+    font-size: 0.3rem;
+}
+.as2 .img2{
+    width: 3.58rem;
+    float: right;
+    margin-top: 5rem;
+    margin-right: .6rem;
+}
+.as3 .img2{
+    height: 4.84rem;
+    float: right;
+    margin-right: 0.5rem;
+    margin-top: 0.5rem;
+}
+.as3 .content1{
+    float: right;
+    color: #fff;
+    margin: 3.7rem 0.4rem 0 0 ;
+    font-size: 0.3rem;
+}
+.as4 .img1{
+    height: 4.84rem;
+    float: left;
+    margin-left: 0.5rem;
+    margin-top: 1.5rem;
+}
+.as4 .content1{
+    width: 4rem;
+    float: left;
+    color: white;
+    margin-top: 1.5rem;
+    margin-left: 0.4rem;
+}
+.as4 .content1 .right{
+    text-align: right;
+    margin-top: 3rem;
+}
+.as4 .img2{
+    width: 2.63rem;
+    float: right;
+    margin-right:0.6rem;
+    margin-top: 0.2rem;
+}
+.as4 h5{
+    color: #ff0;
+    clear: both;
+    text-align: center;
+    padding-top: 0.5rem;
+}
+
+
+.as1 .down {
+    margin: .5rem auto;
+    clear: both;
+    padding-top: 7rem;
+    width: .82rem;
+    height: .29rem;
+    -webkit-animation: bounce 2s infinite;
+}
+@-webkit-keyframes bounce {
+    0% {
+        -webkit-transform: translateY(0);
+    }
+    50% {
+        -webkit-transform: translateY(-15px);
+    }
+    100% {
+        -webkit-transform: translateY(0);
+
+    }
+}
